@@ -41,5 +41,16 @@ void main() {
         expect(SpdxLicense.tryParse(invalidLicenseSource), isNull);
       });
     });
+
+    group('identifier', () {
+      test('returns the identifier for a valid SPDX license', () {
+        expect(SpdxLicense.$MIT.identifier, 'MIT');
+        expect(SpdxLicense.$BSD_2_Clause.identifier, 'BSD-2-Clause');
+      });
+
+      test('returns "unknown" for the unknown license', () {
+        expect(SpdxLicense.$unknown.identifier, 'unknown');
+      });
+    });
   });
 }

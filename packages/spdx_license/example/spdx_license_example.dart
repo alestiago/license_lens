@@ -7,9 +7,9 @@ void main() {
   // Simple access for specific SPDX license by its identifier:
   SpdxLicense.$MIT;
 
-  // Easily evaluate the standard name for a specific SPDX license:
-  SpdxLicense.$MIT.value; // Output: MIT
-  SpdxLicense.$BSD_2_Clause.value; // Output: BSD-2-Clause
+  // Easily evaluate the standard identifier for a specific SPDX license:
+  SpdxLicense.$MIT.identifier; // Output: MIT
+  SpdxLicense.$BSD_2_Clause.identifier; // Output: BSD-2-Clause
 
   // Parse a string to get the corresponding SPDX license:
   SpdxLicense.parse('MIT'); // Output: SpdxLicense.$MIT

@@ -717,7 +717,7 @@ enum SpdxLicense {
   $zlib_acknowledgement._('zlib-acknowledgement'),
   $unknown._('unknown');
 
-  const SpdxLicense._(this.value);
+  const SpdxLicense._(this.identifier);
 
   /// Parses a [String] into a [SpdxLicense].
   ///
@@ -735,11 +735,12 @@ enum SpdxLicense {
   ///
   /// Like [SpdxLicense.parse] except that it returns `null` where a similar
   /// call to [SpdxLicense.parse] would throw a [FormatException].
-  static SpdxLicense? tryParse(String source) => _valueMap[source];
+  static SpdxLicense? tryParse(String source) => _identifierMap[source];
 
-  static final Map<String, SpdxLicense> _valueMap = SpdxLicense.values
+  static final Map<String, SpdxLicense> _identifierMap = SpdxLicense.values
     .asNameMap()
-    .map((key, value) => MapEntry(value.value, value));
+    .map((key, value) => MapEntry(value.identifier, value));
 
-  final String value;
+  /// The identifier of the license, as seen in the [SPDX License List](https://spdx.org/licenses/).
+  final String identifier;
 }
