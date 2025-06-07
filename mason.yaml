@@ -1,0 +1,3 @@
+bricks:
+  spdx_license:
+    path: packages/spdx_license_gen
