@@ -1,39 +1,30 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# SPDX License
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Provides up-to-date SPDX license information and utilities, as seen in the [SPDX Licenses list](https://spdx.org/licenses/), in Dart.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+import 'package:spdx_license/spdx_license.dart';
+
+void main() {
+  // Simple access for specific SPDX license by its identifier:
+  SpdxLicense.$MIT;
+
+  // Easily evaluate the standard identifier for a specific SPDX license:
+  SpdxLicense.$MIT.identifier; // Output: MIT
+  SpdxLicense.$BSD_2_Clause.identifier; // Output: BSD-2-Clause
+
+  // Parse a string to get the corresponding SPDX license:
+  SpdxLicense.parse('MIT'); // Output: SpdxLicense.$MIT
+  SpdxLicense.tryParse('not-MIT'); // Output: null
+
+  // Access the entire list of all SPDX licenses:
+  for (final license in SpdxLicense.values) {
+    if (license == SpdxLicense.$MIT) {
+      // Found the MIT license!
+    }
+  }
+}
+
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
