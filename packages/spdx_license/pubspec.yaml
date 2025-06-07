@@ -1,0 +1,14 @@
+name: spdx_license
+description: Provides up-to-date SPDX license information and utilities in Dart.
+version: 0.1.0+1
+repository: https://github.com/alestiago/license_lens
+issue_tracker: https://github.com/alestiago/license_lens/issues
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+dev_dependencies:
+  test:
+  very_good_analysis: ^8.0.0
+  
