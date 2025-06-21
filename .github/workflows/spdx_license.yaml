@@ -23,7 +23,7 @@ jobs:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
     with:
       dart_sdk: 3.8.0
-      analyze_directories: "lib,test,example"
+      analyze_directories: "lib test example"
       format_directories: "lib,test,example"
       report_on: "lib,test"
       check_ignore: true
