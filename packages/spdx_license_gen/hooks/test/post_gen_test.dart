@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:mason/mason.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
 
 import '../post_gen.dart' as post_gen;
@@ -67,7 +66,7 @@ void main() {
       expect(capturedCommand, 'dart');
       expect(
         capturedArgs,
-        ['format', path.join('test', 'spdx_license.gen.dart')],
+        ['format', '.'],
       );
       expect(capturedRunInShell, true);
     });
