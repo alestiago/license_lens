@@ -24,7 +24,8 @@ jobs:
     with:
       dart_sdk: 3.8.0
       format_directories: "test"
-      check_ignore: true
+      analyze_directories: "test"
       report_on: "test"
+      check_ignore: true
       no_example: true
       working_directory: "packages/spdx_license_gen/hooks"

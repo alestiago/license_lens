@@ -23,8 +23,9 @@ jobs:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
     with:
       dart_sdk: 3.8.0
+      analyze_directories: "lib,test,example"
       format_directories: "lib,test,example"
-      check_ignore: true
       report_on: "lib,test"
+      check_ignore: true
       no_example: true
       working_directory: "packages/spdx_license/"
