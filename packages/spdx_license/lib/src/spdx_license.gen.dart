@@ -723,6 +723,9 @@ enum SpdxLicense {
   ///
   /// If the [source] is not a valid [SpdxLicense], a [FormatException] is
   /// thrown.
+  /// 
+  /// Rather than throwing and immediately catching the [FormatException], 
+  /// instead use [tryParse] to handle a potential parsing error.
   factory SpdxLicense.parse(String source) {
     final result = SpdxLicense.tryParse(source);
     if (result == null) {

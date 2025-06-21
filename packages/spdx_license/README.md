@@ -1,6 +1,6 @@
 # SPDX License
 
-Provides up-to-date SPDX license information and utilities, as seen in the [SPDX Licenses list](https://spdx.org/licenses/), in Dart.
+Provides the full and up-to-date SPDX licenses as seen in the [SPDX Licenses list](https://spdx.org/licenses/), in Dart.
 
 ## Usage
 
