@@ -16,5 +16,5 @@ environment:
 
 dev_dependencies:
   test:
-  very_good_analysis: ^8.0.0
+  very_good_analysis: ^9.0.0
   

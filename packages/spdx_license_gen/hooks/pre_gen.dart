@@ -60,14 +60,13 @@ Future<void> preGen(
         (licensesVar == null || (licensesVar is List && licensesVar.isEmpty)) &&
         licensesVar is! List<String>;
 
-    final licenses =
-        shouldFetchLicenses
-            ? await _downloadLicenses(
-              logger: context.logger,
-              client: client,
-              zipDecoder: zipDecoder,
-            )
-            : licensesVar as List;
+    final licenses = shouldFetchLicenses
+        ? await _downloadLicenses(
+            logger: context.logger,
+            client: client,
+            zipDecoder: zipDecoder,
+          )
+        : licensesVar as List;
 
     final newLicensesVar = <Map<String, dynamic>>[
       for (final license in licenses)
