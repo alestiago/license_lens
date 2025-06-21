@@ -7,13 +7,13 @@ concurrency:
 on:
   push:
     paths:
-      - .github/workflows/spdx_license.yaml
+      - .github/workflows/spdx_license_gen.yaml
       - "packages/spdx_license_gen/**"
     branches:
       - main
   pull_request:
     paths:
-      - .github/workflows/spdx_license.yaml
+      - .github/workflows/spdx_license_gen.yaml
       - "packages/spdx_license_gen/**"
     branches:
       - main
