@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:mason/mason.dart';
 import 'package:meta/meta.dart';
-import 'package:path/path.dart' as path;
 
 typedef ProcessRun =
     Future<ProcessResult> Function(
@@ -21,7 +20,7 @@ Future<void> run(HookContext context) async {
 
   await runProcess(
     'dart',
-    ['format', path.join('test', 'spdx_license.gen.dart')],
+    ['format', '.'],
     workingDirectory: Directory.current.path,
     runInShell: true,
   );
