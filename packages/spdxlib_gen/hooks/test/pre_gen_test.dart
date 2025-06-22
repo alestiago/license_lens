@@ -1,13 +1,13 @@
 // Copyright (c) 2025 Alejandro Santiago
 //
-// This file is part of spdx_license_gen and is distributed under the terms of
+// This file is part of spdxlib_gen and is distributed under the terms of
 // the MIT License.
 //
 // For complete licensing information, please refer to the README file:
-// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/LICENSE
+// https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/LICENSE
 //
 // Full attribution information is provided in the NOTICE file:
-// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/NOTICE.md
+// https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/NOTICE.md
 
 import 'dart:typed_data';
 
@@ -174,7 +174,7 @@ void main() {
         await pre_gen.preGen(context, client: client);
 
         final errorMessage =
-            '''[spdx_license] Failed to download the SPDX license list, received response with status code: ${response.statusCode}''';
+            '''[spdxlib] Failed to download the SPDX license list, received response with status code: ${response.statusCode}''';
 
         verify(() => context.logger.err(errorMessage)).called(1);
       });
@@ -192,7 +192,7 @@ void main() {
         );
 
         const errorMessage =
-            '''[spdx_license] Failed to decode the SPDX license list, received error: $error''';
+            '''[spdxlib] Failed to decode the SPDX license list, received error: $error''';
 
         verify(() => context.logger.err(errorMessage)).called(1);
       });
@@ -205,7 +205,7 @@ void main() {
 
         verify(
           () => context.logger.err(
-            '[spdx_license] An unknown error occurred, received error: $error',
+            '[spdxlib] An unknown error occurred, received error: $error',
           ),
         ).called(1);
       });

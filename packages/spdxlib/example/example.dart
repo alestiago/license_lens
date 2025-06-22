@@ -1,7 +1,7 @@
-// Example file demonstrating how to use the package:spdx_license.
+// Example file demonstrating how to use the package:spdxlib.
 // ignore_for_file: unnecessary_statements
 
-import 'package:spdx_license/spdx_license.dart';
+import 'package:spdxlib/spdxlib.dart';
 
 void main() {
   // Simple access for specific SPDX license by its identifier:

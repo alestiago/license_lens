@@ -1,4 +1,4 @@
-name: spdx_license
+name: spdxlib
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -7,14 +7,14 @@ concurrency:
 on:
   push:
     paths:
-      - .github/workflows/spdx_license.yaml
-      - "packages/spdx_license/**"
+      - .github/workflows/spdxlib.yaml
+      - "packages/spdxlib/**"
     branches:
       - main
   pull_request:
     paths:
-      - .github/workflows/spdx_license.yaml
-      - "packages/spdx_license/**"
+      - .github/workflows/spdxlib.yaml
+      - "packages/spdxlib/**"
     branches:
       - main
 
@@ -28,4 +28,4 @@ jobs:
       report_on: "lib,test"
       check_ignore: true
       no_example: true
-      working_directory: "packages/spdx_license/"
+      working_directory: "packages/spdxlib/"

@@ -1,9 +1,9 @@
-name: spdx_license_publish
+name: spdxlib_publish
 
 on:
   push:
     tags:
-      - "spdx_license-v[0-9]+.[0-9]+.[0-9]+*" # tag pattern on pub.dev: 'spdx_license-v{{version}'
+      - "spdxlib-v[0-9]+.[0-9]+.[0-9]+*" # tag pattern on pub.dev: 'spdxlib-v{{version}'
   workflow_dispatch:
 
 jobs:

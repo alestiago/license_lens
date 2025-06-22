@@ -1,13 +1,13 @@
 // Copyright (c) 2025 Alejandro Santiago
 //
-// This file is part of spdx_license_gen and is distributed under the terms of
+// This file is part of spdxlib_gen and is distributed under the terms of
 // the MIT License.
 //
 // For complete licensing information, please refer to the README file:
-// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/LICENSE
+// https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/LICENSE
 //
 // Full attribution information is provided in the NOTICE file:
-// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/NOTICE.md
+// https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/NOTICE.md
 
 /// A generator that creates the SPDX License enumeration.
 ///
@@ -43,7 +43,7 @@ const _spdxTargetPath = 'license-list-data-main/json/details';
 class GenerateSpdxLicenseException implements Exception {
   /// {@macro generate_spdx_license_exception}
   const GenerateSpdxLicenseException(String message)
-    : message = '[spdx_license] $message';
+    : message = '[spdxlib] $message';
 
   final String message;
 }
@@ -92,7 +92,7 @@ Future<void> preGen(
     context.logger.err(e.message);
   } on Object catch (e) {
     context.logger.err(
-      '''[spdx_license] An unknown error occurred, received error: $e''',
+      '''[spdxlib] An unknown error occurred, received error: $e''',
     );
   }
 }

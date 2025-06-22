@@ -22,7 +22,7 @@ dart pub global activate mason_cli
 3. Get hooks' dependencies:
 
 ```sh
-# 🪝 Get hooks' dependencies (from packages/spdx_license_gen/hooks)
+# 🪝 Get hooks' dependencies (from packages/spdxlib_gen/hooks)
 dart pub get
 ```
 
@@ -45,8 +45,8 @@ mason get
 5. Generate a Dart SPDX License enumeration:
 
 ```sh
-# ⚙️ Generate code using the spdx_license brick (from project root)
-mason make spdx_license -o packages/spdx_license/lib/src/ --on-conflict=overwrite 
+# ⚙️ Generate code using the spdxlib brick (from project root)
+mason make spdxlib -o packages/spdxlib/lib/src/ --on-conflict=overwrite 
 ```
 
 If the licenses prompt is left empty the brick will fetch the [SPDX list](https://github.com/spdx/license-list-data/tree/main/json/details). Otherwise, the user specified licenses will be used and no SPDX List will be fetched.
