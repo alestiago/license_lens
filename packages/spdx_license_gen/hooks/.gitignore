@@ -9,3 +9,6 @@ pubspec.lock
 # https://docs.brickhub.dev/
 # Created by `mason get`
 build/hooks/
+
+# Code coverage files
+coverage/

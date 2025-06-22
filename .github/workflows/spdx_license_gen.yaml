@@ -28,4 +28,5 @@ jobs:
       report_on: "test"
       check_ignore: true
       no_example: true
+      run_skipped: true
       working_directory: "packages/spdx_license_gen/hooks"
