@@ -8,7 +8,7 @@ This package should always match [PANA's](https://github.com/dart-lang/pana/blob
 
 ## Usage
 
-1. Install a valid [Dart SDK](https://dart.dev/get-dart) in your local environment. Compatible Dart SDK versions with the SPDX license brick can be found [here](https://github.com/VeryGoodOpenSource/very_good_cli/blob/main/tool/spdx_license/hooks/pubspec.yaml). If you have Flutter installed you likely have a valid Dart SDK version already installed.
+1. Install a valid [Dart SDK](https://dart.dev/get-dart) in your local environment. Compatible Dart SDK versions with the SPDX license brick can be found within the environment Dart dependency in the [pubspec.yaml](./hooks/pubspec.yaml). If you have Flutter installed you likely have a valid Dart SDK version already installed.
 
 2. Install [Mason](https://github.com/felangel/mason/tree/master/packages/mason_cli#installation) in your local environment:
 
@@ -27,8 +27,8 @@ mason get
 4. Generate a Dart SPDX License enumeration:
 
 ```sh
-# ⚙️ Generate code using the spdx_license brick (from within project)
-mason make spdx_license -o lib/src/ --on-conflict=overwrite
+# ⚙️ Generate code using the spdxlib brick (from within project)
+mason make spdxlib -o lib/src/ --on-conflict=overwrite
 ```
 
 If the licenses prompt is left empty the brick will fetch the [SPDX list](https://github.com/spdx/license-list-data/tree/main/json/details). Otherwise, the user specified licenses will be used and no SPDX List will be fetched.

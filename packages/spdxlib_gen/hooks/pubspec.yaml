@@ -1,7 +1,7 @@
-name: spdx_license_hooks
+name: spdxlib_hooks
 description: Hook for generating SPDX license.
 version: 0.1.0+1
-repository: https://github.com/alestiago/license_lens/tree/main/packages/spdx_license_gen/hooks
+repository: https://github.com/alestiago/license_lens/tree/main/packages/spdxlib_gen/hooks
 issue_tracker: https://github.com/alestiago/license_lens/issues
 publish_to: none
 

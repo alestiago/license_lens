@@ -1,11 +1,11 @@
-# SPDX License
+# SPDX lib
 
 Provides an up-to-date full list of all SPDX licenses as seen in the [SPDX Licenses list](https://spdx.org/licenses/), in Dart.
 
 ## Usage
 
 ```dart
-import 'package:spdx_license/spdx_license.dart';
+import 'package:spdxlib/spdxlib.dart';
 
 void main() {
   // Simple access for specific SPDX license by its identifier:

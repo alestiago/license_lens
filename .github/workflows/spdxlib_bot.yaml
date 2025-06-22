@@ -1,4 +1,4 @@
-name: spdx_license_bot
+name: spdxlib_gen_bot
 
 on:
   # This should ideally trigger whenever there is a commit to the [SPDX License repository](https://github.com/spdx/license-list-data).
@@ -23,9 +23,9 @@ jobs:
       - name: 🎯 Setup Dart
         uses: dart-lang/setup-dart@v1
 
-      - name: 📦 Install dependencies (packages/spdx_license_gen/hooks)
+      - name: 📦 Install dependencies (packages/spdxlib_gen/hooks)
         run: |
-          cd spdx_license_gen/hooks
+          cd spdxlib_gen/hooks
           dart pub get
           cd -
 
@@ -34,11 +34,11 @@ jobs:
           dart pub global activate mason_cli
           mason get
 
-      - name: 🧱 Mason make (packages/spdx_license)
+      - name: 🧱 Mason make (packages/spdxlib)
         id: make
         run: |
-          cd spdx_license/
-          if [[ $(mason make spdx_license -q --licenses "[]" -o lib/src/ --on-conflict overwrite --set-exit-if-changed) =~ "0 files changed" ]]; then echo "did_change=false"; else echo "did_change=true"; fi >> $GITHUB_ENV
+          cd spdxlib/
+          if [[ $(mason make spdxlib -q --licenses "[]" -o lib/src/ --on-conflict overwrite --set-exit-if-changed) =~ "0 files changed" ]]; then echo "did_change=false"; else echo "did_change=true"; fi >> $GITHUB_ENV
           cd -
 
       - name: 🐙 Generate GitHub App token
@@ -56,13 +56,13 @@ jobs:
         with:
           token: ${{ steps.generate-token.outputs.token }}
           base: main
-          branch: bot/spdx_license_update
-          commit-message: "chore(spdx_license): update SPDX licenses"
-          title: "chore(spdx_license): update SPDX licenses"
+          branch: bot/spdxlib_gen_update
+          commit-message: "chore(spdxlib): update SPDX licenses"
+          title: "chore(spdxlib): update SPDX licenses"
           body: |
             ## Description
 
-            This pull request was generated automatically by the scheduled `spdx_license_bot` GitHub Actions workflow.
+            This pull request was generated automatically by the scheduled `spdxlib_bot` GitHub Actions workflow.
 
             **Summary of changes:**
             - Regenerated `spdx_license.gen.dart` using the latest data from the SPDX License repository.

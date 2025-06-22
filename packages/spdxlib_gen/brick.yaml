@@ -1,4 +1,4 @@
-name: spdx_license
+name: spdxlib
 description: Generates a Dart SPDX License enumeration.
 version: 1.0.0
 publish_to: none
