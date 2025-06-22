@@ -1,16 +1,16 @@
-## Contributing to the SPDX License Generator
+## Contributing to the SPDX lib Generator
 
 First of all, thank you for taking the time to contribute! 🎉👍 Before you do, please carefully read this guide.
 
-## Developing for SPDX License Generator brick
+## Developing for SPDX lib Generator brick
 
 To develop for PDX License Generator brick, you will also need to become familiar with our processes and conventions detailed within the mono-repository [CONTRIBUTING](../../CONTRIBUTING.md).
 
-💡 **Note**: The SPDX License brick is not published at [Brick Hub](brickhub.dev).
+💡 **Note**: The SPDX lib brick is not published at [Brick Hub](brickhub.dev).
 
 ### Setting up your local development environment
 
-1. Install a valid [Dart SDK](https://dart.dev/get-dart) in your local environment. Compatible Dart SDK versions with the SPDX license brick can be found within the [hooks pubspec](hooks/pubspec.yaml). If you have Flutter installed you likely have a valid Dart SDK version already installed.
+1. Install a valid [Dart SDK](https://dart.dev/get-dart) in your local environment. Compatible Dart SDK versions with the spdxlib brick can be found within the [hooks pubspec](hooks/pubspec.yaml). If you have Flutter installed you likely have a valid Dart SDK version already installed.
 
 2. Install [Mason](https://github.com/felangel/mason/tree/master/packages/mason_cli#installation) in your local environment:
 
@@ -42,7 +42,7 @@ If some tests do not pass out of the box, please submit an [issue](https://githu
 mason get
 ```
 
-5. Generate a Dart SPDX License enumeration:
+5. Generate a Dart SPDX lib enumeration:
 
 ```sh
 # ⚙️ Generate code using the spdxlib brick (from project root)
