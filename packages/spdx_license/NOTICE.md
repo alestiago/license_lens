@@ -8,8 +8,7 @@ This project consumes license data from SPDX at [license-list-data](https://gith
 >
 > ---
 >
-> Source: https://github.com/spdx/license-list-data/blob/main/README.md
-> Accessed: 22 Jun 2025
+> Source: https://github.com/spdx/license-list-data/blob/main/README.md (Accessed 22 June 2025)
 
 As stated, the [license-list-data](https://github.com/spdx/license-list-data/) consumes data from SPDX at [license-list-XML](https://github.com/spdx/license-list-XML), which grants 
 usage permission.
@@ -20,8 +19,7 @@ usage permission.
 >
 > ---
 >
-> Source: https://github.com/spdx/license-list-XML/blob/main/README.md
-> Accessed: 22 Jun 2025
+> Source: https://github.com/spdx/license-list-XML/blob/main/README.md (Accessed 22 June 2025)
 
 ### very_good_cli
 
@@ -51,5 +49,4 @@ This project modifies portions of code originally from Very Good Ventures at [ve
 >
 > ---
 >
-> Source: https://github.com/VeryGoodOpenSource/very_good_cli/blob/v0.19.1/LICENSE
-> Accessed: 22 Jun 2025
+> Source: https://github.com/VeryGoodOpenSource/very_good_cli/blob/v0.19.1/LICENS (Accessed 22 June 2025)
