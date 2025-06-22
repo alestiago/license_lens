@@ -29,7 +29,7 @@ dart pub get
 4. Run all hook's tests:
 
 ```sh
-# 🧪 Test all hook's (from packages/spdx_license_gen/hooks)
+# 🧪 Test all hook's (from packages/spdxlib_gen/hooks)
 dart test
 ```
 
