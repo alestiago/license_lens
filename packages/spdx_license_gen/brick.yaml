@@ -1,6 +1,6 @@
 name: spdx_license
 description: Generates a Dart SPDX License enumeration.
-version: 0.1.0+1
+version: 1.0.0
 publish_to: none
 
 environment:
