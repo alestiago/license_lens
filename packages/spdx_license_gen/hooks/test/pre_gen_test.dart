@@ -1,3 +1,14 @@
+// Copyright (c) 2025 Alejandro Santiago
+//
+// This file is part of spdx_license_gen and is distributed under the terms of
+// the MIT License.
+//
+// For complete licensing information, please refer to the README file:
+// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/LICENSE.md
+//
+// Full attribution information is provided in the NOTICE file:
+// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/NOTICE.md
+
 import 'dart:typed_data';
 
 import 'package:archive/archive.dart';
