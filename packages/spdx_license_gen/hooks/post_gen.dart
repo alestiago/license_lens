@@ -4,7 +4,7 @@
 // the MIT License.
 //
 // For complete licensing information, please refer to the README file:
-// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/LICENSE.md
+// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/LICENSE
 //
 // Full attribution information is provided in the NOTICE file:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/NOTICE.md
