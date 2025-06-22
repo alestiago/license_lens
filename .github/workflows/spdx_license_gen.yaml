@@ -1,0 +1,32 @@
+name: spdx_license_gen
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    paths:
+      - .github/workflows/spdx_license_gen.yaml
+      - "packages/spdx_license_gen/**"
+    branches:
+      - main
+  pull_request:
+    paths:
+      - .github/workflows/spdx_license_gen.yaml
+      - "packages/spdx_license_gen/**"
+    branches:
+      - main
+
+jobs:
+  hooks:
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+    with:
+      dart_sdk: 3.8.0
+      format_directories: "test"
+      analyze_directories: "test"
+      report_on: "test"
+      check_ignore: true
+      no_example: true
+      run_skipped: true
+      working_directory: "packages/spdx_license_gen/hooks"

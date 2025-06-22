@@ -1,0 +1,7 @@
+# MacOS related
+.DS_Store
+
+# https://docs.brickhub.dev/
+# Created by `mason get`
+.mason/
+mason-lock.json
