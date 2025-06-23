@@ -1,7 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 //
-// If you need to make changes, please refer to the SPDX License brick
-// CONTRIBUTING file.
+// If you would like to modify this file consider contributing to the
+// SPDX License brick.
+//
+// Further contribution information can be found at:
+// https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/CONTRIBUTING.md
+
+// Copyright (c) 2025 Alejandro Santiago
+//
+// This file is part of spdxlib and is distributed under the terms of the
+// MIT License.
+//
+// For complete licensing information, please refer to the README file:
+// https://github.com/alestiago/license_lens/blob/main/packages/spdxlib/LICENSE
+//
+// Full attribution information is provided in the NOTICE file:
+// https://github.com/alestiago/license_lens/blob/main/packages/spdxlib/NOTICE.md
 
 // ignore_for_file: type=lint
 
