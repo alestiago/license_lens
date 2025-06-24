@@ -85,6 +85,22 @@ void main() {
         ]);
       });
 
+      test('when licenses are downloaded', () async {
+        final licenses = ['MIT', 'BSD'];
+        downloadLicensesOverride = () async => licenses;
+
+        await pre_gen.preGen(
+          context,
+          downloadLicensesOverride: downloadLicensesOverride,
+        );
+
+        expect(context.vars['total'], 2);
+        expect(context.vars['licenses'], [
+          {'license': 'MIT', 'identifier': r'$MIT'},
+          {'license': 'BSD', 'identifier': r'$BSD'},
+        ]);
+      });
+
       test('with valid Dart identifiers', () async {
         const name = '     0+.M I-T     ';
         context.vars['licenses'] = [name];
