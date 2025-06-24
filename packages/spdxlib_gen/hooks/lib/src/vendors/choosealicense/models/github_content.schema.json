@@ -1,0 +1,129 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/GitContentSchemaElement"
+    },
+    "definitions": {
+        "GitContentSchemaElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "sha": {
+                    "type": "string"
+                },
+                "size": {
+                    "type": "integer"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".txt"
+                    ]
+                },
+                "html_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".txt"
+                    ]
+                },
+                "git_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "download_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".txt"
+                    ]
+                },
+                "type": {
+                    "$ref": "#/definitions/Type"
+                },
+                "_links": {
+                    "$ref": "#/definitions/Links"
+                }
+            },
+            "required": [
+                "_links",
+                "download_url",
+                "git_url",
+                "html_url",
+                "name",
+                "path",
+                "sha",
+                "size",
+                "type",
+                "url"
+            ],
+            "title": "GitContentSchemaElement"
+        },
+        "Links": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "self": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".txt"
+                    ]
+                },
+                "git": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "html": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".txt"
+                    ]
+                }
+            },
+            "required": [
+                "git",
+                "html",
+                "self"
+            ],
+            "title": "Links"
+        },
+        "Type": {
+            "type": "string",
+            "enum": [
+                "file"
+            ],
+            "title": "Type"
+        }
+    }
+}

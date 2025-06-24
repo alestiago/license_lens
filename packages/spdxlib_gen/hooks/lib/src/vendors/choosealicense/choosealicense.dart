@@ -11,6 +11,7 @@
 
 import 'dart:convert';
 
+import 'package:archive/archive.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:spdxlib_hooks/spdxlib.dart';
@@ -28,6 +29,21 @@ typedef DownloadRules =
     Future<Rules> Function({
       @visibleForTesting http.Client? client,
     });
+
+/// {@template ChooseALicenseException}
+/// An exception thrown when interacting with the ChooseALicense source.
+/// {@endtemplate}
+class ChooseALicenseException implements Exception {
+  /// {@macro ChooseALicenseException}
+  const ChooseALicenseException(String message)
+    : message = '[spdxlib] $message';
+
+  /// Describes the error message.
+  final String message;
+
+  @override
+  String toString() => message;
+}
 
 /// Dowloads the rules a license may have.
 ///
@@ -60,14 +76,83 @@ Future<Rules> downloadRules({
   return rulesFromJson(jsonString);
 }
 
-/// {@template ChooseALicenseException}
-/// An exception thrown when interacting with the ChooseALicense source.
-/// {@endtemplate}
-class ChooseALicenseException implements Exception {
-  /// {@macro ChooseALicenseException}
-  const ChooseALicenseException(String message)
-    : message = '[spdxlib] $message';
+/// The URL where the ChooseALicense rule definitions are hosted.
+@visibleForTesting
+const licenseRulesUrl =
+    'https://api.github.com/repos/github/choosealicense.com/contents/_licenses';
 
-  /// Describes the error message.
-  final String message;
+/// All the licenses (indexed by their SPDX identifier) and their rules.
+typedef AllLicenseRules = Map<String, LicenseRules>;
+
+/// Downloads the rules for all licenses defined by ChooseALicense.
+Future<AllLicenseRules> downloadLicenseRules({
+  required http.Client client,
+  @visibleForTesting ZipDecoder? zipDecoder,
+}) async {
+  final httpClient = client;
+  final response = await httpClient.get(Uri.parse(licenseRulesUrl));
+
+  if (response.statusCode != 200) {
+    throw ChooseALicenseException(
+      'Failed to download the ChooseALicense rules, received status code: '
+      '${response.statusCode}',
+    );
+  }
+
+  late List<GithubContent> gitHubContent;
+  try {
+    gitHubContent = githubContentFromJson(response.body);
+  } on Exception {
+    throw ChooseALicenseException(
+      'Failed to parse the ChooseALicense rules, received response: '
+      '${response.body}',
+    );
+  }
+
+  final allLicenseRules = AllLicenseRules();
+  for (final licenseFile in gitHubContent) {
+    final downloadUrl = licenseFile.downloadUrl;
+    final response = await httpClient.get(Uri.parse(downloadUrl));
+
+    if (response.statusCode != 200) {
+      throw ChooseALicenseException(
+        'Failed to download the license rules for ${licenseFile.name}, '
+        'received status code: ${response.statusCode}',
+      );
+    }
+
+    final content = response.body;
+    final start = content.indexOf('---');
+    final end = content.indexOf('---', start + 3);
+    if (start == -1 || end == -1) {
+      throw ChooseALicenseException(
+        'Failed to parse the license rules for ${licenseFile.name}, expected a '
+        'section between `---` lines.',
+      );
+    }
+
+    final header = content.substring(start + 3, end).trim();
+    final yaml = loadYaml(header);
+    if (yaml is! YamlMap) {
+      throw ChooseALicenseException(
+        'Failed to parse the license rules for ${licenseFile.name}, expected a '
+        'YAML map but got: ${yaml.runtimeType}',
+      );
+    }
+
+    late final LicenseRules licenseRules;
+    try {
+      final jsonString = jsonEncode(yaml);
+      licenseRules = licenseRulesFromJson(jsonString);
+    } on Exception {
+      throw ChooseALicenseException(
+        'Failed to parse the license rules for ${licenseFile.name}, received '
+        'response: $content',
+      );
+    }
+
+    allLicenseRules[licenseRules.spdxId] = licenseRules;
+  }
+
+  return allLicenseRules;
 }

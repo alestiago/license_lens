@@ -88,4 +88,7 @@ class GenerateSpdxLicenseException implements Exception {
 
   /// Describes the error message.
   final String message;
+
+  @override
+  String toString() => message;
 }

@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/LicenseRules",
+    "definitions": {
+        "LicenseRules": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "spdx-id": {
+                    "type": "string"
+                },
+                "featured": {
+                    "type": "boolean"
+                },
+                "hidden": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "how": {
+                    "type": "string"
+                },
+                "using": {
+                    "$ref": "#/definitions/Using"
+                },
+                "permissions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "conditions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "limitations": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "spdx-id"
+            ],
+            "title": "LicenseRules"
+        },
+        "Using": {
+            "type": "object",
+            "additionalProperties": false,
+            "title": "Using"
+        }
+    }
+}
