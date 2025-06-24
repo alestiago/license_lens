@@ -20,6 +20,9 @@ import 'package:mason/mason.dart';
 import 'package:meta/meta.dart';
 import 'package:spdxlib_hooks/spdxlib.dart';
 
+@visibleForTesting
+DownloadLicenses? downloadLicensesOverride;
+
 /// {@macro pre_gen}
 Future<void> run(HookContext context) async => preGen(context);
 
@@ -32,10 +35,7 @@ Future<void> run(HookContext context) async => preGen(context);
 /// will be downloaded and parsed from the same source as the PANA tool.
 /// {@endtemplate}
 @visibleForTesting
-Future<void> preGen(
-  HookContext context, {
-  @visibleForTesting DownloadLicenses? downloadLicensesOverride,
-}) async {
+Future<void> preGen(HookContext context) async {
   try {
     final licensesVar = context.vars['licenses'];
     final shouldFetchLicenses =
@@ -44,10 +44,7 @@ Future<void> preGen(
 
     late List<String> licenses;
     if (shouldFetchLicenses) {
-      licenses = await _dowloadLicenses(
-        logger: context.logger,
-        downloadLicensesOverride: downloadLicensesOverride,
-      );
+      licenses = await _dowloadLicenses(logger: context.logger);
     } else {
       if (licensesVar is! List<String>) {
         context.logger.err(
@@ -87,7 +84,6 @@ extension on String {
 
 Future<Licenses> _dowloadLicenses({
   required Logger logger,
-  @visibleForTesting DownloadLicenses? downloadLicensesOverride,
 }) async {
   final progress = logger.progress(
     'Starting to download the SPDX license list, this might take some time',
