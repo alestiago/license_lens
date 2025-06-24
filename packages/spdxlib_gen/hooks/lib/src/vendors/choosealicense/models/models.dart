@@ -9,5 +9,4 @@
 // Full attribution information is provided in the NOTICE file:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/NOTICE.md
 
-export 'choosealicense/choosealicense.dart';
-export 'license_list_data/license_list_data.dart';
+export 'rules.g.dart';

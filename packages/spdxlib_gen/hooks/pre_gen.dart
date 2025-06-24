@@ -16,6 +16,7 @@ library;
 
 import 'dart:io';
 
+import 'package:http/http.dart' as http;
 import 'package:mason/mason.dart';
 import 'package:meta/meta.dart';
 import 'package:spdxlib_hooks/spdxlib.dart';
@@ -23,8 +24,24 @@ import 'package:spdxlib_hooks/spdxlib.dart';
 @visibleForTesting
 DownloadLicenses? downloadLicensesOverride;
 
+@visibleForTesting
+DownloadRules? downloadRulesOverride;
+
+http.Client _client = http.Client();
+
+typedef MasonContextVariables = Map<String, dynamic>;
+
 /// {@macro pre_gen}
 Future<void> run(HookContext context) async => preGen(context);
+
+void _close() {
+  _client.close();
+}
+
+void _exit(int code) {
+  _close();
+  exit(code);
+}
 
 /// {@template pre_gen}
 /// Populates the context `licenses` variable with the SPDX license list, and
@@ -37,33 +54,13 @@ Future<void> run(HookContext context) async => preGen(context);
 @visibleForTesting
 Future<void> preGen(HookContext context) async {
   try {
-    final licensesVar = context.vars['licenses'];
-    final shouldFetchLicenses =
-        (licensesVar == null || (licensesVar is List && licensesVar.isEmpty)) &&
-        licensesVar is! List<String>;
+    final licenses = await _licensesVariables(context);
+    final rules = await _rulesVariables(context);
 
-    late List<String> licenses;
-    if (shouldFetchLicenses) {
-      licenses = await _dowloadLicenses(logger: context.logger);
-    } else {
-      if (licensesVar is! List<String>) {
-        context.logger.err(
-          'The "licenses" variable is not a List<String> or null',
-        );
-        return;
-      }
-      licenses = licensesVar;
-    }
-
-    final newLicensesVar = <Map<String, dynamic>>[
-      for (final license in licenses)
-        {
-          'license': license,
-          'identifier': license.toDartIdentifier(),
-        },
-    ];
-
-    context.vars = {'licenses': newLicensesVar, 'total': newLicensesVar.length};
+    context.vars = {
+      ...licenses,
+      ...rules,
+    };
   } on Exception catch (e) {
     context.logger.err(
       '''[spdxlib] An unknown error occurred, received error: $e''',
@@ -71,15 +68,37 @@ Future<void> preGen(HookContext context) async {
   }
 }
 
-extension on String {
-  String toDartIdentifier() {
-    return '\$$this'
-        .replaceAll('-', '_')
-        .replaceAll('.', '_')
-        .replaceAll(' ', '')
-        .replaceAll('+', 'plus')
-        .trim();
+Future<MasonContextVariables> _licensesVariables(HookContext context) async {
+  final licensesVar = context.vars['licenses'];
+  final shouldFetchLicenses =
+      (licensesVar == null || (licensesVar is List && licensesVar.isEmpty)) &&
+      licensesVar is! List<String>;
+
+  late List<String> licenses;
+  if (shouldFetchLicenses) {
+    licenses = await _dowloadLicenses(logger: context.logger);
+  } else {
+    if (licensesVar is! List) {
+      context.logger.err(
+        'The "licenses" variable is not a List or null',
+      );
+      exit(ExitCode.data.code);
+    }
+    licenses = licensesVar.map((e) => e.toString()).toList();
   }
+
+  final newLicensesVar = <Map<String, dynamic>>[
+    for (final license in licenses)
+      {
+        'license': license,
+        'identifier': license.toDartIdentifier(),
+      },
+  ];
+
+  return {
+    'licenses': newLicensesVar,
+    'total': newLicensesVar.length,
+  };
 }
 
 Future<Licenses> _dowloadLicenses({
@@ -91,15 +110,60 @@ Future<Licenses> _dowloadLicenses({
 
   late Licenses licenses;
   try {
-    licenses = await (downloadLicensesOverride?.call() ?? downloadLicenses());
+    licenses =
+        await (downloadLicensesOverride?.call() ??
+            downloadLicenses(client: _client));
   } on GenerateSpdxLicenseException catch (e) {
     progress.cancel();
     logger.err(e.message);
-    exit(ExitCode.unavailable.code);
+    _exit(ExitCode.unavailable.code);
   } on Object {
     rethrow;
   }
 
   progress.complete('Found ${licenses.length} SPDX licenses');
   return licenses;
+}
+
+Future<MasonContextVariables> _rulesVariables(HookContext context) async {
+  final rules = await _downloadRules(logger: context.logger);
+  return {'rules': rules.toJson()};
+}
+
+Future<Rules> _downloadRules({
+  required Logger logger,
+}) async {
+  final progress = logger.progress(
+    'Starting to download the ChooseALicense rules, this might take some time',
+  );
+
+  late Rules rules;
+  try {
+    rules =
+        await (downloadRulesOverride?.call() ?? downloadRules(client: _client));
+  } on ChooseALicenseException catch (e) {
+    progress.cancel();
+    logger.err(e.toString());
+    _exit(ExitCode.unavailable.code);
+  } on Object {
+    rethrow;
+  }
+
+  progress.complete(
+    'Downloaded ${rules.permissions.length} permissions, '
+    '${rules.conditions.length} conditions, and '
+    '${rules.limitations.length} limitations',
+  );
+  return rules;
+}
+
+extension on String {
+  String toDartIdentifier() {
+    return '\$$this'
+        .replaceAll('-', '_')
+        .replaceAll('.', '_')
+        .replaceAll(' ', '')
+        .replaceAll('+', 'plus')
+        .trim();
+  }
 }

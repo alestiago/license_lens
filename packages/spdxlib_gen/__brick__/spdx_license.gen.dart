@@ -24,6 +24,8 @@
 /// This file was automatically generated with the SPDX License brick.
 library spdx_license;
 
+import 'license_rules.gen.dart';
+
 /// {@template spdx_license}
 /// A list of all {{total}} SPDX licenses.
 ///
@@ -33,7 +35,7 @@ enum SpdxLicense {
   {{#licenses}}{{{identifier}}}._('{{{license}}}'),
   {{/licenses}}$unknown._('unknown');
 
-  const SpdxLicense._(this.identifier);
+  const SpdxLicense._(this.identifier, {this.rules});
 
   /// Parses a [String] into a [SpdxLicense].
   ///
@@ -62,4 +64,9 @@ enum SpdxLicense {
 
   /// The identifier of the license, as seen in the [SPDX License List](https://spdx.org/licenses/).
   final String identifier;
+
+  /// {@macro LicenseRules}
+  ///
+  /// Null when no rules could be determined for the license.
+  final LicenseRules? rules;
 }

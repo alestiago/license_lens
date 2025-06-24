@@ -44,10 +44,10 @@ typedef DownloadLicenses = Future<Licenses> Function();
 ///
 /// Throws a [GenerateSpdxLicenseException] if the download or decoding fails.
 Future<Licenses> downloadLicenses({
-  @visibleForTesting http.Client? client,
+  required http.Client client,
   @visibleForTesting ZipDecoder? zipDecoder,
 }) async {
-  final httpClient = client ?? http.Client();
+  final httpClient = client;
   final response = await httpClient.get(Uri.parse(spdxLicenseListUrl));
 
   if (response.statusCode != 200) {

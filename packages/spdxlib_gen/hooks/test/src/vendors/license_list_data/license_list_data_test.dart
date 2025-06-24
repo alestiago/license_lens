@@ -51,7 +51,10 @@ void main() {
       'downloads licenses successfully',
       tags: ['pull-request-only'],
       () async {
-        final result = await downloadLicenses();
+        final client = http.Client();
+        addTearDown(client.close);
+
+        final result = await downloadLicenses(client: client);
         expect(result.length, isNotNull);
       },
     );
