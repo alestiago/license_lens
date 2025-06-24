@@ -9,23 +9,12 @@
 // Full attribution information is provided in the NOTICE file:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/NOTICE.md
 
-import 'dart:typed_data';
-
-import 'package:archive/archive.dart';
-import 'package:http/http.dart' as http;
 import 'package:mason/mason.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:spdxlib_hooks/spdxlib.dart';
 import 'package:test/test.dart';
 
 import '../pre_gen.dart' as pre_gen;
-
-class _MockClient extends Mock implements http.Client {}
-
-class _MockResponse extends Mock implements http.Response {}
-
-class _MockZipDecoder extends Mock implements ZipDecoder {}
-
-class _MockArchive extends Mock implements Archive {}
 
 class _MockLogger extends Mock implements Logger {}
 
@@ -46,12 +35,9 @@ class _TestHookContext implements HookContext {
 void main() {
   group('pre_gen', () {
     late HookContext context;
-    late http.Client client;
-    late http.Response response;
     late Logger logger;
     late Progress progress;
-    late ZipDecoder zipDecoder;
-    late Archive archive;
+    late DownloadLicenses downloadLicensesOverride;
 
     setUp(() {
       progress = _MockProgress();
@@ -62,16 +48,9 @@ void main() {
 
       context = _TestHookContext(logger: logger);
 
-      response = _MockResponse();
-      when(() => response.statusCode).thenReturn(200);
-
-      client = _MockClient();
-      registerFallbackValue(Uri());
-      when(() => client.get(any())).thenAnswer((_) async => response);
-
-      zipDecoder = _MockZipDecoder();
-
-      archive = _MockArchive();
+      downloadLicensesOverride = () async {
+        return [];
+      };
     });
 
     group('run', () {
@@ -94,7 +73,10 @@ void main() {
       test('when licenses are provided', () async {
         context.vars['licenses'] = ['MIT', 'BSD'];
 
-        await pre_gen.preGen(context);
+        await pre_gen.preGen(
+          context,
+          downloadLicensesOverride: downloadLicensesOverride,
+        );
 
         expect(context.vars['total'], 2);
         expect(context.vars['licenses'], [
@@ -107,7 +89,10 @@ void main() {
         const name = '     0+.M I-T     ';
         context.vars['licenses'] = [name];
 
-        await pre_gen.preGen(context);
+        await pre_gen.preGen(
+          context,
+          downloadLicensesOverride: downloadLicensesOverride,
+        );
 
         expect(context.vars['total'], 1);
         expect(context.vars['licenses'], [
@@ -118,94 +103,93 @@ void main() {
 
     group('progress', () {
       test('starts with valid message', () async {
-        when(() => response.statusCode).thenReturn(404);
-
-        await pre_gen.preGen(context, client: client);
+        await pre_gen.preGen(
+          context,
+          downloadLicensesOverride: downloadLicensesOverride,
+        );
 
         const message =
             '''Starting to download the SPDX license list, this might take some time''';
         verify(() => logger.progress(message)).called(1);
       });
 
-      test('completes when finished decoding', () async {
-        final bodyBytes = Uint8List.fromList([]);
-        when(() => response.bodyBytes).thenReturn(bodyBytes);
-        when(() => zipDecoder.decodeBytes(bodyBytes)).thenReturn(archive);
-        when(() => archive.files).thenReturn([]);
-
+      test('completes when finished downloading', () async {
         await pre_gen.preGen(
           context,
-          client: client,
-          zipDecoder: zipDecoder,
+          downloadLicensesOverride: downloadLicensesOverride,
         );
 
         verify(() => progress.complete('Found 0 SPDX licenses')).called(1);
       });
 
       group('is cancelled', () {
-        test('when fails to download list', () async {
-          when(() => response.statusCode).thenReturn(404);
+        test(
+          'when fails to download list throwing $GenerateSpdxLicenseException',
+          () async {
+            Future<Licenses> downloadLicensesOverride() async =>
+                throw const GenerateSpdxLicenseException(
+                  'Failed to download the SPDX license list',
+                );
 
-          await pre_gen.preGen(context, client: client);
+            await pre_gen.preGen(
+              context,
+              downloadLicensesOverride: downloadLicensesOverride,
+            );
 
-          verify(() => progress.cancel()).called(1);
-        });
+            verify(() => progress.cancel()).called(1);
+          },
+        );
 
-        test('when fails to decode list', () async {
-          final bodyBytes = Uint8List.fromList([]);
-          when(() => response.bodyBytes).thenReturn(bodyBytes);
-          when(() => zipDecoder.decodeBytes(bodyBytes)).thenThrow('error');
+        test(
+          'when fails to download list throwing an unknown error',
+          () async {
+            Future<Licenses> downloadLicensesOverride() async =>
+                throw Exception('Unknown error');
 
-          await pre_gen.preGen(
-            context,
-            client: client,
-            zipDecoder: zipDecoder,
-          );
+            await pre_gen.preGen(
+              context,
+              downloadLicensesOverride: downloadLicensesOverride,
+            );
 
-          verify(() => progress.cancel()).called(1);
-        });
+            verify(() => progress.cancel()).called(1);
+          },
+        );
       });
     });
 
     group('logs', () {
-      test('when fails to download list', () async {
-        when(() => response.statusCode).thenReturn(404);
+      test(
+        'when fails to download list throwing $GenerateSpdxLicenseException',
+        () async {
+          const message = '''Failed to download the SPDX license list''';
 
-        await pre_gen.preGen(context, client: client);
+          Future<Licenses> downloadLicensesOverride() async =>
+              throw const GenerateSpdxLicenseException(
+                message,
+              );
+          await pre_gen.preGen(
+            context,
+            downloadLicensesOverride: downloadLicensesOverride,
+          );
 
-        final errorMessage =
-            '''[spdxlib] Failed to download the SPDX license list, received response with status code: ${response.statusCode}''';
+          verify(() => context.logger.err(message)).called(1);
+        },
+      );
 
-        verify(() => context.logger.err(errorMessage)).called(1);
-      });
+      test('when an unknown error is raised', () async {
+        const message = '''Failed to download the SPDX license list''';
 
-      test('when fails to decode list', () async {
-        final bodyBytes = Uint8List.fromList([]);
-        when(() => response.bodyBytes).thenReturn(bodyBytes);
-        const error = 'an error';
-        when(() => zipDecoder.decodeBytes(bodyBytes)).thenThrow(error);
+        Future<Licenses> downloadLicensesOverride() async =>
+            throw Exception(message);
 
         await pre_gen.preGen(
           context,
-          client: client,
-          zipDecoder: zipDecoder,
+          downloadLicensesOverride: downloadLicensesOverride,
         );
-
-        const errorMessage =
-            '''[spdxlib] Failed to decode the SPDX license list, received error: $error''';
-
-        verify(() => context.logger.err(errorMessage)).called(1);
-      });
-
-      test('when an unknown error is raised', () async {
-        const error = 'error';
-        when(() => client.get(any())).thenThrow(error);
-
-        await pre_gen.preGen(context, client: client);
 
         verify(
           () => context.logger.err(
-            '[spdxlib] An unknown error occurred, received error: $error',
+            '[spdxlib] An unknown error occurred, received error: $message',
           ),
         ).called(1);
       });
