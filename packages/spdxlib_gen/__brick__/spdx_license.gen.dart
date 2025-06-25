@@ -32,7 +32,7 @@ import 'license_rules.gen.dart';
 /// These have been automatically generated from the SPDX License brick.
 /// {@endtemplate}
 enum SpdxLicense {
-  {{#licenses}}{{{identifier}}}._('{{{license}}}',{{#hasRules}}
+  {{#licenses}}{{{identifier}}}._('{{{license}}}'{{#hasRules}},
     rules: LicenseRules(
       {{#rules.hasPermissions}}permissions: const { {{#rules.permissions}}LicensePermission.{{#camelCase}}{{.}}{{/camelCase}},{{/rules.permissions}} },{{/rules.hasPermissions}}
       {{#rules.hasConditions}}conditions: const { {{#rules.conditions}}LicenseCondition.{{#camelCase}}{{.}}{{/camelCase}},{{/rules.conditions}} },{{/rules.hasConditions}}
