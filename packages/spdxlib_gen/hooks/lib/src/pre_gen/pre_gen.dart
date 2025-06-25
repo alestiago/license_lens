@@ -14,7 +14,6 @@
 /// For more information, see the `README.md`.
 library;
 
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
@@ -27,6 +26,15 @@ part 'rules.dart';
 
 /// The type for the Mason context variables used in the pre-gen hook.
 typedef MasonContextVariables = Map<String, dynamic>;
+
+/// Signature for overriding [downloadRules].
+typedef DownloadRules = Future<Rules> Function();
+
+/// Signature for overriding [downloadLicenseRules].
+typedef DownloadLicenseRules = Future<AllLicenseRules> Function();
+
+/// Signature for overriding [downloadLicenses].
+typedef DownloadLicenses = Future<Licenses> Function();
 
 /// Defines the context variables used by the pre-gen hook.
 enum ContextVariables {
@@ -46,12 +54,16 @@ enum ContextVariables {
 }
 
 @visibleForTesting
-/// Allows overriding the download licenses function for testing purposes.
+/// Allows overriding [downloadLicenses] function for testing purposes.
 DownloadLicenses? downloadLicensesOverride;
 
 @visibleForTesting
-/// Allows overriding the download rules function for testing purposes.
+/// Allows overriding [downloadRules] function for testing purposes.
 DownloadRules? downloadRulesOverride;
+
+@visibleForTesting
+/// Allows overriding [downloadLicenseRules] function for testing purposes.
+DownloadLicenseRules? downloadLicenseRulesOverride;
 
 http.Client _client = http.Client();
 
@@ -76,8 +88,6 @@ void _exit(int code) {
 /// will be downloaded and parsed from the same source as the PANA tool.
 /// {@endtemplate}
 Future<void> preGen(HookContext context) async {
-  if (context.vars.isNotEmpty) return;
-
   try {
     final licenses = await _licensesVariables(context);
     final rules = await _rulesVariables(context);
@@ -86,9 +96,6 @@ Future<void> preGen(HookContext context) async {
       ...licenses,
       ...rules,
     };
-
-    final file = File('config.json');
-    await file.writeAsString(jsonEncode(context.vars));
   } on Exception catch (e) {
     context.logger.err(
       '''[spdxlib] An unknown error occurred, received error: $e''',

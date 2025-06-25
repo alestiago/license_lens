@@ -88,7 +88,9 @@ Future<AllLicenseRules> _downloadAllLicenseRules({
 
   late AllLicenseRules allLicenseRules;
   try {
-    allLicenseRules = await downloadLicenseRules(client: _client);
+    allLicenseRules =
+        await (downloadLicenseRulesOverride?.call() ??
+            downloadLicenseRules(client: _client));
   } on ChooseALicenseException catch (e) {
     progress.cancel();
     logger.err(e.message);

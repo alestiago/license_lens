@@ -32,9 +32,6 @@ const spdxLicenseListUrl =
 /// This is also the license list path used by the PANA tool.
 const _spdxTargetPath = 'license-list-data-main/json/details';
 
-/// The public [downloadLicenses] function signature.
-typedef DownloadLicenses = Future<Licenses> Function();
-
 /// Downloads the SPDX license list and returns the list of license IDs.
 ///
 /// For example, the list might be:

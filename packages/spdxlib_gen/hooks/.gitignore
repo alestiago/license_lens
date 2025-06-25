@@ -12,3 +12,6 @@ build/hooks/
 
 # Code coverage files
 coverage/
+
+# Mason
+config.json

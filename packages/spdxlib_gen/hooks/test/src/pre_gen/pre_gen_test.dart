@@ -49,10 +49,18 @@ void main() {
       pre_gen.downloadLicensesOverride = () async {
         return [];
       };
+      pre_gen.downloadRulesOverride = () async {
+        return Rules(permissions: [], conditions: [], limitations: []);
+      };
+      pre_gen.downloadLicenseRulesOverride = () async {
+        return {};
+      };
     });
 
     tearDown(() {
       pre_gen.downloadLicensesOverride = null;
+      pre_gen.downloadRulesOverride = null;
+      pre_gen.downloadLicenseRulesOverride = null;
     });
 
     group('sets vars correctly', () {
@@ -62,10 +70,19 @@ void main() {
         await pre_gen.preGen(context);
 
         expect(context.vars['total'], 2);
-        expect(context.vars['licenses'], [
-          {'license': 'MIT', 'identifier': r'$MIT'},
-          {'license': 'BSD', 'identifier': r'$BSD'},
-        ]);
+        expect(
+          context.vars['licenses'],
+          containsAll([
+            allOf(
+              containsPair('license', 'MIT'),
+              containsPair('identifier', r'$MIT'),
+            ),
+            allOf(
+              containsPair('license', 'BSD'),
+              containsPair('identifier', r'$BSD'),
+            ),
+          ]),
+        );
       });
 
       test('when licenses are downloaded', () async {
@@ -76,10 +93,19 @@ void main() {
         await pre_gen.preGen(context);
 
         expect(context.vars['total'], 2);
-        expect(context.vars['licenses'], [
-          {'license': 'MIT', 'identifier': r'$MIT'},
-          {'license': 'BSD', 'identifier': r'$BSD'},
-        ]);
+        expect(
+          context.vars['licenses'],
+          containsAll([
+            allOf(
+              containsPair('license', 'MIT'),
+              containsPair('identifier', r'$MIT'),
+            ),
+            allOf(
+              containsPair('license', 'BSD'),
+              containsPair('identifier', r'$BSD'),
+            ),
+          ]),
+        );
       });
 
       test('with valid Dart identifiers', () async {
@@ -89,9 +115,15 @@ void main() {
         await pre_gen.preGen(context);
 
         expect(context.vars['total'], 1);
-        expect(context.vars['licenses'], [
-          {'license': name, 'identifier': r'$0plus_MI_T'},
-        ]);
+        expect(
+          context.vars['licenses'],
+          contains(
+            allOf(
+              containsPair('license', name),
+              containsPair('identifier', r'$0plus_MI_T'),
+            ),
+          ),
+        );
       });
     });
 

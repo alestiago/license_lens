@@ -24,12 +24,6 @@ export 'models/models.dart';
 const rulesUrl =
     'https://raw.githubusercontent.com/github/choosealicense.com/refs/heads/gh-pages/_data/rules.yml';
 
-/// The public [DownloadRules] function signature.
-typedef DownloadRules =
-    Future<Rules> Function({
-      @visibleForTesting http.Client? client,
-    });
-
 /// {@template ChooseALicenseException}
 /// An exception thrown when interacting with the ChooseALicense source.
 /// {@endtemplate}

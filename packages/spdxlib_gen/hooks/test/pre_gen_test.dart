@@ -2,8 +2,10 @@ import 'package:mason/mason.dart';
 import 'package:spdxlib_hooks/src/pre_gen/pre_gen.dart' as pre_gen;
 import 'package:test/test.dart';
 
-class _TestHookContext implements HookContext {
-  _TestHookContext({required Logger logger}) : _logger = logger;
+import 'test_tag.dart';
+
+class _FakeHookContext implements HookContext {
+  _FakeHookContext({required Logger logger}) : _logger = logger;
 
   final Logger _logger;
 
@@ -18,11 +20,10 @@ void main() {
   group('run', () {
     test(
       'sets vars correctly',
+      tags: [TestTag.pullRequestOnly],
       () async {
         final logger = Logger();
-        final context = _TestHookContext(logger: logger);
-
-        pre_gen.downloadLicensesOverride = () async => ['MIT', 'BSD'];
+        final context = _FakeHookContext(logger: logger);
 
         await pre_gen.run(context);
 

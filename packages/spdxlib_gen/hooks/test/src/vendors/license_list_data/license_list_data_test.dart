@@ -15,6 +15,8 @@ import 'package:mocktail/mocktail.dart';
 import 'package:spdxlib_hooks/src/vendors/vendors.dart';
 import 'package:test/test.dart';
 
+import '../../../test_tag.dart';
+
 class _MockZipDecoder extends Mock implements ZipDecoder {}
 
 class _MockHttpClient extends Mock implements http.Client {}
@@ -49,7 +51,7 @@ void main() {
 
     test(
       'downloads licenses successfully',
-      tags: ['pull-request-only'],
+      tags: [TestTag.pullRequestOnly],
       () async {
         final client = http.Client();
         addTearDown(client.close);
