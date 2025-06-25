@@ -8,7 +8,7 @@ Future<MasonContextVariables> _licensesVariables(HookContext context) async {
 
   late List<String> licenses;
   if (shouldFetchLicenses) {
-    licenses = await _dowloadLicenses(logger: context.logger);
+    licenses = await _downloadLicenses(logger: context.logger);
   } else {
     if (licensesVar is! List) {
       context.logger.err(
@@ -44,7 +44,7 @@ extension on String {
   }
 }
 
-Future<Licenses> _dowloadLicenses({
+Future<Licenses> _downloadLicenses({
   required Logger logger,
 }) async {
   final progress = logger.progress(
