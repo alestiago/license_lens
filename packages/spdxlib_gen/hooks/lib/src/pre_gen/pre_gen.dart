@@ -14,6 +14,7 @@
 /// For more information, see the `README.md`.
 library;
 
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
@@ -75,6 +76,8 @@ void _exit(int code) {
 /// will be downloaded and parsed from the same source as the PANA tool.
 /// {@endtemplate}
 Future<void> preGen(HookContext context) async {
+  if (context.vars.isNotEmpty) return;
+
   try {
     final licenses = await _licensesVariables(context);
     final rules = await _rulesVariables(context);
@@ -83,6 +86,9 @@ Future<void> preGen(HookContext context) async {
       ...licenses,
       ...rules,
     };
+
+    final file = File('config.json');
+    await file.writeAsString(jsonEncode(context.vars));
   } on Exception catch (e) {
     context.logger.err(
       '''[spdxlib] An unknown error occurred, received error: $e''',

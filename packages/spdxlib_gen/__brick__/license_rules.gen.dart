@@ -24,8 +24,6 @@
 /// This file was automatically generated with the SPDX License brick.
 library license_rules;
 
-import 'dart:collection';
-
 /// {@template LicenseRules}
 /// The possible permissions, conditions, and limitations for a license.
 ///
@@ -35,9 +33,9 @@ import 'dart:collection';
 class LicenseRules {
   // {@macro LicenseRules}
   const LicenseRules({
-    required this.permissions,
-    required this.conditions,
-    required this.limitations,
+    this.permissions,
+    this.conditions,
+    this.limitations,
   });
 
   /// The permissions that the license grants.
@@ -45,21 +43,21 @@ class LicenseRules {
   /// If empty, the license does not grant any permissions.
   ///
   /// Null when the permissions could not be determined.
-  final UnmodifiableSetView<LicensePermission>? permissions;
+  final Set<LicensePermission>? permissions;
 
   /// The conditions that the license imposes.
   ///
   /// If empty, the license does not impose any conditions.
   ///
   /// Null when the conditions could not be determined.
-  final UnmodifiableSetView<LicenseCondition>? conditions;
+  final Set<LicenseCondition>? conditions;
 
   /// The limitations that the license imposes.
   ///
   /// If empty, the license does not impose any limitations.
   ///
   /// Null when the limitations could not be determined.
-  final UnmodifiableSetView<LicenseLimitation>? limitations;
+  final Set<LicenseLimitation>? limitations;
 }
 
 /// The possible permissions for a license.

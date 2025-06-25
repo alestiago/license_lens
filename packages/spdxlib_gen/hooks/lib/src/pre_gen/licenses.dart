@@ -7,8 +7,10 @@ Future<MasonContextVariables> _licensesVariables(HookContext context) async {
       licensesVar is! List<String>;
 
   late List<String> licenses;
+  late AllLicenseRules allLicenseRules;
   if (shouldFetchLicenses) {
     licenses = await _downloadLicenses(logger: context.logger);
+    allLicenseRules = await _downloadAllLicenseRules(logger: context.logger);
   } else {
     if (licensesVar is! List) {
       context.logger.err(
@@ -17,6 +19,7 @@ Future<MasonContextVariables> _licensesVariables(HookContext context) async {
       exit(ExitCode.data.code);
     }
     licenses = licensesVar.map((e) => e.toString()).toList();
+    allLicenseRules = {};
   }
 
   final newLicensesVar = <Map<String, dynamic>>[
@@ -24,6 +27,14 @@ Future<MasonContextVariables> _licensesVariables(HookContext context) async {
       {
         'license': license,
         'identifier': license.toDartIdentifier(),
+        'hasRules': allLicenseRules.containsKey(license),
+        if (allLicenseRules.containsKey(license))
+          'rules': {
+            'hasPermissions': allLicenseRules[license]!.permissions != null,
+            'hasConditions': allLicenseRules[license]!.conditions != null,
+            'hasLimitations': allLicenseRules[license]!.limitations != null,
+            ...(allLicenseRules[license]!.toJson()),
+          },
       },
   ];
 
@@ -66,4 +77,26 @@ Future<Licenses> _downloadLicenses({
 
   progress.complete('Found ${licenses.length} SPDX licenses');
   return licenses;
+}
+
+Future<AllLicenseRules> _downloadAllLicenseRules({
+  required Logger logger,
+}) async {
+  final progress = logger.progress(
+    'Starting to download the ChooseALicense rules, this might take some time',
+  );
+
+  late AllLicenseRules allLicenseRules;
+  try {
+    allLicenseRules = await downloadLicenseRules(client: _client);
+  } on ChooseALicenseException catch (e) {
+    progress.cancel();
+    logger.err(e.message);
+    _exit(ExitCode.unavailable.code);
+  } on Object {
+    rethrow;
+  }
+
+  progress.complete('Found ${allLicenseRules.length} ChooseALicense rules');
+  return allLicenseRules;
 }
