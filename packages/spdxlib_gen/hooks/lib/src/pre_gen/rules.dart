@@ -1,12 +1,16 @@
 part of 'pre_gen.dart';
 
-Future<MasonContextVariables> _rulesVariables(HookContext context) async {
+Future<MasonContextVariables> _rulesVariables(
+  HookContext context, {
+  @visibleForTesting TestOverrides? testOverrides,
+}) async {
   final rules = await _downloadRules(logger: context.logger);
   return {ContextVariables.rules.name: rules.toJson()};
 }
 
 Future<Rules> _downloadRules({
   required Logger logger,
+  @visibleForTesting TestOverrides? testOverrides,
 }) async {
   final progress = logger.progress(
     'Starting to download the ChooseALicense rules, this might take some time',
@@ -15,7 +19,8 @@ Future<Rules> _downloadRules({
   late Rules rules;
   try {
     rules =
-        await (downloadRulesOverride?.call() ?? downloadRules(client: _client));
+        await (testOverrides?.downloadRulesOverride?.call() ??
+            downloadRules(client: _client));
   } on ChooseALicenseException catch (e) {
     progress.cancel();
     logger.err(e.toString());

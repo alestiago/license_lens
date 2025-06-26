@@ -54,16 +54,54 @@ enum ContextVariables {
 }
 
 @visibleForTesting
-/// Allows overriding [downloadLicenses] function for testing purposes.
-DownloadLicenses? downloadLicensesOverride;
+/// {@template TestOverrides}
+/// A class that allows overriding the download functions for testing purposes.
+/// {@endtemplate}
+class TestOverrides {
+  @visibleForTesting
+  /// {@macro TestOverrides}
+  const TestOverrides(
+    this.downloadLicensesOverride,
+    this.downloadRulesOverride,
+    this.downloadLicenseRulesOverride,
+  );
 
-@visibleForTesting
-/// Allows overriding [downloadRules] function for testing purposes.
-DownloadRules? downloadRulesOverride;
+  /// Creates an instance of [TestOverrides] with empty overrides.
+  @visibleForTesting
+  factory TestOverrides.empty() {
+    return TestOverrides(
+      () async => [],
+      () async => Rules(permissions: [], conditions: [], limitations: []),
+      () async => {},
+    );
+  }
 
-@visibleForTesting
-/// Allows overriding [downloadLicenseRules] function for testing purposes.
-DownloadLicenseRules? downloadLicenseRulesOverride;
+  @visibleForTesting
+  /// Allows overriding [downloadLicenses] function for testing purposes.
+  final DownloadLicenses? downloadLicensesOverride;
+
+  @visibleForTesting
+  /// Allows overriding [downloadRules] function for testing purposes.
+  final DownloadRules? downloadRulesOverride;
+
+  @visibleForTesting
+  /// Allows overriding [downloadLicenseRules] function for testing purposes.
+  final DownloadLicenseRules? downloadLicenseRulesOverride;
+
+  /// Creates a copy of this [TestOverrides] instance with the specified
+  /// overrides.
+  TestOverrides copyWith({
+    DownloadLicenses? downloadLicensesOverride,
+    DownloadRules? downloadRulesOverride,
+    DownloadLicenseRules? downloadLicenseRulesOverride,
+  }) {
+    return TestOverrides(
+      downloadLicensesOverride ?? this.downloadLicensesOverride,
+      downloadRulesOverride ?? this.downloadRulesOverride,
+      downloadLicenseRulesOverride ?? this.downloadLicenseRulesOverride,
+    );
+  }
+}
 
 http.Client _client = http.Client();
 
@@ -87,10 +125,19 @@ void _exit(int code) {
 /// will be populated with the user's list. Otherwise, the SPDX license list
 /// will be downloaded and parsed from the same source as the PANA tool.
 /// {@endtemplate}
-Future<void> preGen(HookContext context) async {
+Future<void> preGen(
+  HookContext context, {
+  @visibleForTesting TestOverrides? testOverrides,
+}) async {
   try {
-    final licenses = await _licensesVariables(context);
-    final rules = await _rulesVariables(context);
+    final licenses = await _licensesVariables(
+      context,
+      testOverrides: testOverrides,
+    );
+    final rules = await _rulesVariables(
+      context,
+      testOverrides: testOverrides,
+    );
 
     context.vars = {
       ...licenses,

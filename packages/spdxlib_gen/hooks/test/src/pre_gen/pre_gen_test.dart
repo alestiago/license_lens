@@ -32,10 +32,11 @@ class _TestHookContext implements HookContext {
 }
 
 void main() {
-  group('pre_gen', skip: true, () {
+  group('pre_gen', () {
     late HookContext context;
     late Logger logger;
     late Progress progress;
+    late TestOverrides testOverrides;
 
     setUp(() {
       progress = _MockProgress();
@@ -46,28 +47,14 @@ void main() {
 
       context = _TestHookContext(logger: logger);
 
-      pre_gen.downloadLicensesOverride = () async {
-        return [];
-      };
-      pre_gen.downloadRulesOverride = () async {
-        return Rules(permissions: [], conditions: [], limitations: []);
-      };
-      pre_gen.downloadLicenseRulesOverride = () async {
-        return {};
-      };
-    });
-
-    tearDown(() {
-      pre_gen.downloadLicensesOverride = null;
-      pre_gen.downloadRulesOverride = null;
-      pre_gen.downloadLicenseRulesOverride = null;
+      testOverrides = TestOverrides.empty();
     });
 
     group('sets vars correctly', () {
       test('when licenses are provided', () async {
         context.vars['licenses'] = ['MIT', 'BSD'];
 
-        await pre_gen.preGen(context);
+        await pre_gen.preGen(context, testOverrides: testOverrides);
 
         expect(context.vars['total'], 2);
         expect(
@@ -88,9 +75,11 @@ void main() {
       test('when licenses are downloaded', () async {
         final licenses = ['MIT', 'BSD'];
 
-        pre_gen.downloadLicensesOverride = () async => licenses;
+        final testOverrides = TestOverrides.empty().copyWith(
+          downloadLicensesOverride: () async => licenses,
+        );
 
-        await pre_gen.preGen(context);
+        await pre_gen.preGen(context, testOverrides: testOverrides);
 
         expect(context.vars['total'], 2);
         expect(
@@ -112,7 +101,7 @@ void main() {
         const name = '     0+.M I-T     ';
         context.vars['licenses'] = [name];
 
-        await pre_gen.preGen(context);
+        await pre_gen.preGen(context, testOverrides: testOverrides);
 
         expect(context.vars['total'], 1);
         expect(
@@ -129,7 +118,7 @@ void main() {
 
     group('progress', () {
       test('starts with valid message', () async {
-        await pre_gen.preGen(context);
+        await pre_gen.preGen(context, testOverrides: testOverrides);
 
         const message =
             '''Starting to download the SPDX license list, this might take some time''';
@@ -137,7 +126,7 @@ void main() {
       });
 
       test('completes when finished downloading', () async {
-        await pre_gen.preGen(context);
+        await pre_gen.preGen(context, testOverrides: testOverrides);
 
         verify(() => progress.complete('Found 0 SPDX licenses')).called(1);
       });
@@ -146,12 +135,14 @@ void main() {
         test(
           'when fails to download list throwing $GenerateSpdxLicenseException',
           () async {
-            pre_gen.downloadLicensesOverride = () async =>
-                throw const GenerateSpdxLicenseException(
-                  'Failed to download the SPDX license list',
-                );
+            final testOverrides = TestOverrides.empty().copyWith(
+              downloadLicensesOverride: () async =>
+                  throw const GenerateSpdxLicenseException(
+                    'Failed to download the SPDX license list',
+                  ),
+            );
 
-            await pre_gen.preGen(context);
+            await pre_gen.preGen(context, testOverrides: testOverrides);
 
             verify(() => progress.cancel()).called(1);
           },
@@ -160,10 +151,12 @@ void main() {
         test(
           'when fails to download list throwing an unknown error',
           () async {
-            pre_gen.downloadLicensesOverride = () async =>
-                throw Exception('Unknown error');
+            final testOverrides = TestOverrides.empty().copyWith(
+              downloadLicensesOverride: () async =>
+                  throw Exception('Unknown error'),
+            );
 
-            await pre_gen.preGen(context);
+            await pre_gen.preGen(context, testOverrides: testOverrides);
 
             verify(() => progress.cancel()).called(1);
           },
@@ -176,10 +169,12 @@ void main() {
         'when fails to download list throwing $GenerateSpdxLicenseException',
         () async {
           const message = '''Failed to download the SPDX license list''';
-          pre_gen.downloadLicensesOverride = () async =>
-              throw const GenerateSpdxLicenseException(message);
+          final testOverrides = TestOverrides.empty().copyWith(
+            downloadLicensesOverride: () async =>
+                throw const GenerateSpdxLicenseException(message),
+          );
 
-          await pre_gen.preGen(context);
+          await pre_gen.preGen(context, testOverrides: testOverrides);
 
           verify(() => context.logger.err(message)).called(1);
         },
@@ -187,9 +182,11 @@ void main() {
 
       test('when an unknown error is raised', () async {
         const message = '''Failed to download the SPDX license list''';
-        pre_gen.downloadLicensesOverride = () async => throw Exception(message);
+        final testOverrides = TestOverrides.empty().copyWith(
+          downloadLicensesOverride: () async => throw Exception(message),
+        );
 
-        await pre_gen.preGen(context);
+        await pre_gen.preGen(context, testOverrides: testOverrides);
 
         verify(
           () => context.logger.err(

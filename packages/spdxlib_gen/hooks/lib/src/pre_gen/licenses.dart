@@ -1,6 +1,9 @@
 part of 'pre_gen.dart';
 
-Future<MasonContextVariables> _licensesVariables(HookContext context) async {
+Future<MasonContextVariables> _licensesVariables(
+  HookContext context, {
+  @visibleForTesting TestOverrides? testOverrides,
+}) async {
   final licensesVar = context.vars['licenses'];
   final shouldFetchLicenses =
       (licensesVar == null || (licensesVar is List && licensesVar.isEmpty)) &&
@@ -9,8 +12,14 @@ Future<MasonContextVariables> _licensesVariables(HookContext context) async {
   late List<String> licenses;
   late AllLicenseRules allLicenseRules;
   if (shouldFetchLicenses) {
-    licenses = await _downloadLicenses(logger: context.logger);
-    allLicenseRules = await _downloadAllLicenseRules(logger: context.logger);
+    licenses = await _downloadLicenses(
+      logger: context.logger,
+      testOverrides: testOverrides,
+    );
+    allLicenseRules = await _downloadAllLicenseRules(
+      logger: context.logger,
+      testOverrides: testOverrides,
+    );
   } else {
     if (licensesVar is! List) {
       context.logger.err(
@@ -57,6 +66,8 @@ extension on String {
 
 Future<Licenses> _downloadLicenses({
   required Logger logger,
+
+  @visibleForTesting TestOverrides? testOverrides,
 }) async {
   final progress = logger.progress(
     'Starting to download the SPDX license list, this might take some time',
@@ -65,7 +76,7 @@ Future<Licenses> _downloadLicenses({
   late Licenses licenses;
   try {
     licenses =
-        await (downloadLicensesOverride?.call() ??
+        await (testOverrides?.downloadLicensesOverride?.call() ??
             downloadLicenses(client: _client));
   } on GenerateSpdxLicenseException catch (e) {
     progress.cancel();
@@ -81,6 +92,7 @@ Future<Licenses> _downloadLicenses({
 
 Future<AllLicenseRules> _downloadAllLicenseRules({
   required Logger logger,
+  @visibleForTesting TestOverrides? testOverrides,
 }) async {
   final progress = logger.progress(
     'Starting to download the ChooseALicense rules, this might take some time',
@@ -89,7 +101,7 @@ Future<AllLicenseRules> _downloadAllLicenseRules({
   late AllLicenseRules allLicenseRules;
   try {
     allLicenseRules =
-        await (downloadLicenseRulesOverride?.call() ??
+        await (testOverrides?.downloadLicenseRulesOverride?.call() ??
             downloadLicenseRules(client: _client));
   } on ChooseALicenseException catch (e) {
     progress.cancel();
