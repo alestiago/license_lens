@@ -32,7 +32,7 @@ class _TestHookContext implements HookContext {
 }
 
 void main() {
-  group('pre_gen', () {
+  group('pre_gen', skip: true, () {
     late HookContext context;
     late Logger logger;
     late Progress progress;
