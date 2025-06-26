@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 //
 // If you would like to modify this file consider contributing to the
-// SPDX License brick.
+// spdxlib brick.
 //
 // Further contribution information can be found at:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/CONTRIBUTING.md
@@ -21,14 +21,14 @@
 
 /// List of all license rules.
 ///
-/// This file was automatically generated with the SPDX License brick.
+/// This file was automatically generated with the spdxlib brick.
 library license_rules;
 
 /// {@template LicenseRules}
 /// The possible permissions, conditions, and limitations for a license.
 ///
 /// The classification of licenses permissions, conditions, and limitations
-/// is based on those made by [ChooseALicense](https://choosealicense.com/).
+/// is based on those made by [choosealicense.com](https://choosealicense.com/).
 /// {@endtemplate}
 class LicenseRules {
   // {@macro LicenseRules}
@@ -62,11 +62,11 @@ class LicenseRules {
 
 /// The possible permissions for a license.
 ///
-/// These have been automatically generated from the ChooseALicense rules.
+/// These have been automatically generated from choosealicense.com's rules.
 ///
 /// See also:
 ///
-/// * [ChooseALicense rules](https://github.com/github/choosealicense.com/blob/gh-pages/_data/rules.yml)
+/// * [choosealicense.com's rules](https://github.com/github/choosealicense.com/blob/gh-pages/_data/rules.yml)
 enum LicensePermission {
   /// The licensed material and derivatives may be used for commercial purposes.
   commercialUse._('Commercial use'),
@@ -91,11 +91,11 @@ enum LicensePermission {
 
 /// The possible conditions for a license.
 ///
-/// These have been automatically generated from the ChooseALicense rules.
+/// These have been automatically generated from choosealicense.com's rules.
 ///
 /// See also:
 ///
-/// * [ChooseALicense rules](https://github.com/github/choosealicense.com/blob/gh-pages/_data/rules.yml)
+/// * [choosealicense.com's rules](https://github.com/github/choosealicense.com/blob/gh-pages/_data/rules.yml)
 enum LicenseCondition {
   /// A copy of the license and copyright notice must be included with the licensed material.
   includeCopyright._('License and copyright notice'),
@@ -129,11 +129,11 @@ enum LicenseCondition {
 
 /// The possible limitations for a license.
 ///
-/// These have been automatically generated from the ChooseALicense rules.
+/// These have been automatically generated from choosealicense.com's rules.
 ///
 /// See also:
 ///
-/// * [ChooseALicense rules](https://github.com/github/choosealicense.com/blob/gh-pages/_data/rules.yml)
+/// * [choosealicense.com's rules](https://github.com/github/choosealicense.com/blob/gh-pages/_data/rules.yml)
 enum LicenseLimitation {
   /// This license explicitly states that it does NOT grant trademark rights, even though licenses without such a statement probably do not grant any implicit trademark rights.
   trademarkUse._('Trademark use'),

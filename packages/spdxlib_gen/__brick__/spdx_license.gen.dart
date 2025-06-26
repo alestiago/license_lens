@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // 
 // If you would like to modify this file consider contributing to the
-// SPDX License brick. 
+// spdxlib brick.
 //
 // Further contribution information can be found at:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/CONTRIBUTING.md
@@ -21,7 +21,7 @@
 
 /// List of all SPDX licenses.
 ///
-/// This file was automatically generated with the SPDX License brick.
+/// This file was automatically generated with the spdxlib brick.
 library spdx_license;
 
 import 'license_rules.gen.dart';
@@ -29,7 +29,7 @@ import 'license_rules.gen.dart';
 /// {@template spdx_license}
 /// A list of all {{total}} SPDX licenses.
 ///
-/// These have been automatically generated from the SPDX License brick.
+/// These have been automatically generated from the spdxlib brick.
 /// {@endtemplate}
 enum SpdxLicense {
   {{#licenses}}{{{identifier}}}._('{{{license}}}'{{#hasRules}},
