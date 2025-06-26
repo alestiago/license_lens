@@ -63,5 +63,34 @@ void main() {
         expect(SpdxLicense.$unknown.identifier, 'unknown');
       });
     });
+
+    group('rules', () {
+      test('has expected data', () {
+        expect(SpdxLicense.$MIT.rules, isNotEmpty);
+
+        final rules = SpdxLicense.$MIT.rules!;
+
+        expect(
+          rules.permissions,
+          equals({
+            LicensePermission.commercialUse,
+            LicensePermission.modifications,
+            LicensePermission.distribution,
+            LicensePermission.privateUse,
+          }),
+        );
+        expect(
+          rules.conditions,
+          equals({LicenseCondition.includeCopyright}),
+        );
+        expect(
+          rules.limitations,
+          equals({
+            LicenseLimitation.warranty,
+            LicenseLimitation.liability,
+          }),
+        );
+      });
+    });
   });
 }
