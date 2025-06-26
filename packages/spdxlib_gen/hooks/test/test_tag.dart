@@ -9,5 +9,5 @@
 /// * [Dart Test Configuration documentation](https://github.com/dart-lang/test/blob/master/pkgs/test/doc/configuration.md)
 abstract class TestTag {
   /// Should only be run during pull request
-  static const pullRequestOnly = 'pull-request-only';
+  static const e2e = 'pull-request-only';
 }

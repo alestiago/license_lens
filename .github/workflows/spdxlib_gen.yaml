@@ -28,5 +28,5 @@ jobs:
       report_on: "test"
       check_ignore: true
       no_example: true
-      run_skipped: true
+      run_skipped: false
       working_directory: "packages/spdxlib_gen/hooks"

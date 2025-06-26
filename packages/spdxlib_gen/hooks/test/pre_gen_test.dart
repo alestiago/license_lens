@@ -20,7 +20,7 @@ void main() {
   group('run', () {
     test(
       'sets vars correctly',
-      tags: [TestTag.pullRequestOnly],
+      tags: [TestTag.e2e],
       () async {
         final logger = Logger();
         final context = _FakeHookContext(logger: logger);

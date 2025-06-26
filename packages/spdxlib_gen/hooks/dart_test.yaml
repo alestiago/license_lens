@@ -1,3 +1,4 @@
 tags:
-  pull-request-only:
-    skip: "Should only be run during pull request"
+  e2e:
+    description: "End to end tests that may consume network resources"
+    skip: "Avoid running e2e tests unless necessary"
