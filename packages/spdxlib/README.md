@@ -90,10 +90,19 @@ void main() {
 
 ```
 
-## Support
+## Community
+
+### Support
 
 If you encounter any issues, please open an [issue](https://github.com/alestiago/license_lens/issues).
 
-## Contributing
+### Contributing
 
 We welcome contributions! Please see the [Contributing Guide](https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/CONTRIBUTING.md) for details on how to get started.
+
+## License
+
+This project is licensed under the MIT License. You can read the full license text in the [LICENSE](./LICENSE) file.
+
+For additional information about third-party licenses and acknowledgments, please refer to the [NOTICE.md](./NOTICE.md) file.
+
