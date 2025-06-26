@@ -9,53 +9,36 @@ Provides an up-to-date full list of all SPDX licenses as seen in the [SPDX Licen
 ## Table of Contents
 
 - [Features](#features)
-- [Why Use This Library?](#why-use-this-library)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Support](#support)
 - [Contributing](#contributing)
 
+## Overview 
+
 ## Features
 
-- Provides a complete list of SPDX licenses.
-- Includes license rules such as permissions, conditions, and limitations from trusthworthy sources.
-- Supports parsing and validation of SPDX license identifiers.
-- Easy-to-use API for accessing license details.
+- **Comprehensive License Coverage**: Provides a complete and up-to-date list of **all** SPDX licenses, synced directly with the official SPDX license list.
+- **Detailed License Rules**: Get insights into permissions, conditions, and limitations for each license, sourced from trusted repositories.
+- **Developer-Friendly API**: Designed specifically for Dart developers, with clear and consistent methods to access and manage SPDX license data.
 
-## Why Use This Library?
+## Quick Start 🚀
 
-- **Up-to-date**: Always synced with the latest SPDX license list.
-- **Comprehensive**: Covers all SPDX licenses with detailed rules.
-- **Dart Native**: Designed specifically for Dart developers.
-- **Open Source**: Licensed under MIT for maximum flexibility.
-
-## Getting started
-
-### Install
-
-To start using `spdxlib`, follow these steps:
-
-1. Run this command within your Dart project:
+### Installing 🧑‍💻
 
 ```dart
+// Add package:spdxlib as a project dependency (run within your project):
 dart pub add spdxlib
 ```
+Now in your Dart code, you can use:
 
-This will add a line like this to your package's pubspec.yaml (and run an implicit dart pub get):
-
-```yaml
-dependencies:
-  spdxlib: ^1.0.0
-```
-
-2. Now in your Dart code, you can use:
 ```dart
 import 'package:spdxlib/spdxlib.dart';
 ```
 
-That's it! You're ready to work with SPDX licenses in your Dart project.
+💡 **Note**: For full installation instructions refer to [pub.dev installs](https://pub.dev/packages/spdxlib/install).
 
-### Usage
+### Usage ✨
 
 ```dart
 import 'package:spdxlib/spdxlib.dart';
@@ -90,7 +73,7 @@ void main() {
 
 ```
 
-## Community
+## Community 🏘️
 
 ### Support
 
@@ -100,9 +83,13 @@ If you encounter any issues, please open an [issue](https://github.com/alestiago
 
 We welcome contributions! Please see the [Contributing Guide](https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/CONTRIBUTING.md) for details on how to get started.
 
-## License
+## License 🪪
 
 This project is licensed under the MIT License. You can read the full license text in the [LICENSE](./LICENSE) file.
 
 For additional information about third-party licenses and acknowledgments, please refer to the [NOTICE.md](./NOTICE.md) file.
+
+## Maintainers 👨‍💻
+
+- [Alejandro Santiago](https://github.com/alestiago)
 
