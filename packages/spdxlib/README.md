@@ -83,7 +83,7 @@ If you encounter any issues, please open an [issue](https://github.com/alestiago
 
 ### Contributing
 
-We welcome contributions! Please see the [Contributing Guide](https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/CONTRIBUTING.md) for details on how to get started.
+We welcome contributions! Please see the [Contributing Guide](./CONTRIBUTING.md) for details on how to get started.
 
 ### License
 
