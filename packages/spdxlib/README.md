@@ -9,10 +9,14 @@ Provides an up-to-date full list of all SPDX licenses as seen in the [SPDX Licen
 ## Table of Contents
 
 - [Features](#features)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Support](#support)
-- [Contributing](#contributing)
+- [Quick start](#quick-start-)
+  - [Installing](#installing-)
+  - [Usage](#usage-)
+- [Project Resources](#project-resources)
+  - [Support](#support)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Maintainers](#maintainers)
 
 ## Overview 
 
@@ -27,16 +31,16 @@ Provides an up-to-date full list of all SPDX licenses as seen in the [SPDX Licen
 ### Installing 🧑‍💻
 
 ```dart
-// Add package:spdxlib as a project dependency (run within your project):
 dart pub add spdxlib
 ```
+
 Now in your Dart code, you can use:
 
 ```dart
 import 'package:spdxlib/spdxlib.dart';
 ```
 
-💡 **Note**: For full installation instructions refer to [pub.dev installs](https://pub.dev/packages/spdxlib/install).
+💡 **Note**: For full installation instructions refer to [spdxlib install](https://pub.dev/packages/spdxlib/install).
 
 ### Usage ✨
 
@@ -73,7 +77,7 @@ void main() {
 
 ```
 
-## Community 🏘️
+## Project Resources
 
 ### Support
 
@@ -83,13 +87,13 @@ If you encounter any issues, please open an [issue](https://github.com/alestiago
 
 We welcome contributions! Please see the [Contributing Guide](https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/CONTRIBUTING.md) for details on how to get started.
 
-## License 🪪
+### License
 
 This project is licensed under the MIT License. You can read the full license text in the [LICENSE](./LICENSE) file.
 
 For additional information about third-party licenses and acknowledgments, please refer to the [NOTICE.md](./NOTICE.md) file.
 
-## Maintainers 👨‍💻
+### Maintainers
 
 - [Alejandro Santiago](https://github.com/alestiago)
 
