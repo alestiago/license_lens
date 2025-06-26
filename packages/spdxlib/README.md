@@ -21,7 +21,7 @@ Provides an up-to-date full list of all SPDX licenses as seen in the [SPDX Licen
 ## Features
 
 - 📜 **Comprehensive License Coverage**: Access an up-to-date and auto-sycned list of official SPDX licenses.
-- 🔍 **Detailed License Rules**: View permissions, conditions, and limitations for each license, sourced from trusted repositories.
+- 🔍 **Detailed License Rules**: View permissions, conditions, and limitations for each license - sourced from trusted repositories.
 - 🛠️ **Developer-Friendly API**: Clear and consistent methods for managing license data.
 
 ## Quick Start 🚀
