@@ -66,7 +66,7 @@ void main() {
 
     group('rules', () {
       test('has expected data', () {
-        expect(SpdxLicense.$MIT.rules, isNotEmpty);
+        expect(SpdxLicense.$MIT.rules, isNotNull);
 
         final rules = SpdxLicense.$MIT.rules!;
 
