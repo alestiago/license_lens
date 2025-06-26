@@ -1,3 +1,14 @@
+// Copyright (c) 2025 Alejandro Santiago
+//
+// This file is part of spdxlib_gen and is distributed under the terms of
+// the MIT License.
+//
+// For complete licensing information, please refer to the README file:
+// https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/LICENSE
+//
+// Full attribution information is provided in the NOTICE file:
+// https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/NOTICE.md
+
 import 'package:mason/mason.dart';
 import 'package:spdxlib_hooks/src/pre_gen/pre_gen.dart' as pre_gen;
 import 'package:test/test.dart';
