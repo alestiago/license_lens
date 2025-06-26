@@ -1,12 +1,12 @@
-## Contributing to the SPDX lib Generator
+## Contributing to the spdxlib brick
 
 First of all, thank you for taking the time to contribute! 🎉👍 Before you do, please carefully read this guide.
 
-## Developing for SPDX lib Generator brick
+## Developing for spdxlib
 
-To develop for PDX License Generator brick, you will also need to become familiar with our processes and conventions detailed within the mono-repository [CONTRIBUTING](../../CONTRIBUTING.md).
+To develop for spdxlib brick, you will also need to become familiar with our processes and conventions detailed within the mono-repository [CONTRIBUTING](../../CONTRIBUTING.md).
 
-💡 **Note**: The SPDX lib brick is not published at [Brick Hub](brickhub.dev).
+💡 **Note**: The spdxlib brick is not published at [Brick Hub](brickhub.dev).
 
 ### Setting up your local development environment
 
