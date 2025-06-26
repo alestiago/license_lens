@@ -22,9 +22,12 @@ Provides an up-to-date full list of all SPDX licenses as seen in the [SPDX Licen
 
 ### Features
 
-- **Comprehensive License Coverage**: Provides a complete and up-to-date list of **all** SPDX licenses, synced directly with the official SPDX license list.
-- **Detailed License Rules**: Get insights into permissions, conditions, and limitations for each license, sourced from trusted repositories.
-- **Developer-Friendly API**: Designed specifically for Dart developers, with clear and consistent methods to access and manage SPDX license data.
+- 📜 **Comprehensive License Coverage**: 
+  Provides a complete and up-to-date list of **all** SPDX licenses, synced directly with the official SPDX license list.
+- 🔍 **Detailed License Rules**: 
+  Get insights into permissions, conditions, and limitations for each license, sourced from trusted repositories.
+- 🛠️ **Developer-Friendly API**: 
+  Designed specifically for Dart developers, with clear and consistent methods to access and manage SPDX license data.
 
 ## Quick Start 🚀
 
