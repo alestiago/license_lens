@@ -25,7 +25,7 @@ jobs:
       dart_sdk: 3.8.0
       format_directories: "test"
       analyze_directories: "test"
-      report_on: "test"
+      report_on: "lib"
       check_ignore: true
       no_example: true
       run_skipped: false
