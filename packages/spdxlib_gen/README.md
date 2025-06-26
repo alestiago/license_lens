@@ -1,4 +1,4 @@
-# SPDX License Gen
+# SPDX lib brick
 
 A generator that provides a Dart SPDX License enumeration from a list of SPDX licenses.
 
