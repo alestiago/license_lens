@@ -18,7 +18,6 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:mason/mason.dart';
-import 'package:meta/meta.dart';
 import 'package:spdxlib_hooks/spdxlib.dart';
 
 part 'licenses.dart';
@@ -45,15 +44,6 @@ enum ContextVariables {
 }
 
 http.Client _client = http.Client();
-
-void _close() {
-  _client.close();
-}
-
-void _exit(int code) {
-  _close();
-  exit(code);
-}
 
 /// {@template pre_gen}
 /// Populates the context `licenses` variable with the SPDX license list, and
@@ -90,12 +80,12 @@ Future<T> _downloadWithProgress<T>({
   late T result;
   try {
     result = await downloadFunction();
-  } catch (e) {
+  } on Exception catch (e) {
     progress
       ..update(e.toString())
       ..cancel();
-    _exit(ExitCode.software.code);
-    rethrow;
+    _client.close();
+    exit(ExitCode.software.code);
   }
 
   progress.complete(completeMessage(result));
