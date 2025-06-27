@@ -126,13 +126,7 @@ void main() {
       );
       when(
         () => client.get(
-          any(
-            that: isA<Uri>().having(
-              (uri) => uri.toString(),
-              'toString',
-              endsWith('.txt'),
-            ),
-          ),
+          any(that: _licenseUriMatcher()),
         ),
       ).thenAnswer((_) async => licenseRuleResponse);
 
@@ -152,6 +146,31 @@ void main() {
         throwsA(isA<ChooseALicenseException>()),
       );
     });
+
+    test(
+      'throws ChooseALicenseException on non-200 license response',
+      () async {
+        final licenseRulesResponse = Response(
+          ChooseALicenseLicenseRulesFixture.successGitHubContent,
+          200,
+        );
+        when(
+          () => client.get(licenseRulesUri),
+        ).thenAnswer((_) async => licenseRulesResponse);
+
+        final licenseRuleResponse = Response('Not Found', 404);
+        when(
+          () => client.get(
+            any(that: _licenseUriMatcher()),
+          ),
+        ).thenAnswer((_) async => licenseRuleResponse);
+
+        expect(
+          () async => downloadLicenseRules(client: client),
+          throwsA(isA<ChooseALicenseException>()),
+        );
+      },
+    );
 
     test('throws ChooseALicenseException on invalid JSON', () async {
       final licenseRulesResponse = Response(
@@ -183,13 +202,7 @@ void main() {
       );
       when(
         () => client.get(
-          any(
-            that: isA<Uri>().having(
-              (uri) => uri.toString(),
-              'toString',
-              endsWith('.txt'),
-            ),
-          ),
+          any(that: _licenseUriMatcher()),
         ),
       ).thenAnswer((_) async => licenseRuleResponse);
 
@@ -217,3 +230,9 @@ void main() {
     });
   });
 }
+
+Matcher _licenseUriMatcher() => isA<Uri>().having(
+  (uri) => uri.toString(),
+  'toString',
+  endsWith('.txt'),
+);
