@@ -1,3 +1,4 @@
 tags:
-  pull-request-only:
-    skip: "Should only be run during pull request"
+  ci:
+    description: "Run tests in CI"
+    skip: "Exclusively run in CI environments"

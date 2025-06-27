@@ -1,3 +1,7 @@
+## 1.1.0 (Unreleased)
+
+- feat: provide license rules information([#5](https://github.com/alestiago/license_lens/pull/5))
+
 ## 1.0.0
 
 - feat: initial package:spdx_license effort ([#1](https://github.com/alestiago/license_lens/pull/1))

@@ -1,0 +1,4858 @@
+{
+    "licenses": [
+        {
+            "license": "0BSD",
+            "identifier": "$0BSD",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [],
+                "description": "The BSD Zero Clause license goes further than the BSD 2-Clause license to allow you unlimited freedom with the software without requirements to include the copyright notice, license text, or disclaimer in either source or binary forms.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.  Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders. You may take the additional step of removing the copyright notice.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "distribution",
+                    "modifications",
+                    "private-use"
+                ],
+                "spdx-id": "0BSD",
+                "title": "BSD Zero Clause License",
+                "using": {}
+            }
+        },
+        {
+            "license": "3D-Slicer-1.0",
+            "identifier": "$3D_Slicer_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "AAL",
+            "identifier": "$AAL",
+            "hasRules": false
+        },
+        {
+            "license": "ADSL",
+            "identifier": "$ADSL",
+            "hasRules": false
+        },
+        {
+            "license": "AFL-1.1",
+            "identifier": "$AFL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "AFL-1.2",
+            "identifier": "$AFL_1_2",
+            "hasRules": false
+        },
+        {
+            "license": "AFL-2.0",
+            "identifier": "$AFL_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "AFL-2.1",
+            "identifier": "$AFL_2_1",
+            "hasRules": false
+        },
+        {
+            "license": "AFL-3.0",
+            "identifier": "$AFL_3_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes"
+                ],
+                "description": "The Academic Free License is a variant of the Open Software License that does not require that the source code of derivative works be disclosed. It contains explicit copyright and patent grants and reserves trademark rights in the author.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Files licensed under AFL 3.0 must also include the notice \"Licensed under the Academic Free License version 3.0\" adjacent to the copyright notice.",
+                "limitations": [
+                    "trademark-use",
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use",
+                    "patent-use"
+                ],
+                "spdx-id": "AFL-3.0",
+                "title": "Academic Free License v3.0",
+                "using": null
+            }
+        },
+        {
+            "license": "AGPL-1.0",
+            "identifier": "$AGPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "AGPL-1.0-only",
+            "identifier": "$AGPL_1_0_only",
+            "hasRules": false
+        },
+        {
+            "license": "AGPL-1.0-or-later",
+            "identifier": "$AGPL_1_0_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "AGPL-3.0",
+            "identifier": "$AGPL_3_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes",
+                    "disclose-source",
+                    "network-use-disclose",
+                    "same-license"
+                ],
+                "description": "Permissions of this strongest copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "AGPL-3.0",
+                "title": "GNU Affero General Public License v3.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "AGPL-3.0-only",
+            "identifier": "$AGPL_3_0_only",
+            "hasRules": false
+        },
+        {
+            "license": "AGPL-3.0-or-later",
+            "identifier": "$AGPL_3_0_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "AMD-newlib",
+            "identifier": "$AMD_newlib",
+            "hasRules": false
+        },
+        {
+            "license": "AMDPLPA",
+            "identifier": "$AMDPLPA",
+            "hasRules": false
+        },
+        {
+            "license": "AML",
+            "identifier": "$AML",
+            "hasRules": false
+        },
+        {
+            "license": "AML-glslang",
+            "identifier": "$AML_glslang",
+            "hasRules": false
+        },
+        {
+            "license": "AMPAS",
+            "identifier": "$AMPAS",
+            "hasRules": false
+        },
+        {
+            "license": "ANTLR-PD",
+            "identifier": "$ANTLR_PD",
+            "hasRules": false
+        },
+        {
+            "license": "ANTLR-PD-fallback",
+            "identifier": "$ANTLR_PD_fallback",
+            "hasRules": false
+        },
+        {
+            "license": "APAFML",
+            "identifier": "$APAFML",
+            "hasRules": false
+        },
+        {
+            "license": "APL-1.0",
+            "identifier": "$APL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "APSL-1.0",
+            "identifier": "$APSL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "APSL-1.1",
+            "identifier": "$APSL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "APSL-1.2",
+            "identifier": "$APSL_1_2",
+            "hasRules": false
+        },
+        {
+            "license": "APSL-2.0",
+            "identifier": "$APSL_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "ASWF-Digital-Assets-1.0",
+            "identifier": "$ASWF_Digital_Assets_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "ASWF-Digital-Assets-1.1",
+            "identifier": "$ASWF_Digital_Assets_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "Abstyles",
+            "identifier": "$Abstyles",
+            "hasRules": false
+        },
+        {
+            "license": "AdaCore-doc",
+            "identifier": "$AdaCore_doc",
+            "hasRules": false
+        },
+        {
+            "license": "Adobe-2006",
+            "identifier": "$Adobe_2006",
+            "hasRules": false
+        },
+        {
+            "license": "Adobe-Display-PostScript",
+            "identifier": "$Adobe_Display_PostScript",
+            "hasRules": false
+        },
+        {
+            "license": "Adobe-Glyph",
+            "identifier": "$Adobe_Glyph",
+            "hasRules": false
+        },
+        {
+            "license": "Adobe-Utopia",
+            "identifier": "$Adobe_Utopia",
+            "hasRules": false
+        },
+        {
+            "license": "Afmparse",
+            "identifier": "$Afmparse",
+            "hasRules": false
+        },
+        {
+            "license": "Aladdin",
+            "identifier": "$Aladdin",
+            "hasRules": false
+        },
+        {
+            "license": "Apache-1.0",
+            "identifier": "$Apache_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "Apache-1.1",
+            "identifier": "$Apache_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "Apache-2.0",
+            "identifier": "$Apache_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes"
+                ],
+                "description": "A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.",
+                "featured": true,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "trademark-use",
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "Apache-2.0",
+                "title": "Apache License 2.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "App-s2p",
+            "identifier": "$App_s2p",
+            "hasRules": false
+        },
+        {
+            "license": "Arphic-1999",
+            "identifier": "$Arphic_1999",
+            "hasRules": false
+        },
+        {
+            "license": "Artistic-1.0",
+            "identifier": "$Artistic_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "Artistic-1.0-Perl",
+            "identifier": "$Artistic_1_0_Perl",
+            "hasRules": false
+        },
+        {
+            "license": "Artistic-1.0-cl8",
+            "identifier": "$Artistic_1_0_cl8",
+            "hasRules": false
+        },
+        {
+            "license": "Artistic-2.0",
+            "identifier": "$Artistic_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes"
+                ],
+                "description": "Heavily favored by the Perl community, the Artistic license requires that modified versions of the software do not prevent users from running the standard version.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Do not replace the copyright notice (year, author), which refers to the license itself, not the licensed project.",
+                "limitations": [
+                    "liability",
+                    "trademark-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "Artistic-2.0",
+                "title": "Artistic License 2.0",
+                "using": null
+            }
+        },
+        {
+            "license": "Artistic-dist",
+            "identifier": "$Artistic_dist",
+            "hasRules": false
+        },
+        {
+            "license": "Aspell-RU",
+            "identifier": "$Aspell_RU",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-1-Clause",
+            "identifier": "$BSD_1_Clause",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-2-Clause",
+            "identifier": "$BSD_2_Clause",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A permissive license that comes in two variants, the <a href=\"/licenses/bsd-2-clause/\">BSD 2-Clause</a> and <a href=\"/licenses/bsd-3-clause/\">BSD 3-Clause</a>. Both have very minute differences to the MIT license.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "BSD-2-Clause",
+                "title": "BSD 2-Clause \"Simplified\" License",
+                "using": {}
+            }
+        },
+        {
+            "license": "BSD-2-Clause-Darwin",
+            "identifier": "$BSD_2_Clause_Darwin",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-2-Clause-FreeBSD",
+            "identifier": "$BSD_2_Clause_FreeBSD",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-2-Clause-NetBSD",
+            "identifier": "$BSD_2_Clause_NetBSD",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-2-Clause-Patent",
+            "identifier": "$BSD_2_Clause_Patent",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "This license is designed to provide: a) a simple permissive license; b) that is compatible with the GNU GPL-2.0; and c) which also has an express patent grant included.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "BSD-2-Clause-Patent",
+                "title": "BSD-2-Clause Plus Patent License",
+                "using": {}
+            }
+        },
+        {
+            "license": "BSD-2-Clause-Views",
+            "identifier": "$BSD_2_Clause_Views",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-2-Clause-first-lines",
+            "identifier": "$BSD_2_Clause_first_lines",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-2-Clause-pkgconf-disclaimer",
+            "identifier": "$BSD_2_Clause_pkgconf_disclaimer",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause",
+            "identifier": "$BSD_3_Clause",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A permissive license similar to the <a href=\"/licenses/bsd-2-clause/\">BSD 2-Clause License</a>, but with a 3rd clause that prohibits others from using the name of the copyright holder or its contributors to promote derived products without written consent.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "BSD-3-Clause",
+                "title": "BSD 3-Clause \"New\" or \"Revised\" License",
+                "using": {}
+            }
+        },
+        {
+            "license": "BSD-3-Clause-Attribution",
+            "identifier": "$BSD_3_Clause_Attribution",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-Clear",
+            "identifier": "$BSD_3_Clause_Clear",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A variant of the <a href=\"/licenses/bsd-3-clause/\">BSD 3-Clause License</a> that explicitly does not grant any patent rights.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "patent-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "BSD-3-Clause-Clear",
+                "title": "BSD 3-Clause Clear License",
+                "using": null
+            }
+        },
+        {
+            "license": "BSD-3-Clause-HP",
+            "identifier": "$BSD_3_Clause_HP",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-LBNL",
+            "identifier": "$BSD_3_Clause_LBNL",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-Modification",
+            "identifier": "$BSD_3_Clause_Modification",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-No-Military-License",
+            "identifier": "$BSD_3_Clause_No_Military_License",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-No-Nuclear-License",
+            "identifier": "$BSD_3_Clause_No_Nuclear_License",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-No-Nuclear-License-2014",
+            "identifier": "$BSD_3_Clause_No_Nuclear_License_2014",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-No-Nuclear-Warranty",
+            "identifier": "$BSD_3_Clause_No_Nuclear_Warranty",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-Open-MPI",
+            "identifier": "$BSD_3_Clause_Open_MPI",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-Sun",
+            "identifier": "$BSD_3_Clause_Sun",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-acpica",
+            "identifier": "$BSD_3_Clause_acpica",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-3-Clause-flex",
+            "identifier": "$BSD_3_Clause_flex",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-4-Clause",
+            "identifier": "$BSD_4_Clause",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A permissive license similar to the <a href=\"/licenses/bsd-3-clause/\">BSD 3-Clause License</a>, but with an \"advertising clause\" that requires an acknowledgment of the original source in all advertising material.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders. Replace [project] with the project organization, if any, that sponsors this work.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "BSD-4-Clause",
+                "title": "BSD 4-Clause \"Original\" or \"Old\" License",
+                "using": {}
+            }
+        },
+        {
+            "license": "BSD-4-Clause-Shortened",
+            "identifier": "$BSD_4_Clause_Shortened",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-4-Clause-UC",
+            "identifier": "$BSD_4_Clause_UC",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-4.3RENO",
+            "identifier": "$BSD_4_3RENO",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-4.3TAHOE",
+            "identifier": "$BSD_4_3TAHOE",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-Advertising-Acknowledgement",
+            "identifier": "$BSD_Advertising_Acknowledgement",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-Attribution-HPND-disclaimer",
+            "identifier": "$BSD_Attribution_HPND_disclaimer",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-Inferno-Nettverk",
+            "identifier": "$BSD_Inferno_Nettverk",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-Protection",
+            "identifier": "$BSD_Protection",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-Source-Code",
+            "identifier": "$BSD_Source_Code",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-Source-beginning-file",
+            "identifier": "$BSD_Source_beginning_file",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-Systemics",
+            "identifier": "$BSD_Systemics",
+            "hasRules": false
+        },
+        {
+            "license": "BSD-Systemics-W3Works",
+            "identifier": "$BSD_Systemics_W3Works",
+            "hasRules": false
+        },
+        {
+            "license": "BSL-1.0",
+            "identifier": "$BSL_1_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright--source"
+                ],
+                "description": "A simple permissive license only requiring preservation of copyright and license notices for source (and not binary) distribution. Licensed works, modifications, and larger works may be distributed under different terms and without source code.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "BSL-1.0",
+                "title": "Boost Software License 1.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "BUSL-1.1",
+            "identifier": "$BUSL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "Baekmuk",
+            "identifier": "$Baekmuk",
+            "hasRules": false
+        },
+        {
+            "license": "Bahyph",
+            "identifier": "$Bahyph",
+            "hasRules": false
+        },
+        {
+            "license": "Barr",
+            "identifier": "$Barr",
+            "hasRules": false
+        },
+        {
+            "license": "Beerware",
+            "identifier": "$Beerware",
+            "hasRules": false
+        },
+        {
+            "license": "BitTorrent-1.0",
+            "identifier": "$BitTorrent_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "BitTorrent-1.1",
+            "identifier": "$BitTorrent_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "Bitstream-Charter",
+            "identifier": "$Bitstream_Charter",
+            "hasRules": false
+        },
+        {
+            "license": "Bitstream-Vera",
+            "identifier": "$Bitstream_Vera",
+            "hasRules": false
+        },
+        {
+            "license": "BlueOak-1.0.0",
+            "identifier": "$BlueOak_1_0_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A permissive license whose main conditions require providing notice of the license. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE.md) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "BlueOak-1.0.0",
+                "title": "Blue Oak Model License 1.0.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "Boehm-GC",
+            "identifier": "$Boehm_GC",
+            "hasRules": false
+        },
+        {
+            "license": "Boehm-GC-without-fee",
+            "identifier": "$Boehm_GC_without_fee",
+            "hasRules": false
+        },
+        {
+            "license": "Borceux",
+            "identifier": "$Borceux",
+            "hasRules": false
+        },
+        {
+            "license": "Brian-Gladman-2-Clause",
+            "identifier": "$Brian_Gladman_2_Clause",
+            "hasRules": false
+        },
+        {
+            "license": "Brian-Gladman-3-Clause",
+            "identifier": "$Brian_Gladman_3_Clause",
+            "hasRules": false
+        },
+        {
+            "license": "C-UDA-1.0",
+            "identifier": "$C_UDA_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CAL-1.0",
+            "identifier": "$CAL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CAL-1.0-Combined-Work-Exception",
+            "identifier": "$CAL_1_0_Combined_Work_Exception",
+            "hasRules": false
+        },
+        {
+            "license": "CATOSL-1.1",
+            "identifier": "$CATOSL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-1.0",
+            "identifier": "$CC_BY_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-2.0",
+            "identifier": "$CC_BY_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-2.5",
+            "identifier": "$CC_BY_2_5",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-2.5-AU",
+            "identifier": "$CC_BY_2_5_AU",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-3.0",
+            "identifier": "$CC_BY_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-3.0-AT",
+            "identifier": "$CC_BY_3_0_AT",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-3.0-AU",
+            "identifier": "$CC_BY_3_0_AU",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-3.0-DE",
+            "identifier": "$CC_BY_3_0_DE",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-3.0-IGO",
+            "identifier": "$CC_BY_3_0_IGO",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-3.0-NL",
+            "identifier": "$CC_BY_3_0_NL",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-3.0-US",
+            "identifier": "$CC_BY_3_0_US",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-4.0",
+            "identifier": "$CC_BY_4_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes"
+                ],
+                "description": "Permits almost any use subject to providing credit and license notice. Frequently used for media assets and educational materials. The most common license for Open Access scientific publications. Not recommended for software.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. It is also acceptable to solely supply a link to a copy of the license, usually to the <a href='https://creativecommons.org/licenses/by/4.0/'>canonical URL for the license</a>.",
+                "limitations": [
+                    "liability",
+                    "trademark-use",
+                    "patent-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "CC-BY-4.0",
+                "title": "Creative Commons Attribution 4.0 International",
+                "using": {}
+            }
+        },
+        {
+            "license": "CC-BY-NC-1.0",
+            "identifier": "$CC_BY_NC_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-2.0",
+            "identifier": "$CC_BY_NC_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-2.5",
+            "identifier": "$CC_BY_NC_2_5",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-3.0",
+            "identifier": "$CC_BY_NC_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-3.0-DE",
+            "identifier": "$CC_BY_NC_3_0_DE",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-4.0",
+            "identifier": "$CC_BY_NC_4_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-ND-1.0",
+            "identifier": "$CC_BY_NC_ND_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-ND-2.0",
+            "identifier": "$CC_BY_NC_ND_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-ND-2.5",
+            "identifier": "$CC_BY_NC_ND_2_5",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-ND-3.0",
+            "identifier": "$CC_BY_NC_ND_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-ND-3.0-DE",
+            "identifier": "$CC_BY_NC_ND_3_0_DE",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-ND-3.0-IGO",
+            "identifier": "$CC_BY_NC_ND_3_0_IGO",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-ND-4.0",
+            "identifier": "$CC_BY_NC_ND_4_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-1.0",
+            "identifier": "$CC_BY_NC_SA_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-2.0",
+            "identifier": "$CC_BY_NC_SA_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-2.0-DE",
+            "identifier": "$CC_BY_NC_SA_2_0_DE",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-2.0-FR",
+            "identifier": "$CC_BY_NC_SA_2_0_FR",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-2.0-UK",
+            "identifier": "$CC_BY_NC_SA_2_0_UK",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-2.5",
+            "identifier": "$CC_BY_NC_SA_2_5",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-3.0",
+            "identifier": "$CC_BY_NC_SA_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-3.0-DE",
+            "identifier": "$CC_BY_NC_SA_3_0_DE",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-3.0-IGO",
+            "identifier": "$CC_BY_NC_SA_3_0_IGO",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-NC-SA-4.0",
+            "identifier": "$CC_BY_NC_SA_4_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-ND-1.0",
+            "identifier": "$CC_BY_ND_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-ND-2.0",
+            "identifier": "$CC_BY_ND_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-ND-2.5",
+            "identifier": "$CC_BY_ND_2_5",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-ND-3.0",
+            "identifier": "$CC_BY_ND_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-ND-3.0-DE",
+            "identifier": "$CC_BY_ND_3_0_DE",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-ND-4.0",
+            "identifier": "$CC_BY_ND_4_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-1.0",
+            "identifier": "$CC_BY_SA_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-2.0",
+            "identifier": "$CC_BY_SA_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-2.0-UK",
+            "identifier": "$CC_BY_SA_2_0_UK",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-2.1-JP",
+            "identifier": "$CC_BY_SA_2_1_JP",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-2.5",
+            "identifier": "$CC_BY_SA_2_5",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-3.0",
+            "identifier": "$CC_BY_SA_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-3.0-AT",
+            "identifier": "$CC_BY_SA_3_0_AT",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-3.0-DE",
+            "identifier": "$CC_BY_SA_3_0_DE",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-3.0-IGO",
+            "identifier": "$CC_BY_SA_3_0_IGO",
+            "hasRules": false
+        },
+        {
+            "license": "CC-BY-SA-4.0",
+            "identifier": "$CC_BY_SA_4_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes",
+                    "same-license"
+                ],
+                "description": "Similar to <a href='/licenses/cc-by-4.0/'>CC-BY-4.0</a> but requires derivatives be distributed under the same or a similar, <a href=\"https://creativecommons.org/compatiblelicenses\">compatible</a> license. Frequently used for media assets and educational materials. A previous version is the default license for Wikipedia and other Wikimedia projects. Not recommended for software.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. It is also acceptable to solely supply a link to a copy of the license, usually to the <a href='https://creativecommons.org/licenses/by-sa/4.0/'>canonical URL for the license</a>.",
+                "limitations": [
+                    "liability",
+                    "trademark-use",
+                    "patent-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "CC-BY-SA-4.0",
+                "title": "Creative Commons Attribution Share Alike 4.0 International",
+                "using": {}
+            }
+        },
+        {
+            "license": "CC-PDDC",
+            "identifier": "$CC_PDDC",
+            "hasRules": false
+        },
+        {
+            "license": "CC-PDM-1.0",
+            "identifier": "$CC_PDM_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC-SA-1.0",
+            "identifier": "$CC_SA_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CC0-1.0",
+            "identifier": "$CC0_1_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [],
+                "description": "The <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">Creative Commons CC0 Public Domain Dedication</a> waives copyright interest in a work you've created and dedicates it to the world-wide public domain. Use CC0 to opt out of copyright entirely and ensure your work has the widest reach. As with the Unlicense and typical software licenses, CC0 disclaims warranties. CC0 is very similar to the Unlicense.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "trademark-use",
+                    "patent-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "CC0-1.0",
+                "title": "Creative Commons Zero v1.0 Universal",
+                "using": {}
+            }
+        },
+        {
+            "license": "CDDL-1.0",
+            "identifier": "$CDDL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CDDL-1.1",
+            "identifier": "$CDDL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "CDL-1.0",
+            "identifier": "$CDL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CDLA-Permissive-1.0",
+            "identifier": "$CDLA_Permissive_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CDLA-Permissive-2.0",
+            "identifier": "$CDLA_Permissive_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "CDLA-Sharing-1.0",
+            "identifier": "$CDLA_Sharing_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CECILL-1.0",
+            "identifier": "$CECILL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CECILL-1.1",
+            "identifier": "$CECILL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "CECILL-2.0",
+            "identifier": "$CECILL_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "CECILL-2.1",
+            "identifier": "$CECILL_2_1",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "network-use-disclose",
+                    "disclose-source",
+                    "same-license"
+                ],
+                "description": "Strong copyleft license made by three French public research organisations, CEA, CNRS, and Inria, compatible with AGPL-3.0, EUPL-1.1, and GPL-2.0, or later versions of those licenses.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENCE) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use",
+                    "patent-use"
+                ],
+                "spdx-id": "CECILL-2.1",
+                "title": "CeCILL Free Software License Agreement v2.1",
+                "using": {}
+            }
+        },
+        {
+            "license": "CECILL-B",
+            "identifier": "$CECILL_B",
+            "hasRules": false
+        },
+        {
+            "license": "CECILL-C",
+            "identifier": "$CECILL_C",
+            "hasRules": false
+        },
+        {
+            "license": "CERN-OHL-1.1",
+            "identifier": "$CERN_OHL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "CERN-OHL-1.2",
+            "identifier": "$CERN_OHL_1_2",
+            "hasRules": false
+        },
+        {
+            "license": "CERN-OHL-P-2.0",
+            "identifier": "$CERN_OHL_P_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes"
+                ],
+                "description": "A permissive license for hardware designs, with conditions only requiring preservation of notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without sources.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use",
+                    "patent-use"
+                ],
+                "spdx-id": "CERN-OHL-P-2.0",
+                "title": "CERN Open Hardware Licence Version 2 - Permissive",
+                "using": {}
+            }
+        },
+        {
+            "license": "CERN-OHL-S-2.0",
+            "identifier": "$CERN_OHL_S_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes",
+                    "disclose-source",
+                    "same-license"
+                ],
+                "description": "Permissions of this strongly reciprocal license for hardware designs are conditioned on making available complete sources of licensed works and modifications, which include larger works using a licensed work, under the same license. Notices must be preserved. Contributors provide an express grant of patent rights.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use",
+                    "patent-use"
+                ],
+                "spdx-id": "CERN-OHL-S-2.0",
+                "title": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+                "using": {}
+            }
+        },
+        {
+            "license": "CERN-OHL-W-2.0",
+            "identifier": "$CERN_OHL_W_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes",
+                    "disclose-source",
+                    "same-license--library"
+                ],
+                "description": "Permissions of this weakly-reciprocal license are conditioned on making available complete sources of licensed works and modifications under the same license. Notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work through interfaces provided by the licensed work may be distributed under different terms and without sources for the larger work.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use",
+                    "patent-use"
+                ],
+                "spdx-id": "CERN-OHL-W-2.0",
+                "title": "CERN Open Hardware Licence Version 2 - Weakly Reciprocal",
+                "using": {}
+            }
+        },
+        {
+            "license": "CFITSIO",
+            "identifier": "$CFITSIO",
+            "hasRules": false
+        },
+        {
+            "license": "CMU-Mach",
+            "identifier": "$CMU_Mach",
+            "hasRules": false
+        },
+        {
+            "license": "CMU-Mach-nodoc",
+            "identifier": "$CMU_Mach_nodoc",
+            "hasRules": false
+        },
+        {
+            "license": "CNRI-Jython",
+            "identifier": "$CNRI_Jython",
+            "hasRules": false
+        },
+        {
+            "license": "CNRI-Python",
+            "identifier": "$CNRI_Python",
+            "hasRules": false
+        },
+        {
+            "license": "CNRI-Python-GPL-Compatible",
+            "identifier": "$CNRI_Python_GPL_Compatible",
+            "hasRules": false
+        },
+        {
+            "license": "COIL-1.0",
+            "identifier": "$COIL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CPAL-1.0",
+            "identifier": "$CPAL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CPL-1.0",
+            "identifier": "$CPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "CPOL-1.02",
+            "identifier": "$CPOL_1_02",
+            "hasRules": false
+        },
+        {
+            "license": "CUA-OPL-1.0",
+            "identifier": "$CUA_OPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "Caldera",
+            "identifier": "$Caldera",
+            "hasRules": false
+        },
+        {
+            "license": "Caldera-no-preamble",
+            "identifier": "$Caldera_no_preamble",
+            "hasRules": false
+        },
+        {
+            "license": "Catharon",
+            "identifier": "$Catharon",
+            "hasRules": false
+        },
+        {
+            "license": "ClArtistic",
+            "identifier": "$ClArtistic",
+            "hasRules": false
+        },
+        {
+            "license": "Clips",
+            "identifier": "$Clips",
+            "hasRules": false
+        },
+        {
+            "license": "Community-Spec-1.0",
+            "identifier": "$Community_Spec_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "Condor-1.1",
+            "identifier": "$Condor_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "Cornell-Lossless-JPEG",
+            "identifier": "$Cornell_Lossless_JPEG",
+            "hasRules": false
+        },
+        {
+            "license": "Cronyx",
+            "identifier": "$Cronyx",
+            "hasRules": false
+        },
+        {
+            "license": "Crossword",
+            "identifier": "$Crossword",
+            "hasRules": false
+        },
+        {
+            "license": "CryptoSwift",
+            "identifier": "$CryptoSwift",
+            "hasRules": false
+        },
+        {
+            "license": "CrystalStacker",
+            "identifier": "$CrystalStacker",
+            "hasRules": false
+        },
+        {
+            "license": "Cube",
+            "identifier": "$Cube",
+            "hasRules": false
+        },
+        {
+            "license": "D-FSL-1.0",
+            "identifier": "$D_FSL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "DEC-3-Clause",
+            "identifier": "$DEC_3_Clause",
+            "hasRules": false
+        },
+        {
+            "license": "DL-DE-BY-2.0",
+            "identifier": "$DL_DE_BY_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "DL-DE-ZERO-2.0",
+            "identifier": "$DL_DE_ZERO_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "DOC",
+            "identifier": "$DOC",
+            "hasRules": false
+        },
+        {
+            "license": "DRL-1.0",
+            "identifier": "$DRL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "DRL-1.1",
+            "identifier": "$DRL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "DSDP",
+            "identifier": "$DSDP",
+            "hasRules": false
+        },
+        {
+            "license": "DocBook-DTD",
+            "identifier": "$DocBook_DTD",
+            "hasRules": false
+        },
+        {
+            "license": "DocBook-Schema",
+            "identifier": "$DocBook_Schema",
+            "hasRules": false
+        },
+        {
+            "license": "DocBook-Stylesheet",
+            "identifier": "$DocBook_Stylesheet",
+            "hasRules": false
+        },
+        {
+            "license": "DocBook-XML",
+            "identifier": "$DocBook_XML",
+            "hasRules": false
+        },
+        {
+            "license": "Dotseqn",
+            "identifier": "$Dotseqn",
+            "hasRules": false
+        },
+        {
+            "license": "ECL-1.0",
+            "identifier": "$ECL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "ECL-2.0",
+            "identifier": "$ECL_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes"
+                ],
+                "description": "The Educational Community License version 2.0 (\"ECL\") consists of the Apache 2.0 license, modified to change the scope of the patent grant in section 3 to be specific to the needs of the education communities using this license.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "trademark-use",
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "ECL-2.0",
+                "title": "Educational Community License v2.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "EFL-1.0",
+            "identifier": "$EFL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "EFL-2.0",
+            "identifier": "$EFL_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "EPICS",
+            "identifier": "$EPICS",
+            "hasRules": false
+        },
+        {
+            "license": "EPL-1.0",
+            "identifier": "$EPL_1_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "disclose-source",
+                    "include-copyright",
+                    "same-license"
+                ],
+                "description": "This commercially-friendly copyleft license provides the ability to commercially license binaries; a modern royalty-free patent license grant; and the ability for linked works to use other licenses, including commercial ones.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "distribution",
+                    "modifications",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "EPL-1.0",
+                "title": "Eclipse Public License 1.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "EPL-2.0",
+            "identifier": "$EPL_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "disclose-source",
+                    "include-copyright",
+                    "same-license"
+                ],
+                "description": "This commercially-friendly copyleft license provides the ability to commercially license binaries; a modern royalty-free patent license grant; and the ability for linked works to use other licenses, including commercial ones.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "distribution",
+                    "modifications",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "EPL-2.0",
+                "title": "Eclipse Public License 2.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "EUDatagrid",
+            "identifier": "$EUDatagrid",
+            "hasRules": false
+        },
+        {
+            "license": "EUPL-1.0",
+            "identifier": "$EUPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "EUPL-1.1",
+            "identifier": "$EUPL_1_1",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "disclose-source",
+                    "document-changes",
+                    "network-use-disclose",
+                    "same-license"
+                ],
+                "description": "The “European Union Public Licence” (EUPL) is a copyleft free/open source software license created on the initiative of and approved by the European Commission in 22 official languages of the European Union.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named COPYING or LICENCE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "trademark-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "EUPL-1.1",
+                "title": "European Union Public License 1.1",
+                "using": null
+            }
+        },
+        {
+            "license": "EUPL-1.2",
+            "identifier": "$EUPL_1_2",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "disclose-source",
+                    "document-changes",
+                    "network-use-disclose",
+                    "same-license"
+                ],
+                "description": "The European Union Public Licence (EUPL) is a copyleft free/open source software license created on the initiative of and approved by the European Commission in <a href=\"https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12\">23 official languages</a> of the European Union.",
+                "featured": null,
+                "hidden": null,
+                "how": "Indicate “Licensed under the EUPL” following the copyright notice of your source code, for example in a README file or directly in a source code file as a comment.",
+                "limitations": [
+                    "liability",
+                    "trademark-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "EUPL-1.2",
+                "title": "European Union Public License 1.2",
+                "using": {}
+            }
+        },
+        {
+            "license": "Elastic-2.0",
+            "identifier": "$Elastic_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "Entessa",
+            "identifier": "$Entessa",
+            "hasRules": false
+        },
+        {
+            "license": "ErlPL-1.1",
+            "identifier": "$ErlPL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "Eurosym",
+            "identifier": "$Eurosym",
+            "hasRules": false
+        },
+        {
+            "license": "FBM",
+            "identifier": "$FBM",
+            "hasRules": false
+        },
+        {
+            "license": "FDK-AAC",
+            "identifier": "$FDK_AAC",
+            "hasRules": false
+        },
+        {
+            "license": "FSFAP",
+            "identifier": "$FSFAP",
+            "hasRules": false
+        },
+        {
+            "license": "FSFAP-no-warranty-disclaimer",
+            "identifier": "$FSFAP_no_warranty_disclaimer",
+            "hasRules": false
+        },
+        {
+            "license": "FSFUL",
+            "identifier": "$FSFUL",
+            "hasRules": false
+        },
+        {
+            "license": "FSFULLR",
+            "identifier": "$FSFULLR",
+            "hasRules": false
+        },
+        {
+            "license": "FSFULLRSD",
+            "identifier": "$FSFULLRSD",
+            "hasRules": false
+        },
+        {
+            "license": "FSFULLRWD",
+            "identifier": "$FSFULLRWD",
+            "hasRules": false
+        },
+        {
+            "license": "FSL-1.1-ALv2",
+            "identifier": "$FSL_1_1_ALv2",
+            "hasRules": false
+        },
+        {
+            "license": "FSL-1.1-MIT",
+            "identifier": "$FSL_1_1_MIT",
+            "hasRules": false
+        },
+        {
+            "license": "FTL",
+            "identifier": "$FTL",
+            "hasRules": false
+        },
+        {
+            "license": "Fair",
+            "identifier": "$Fair",
+            "hasRules": false
+        },
+        {
+            "license": "Ferguson-Twofish",
+            "identifier": "$Ferguson_Twofish",
+            "hasRules": false
+        },
+        {
+            "license": "Frameworx-1.0",
+            "identifier": "$Frameworx_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "FreeBSD-DOC",
+            "identifier": "$FreeBSD_DOC",
+            "hasRules": false
+        },
+        {
+            "license": "FreeImage",
+            "identifier": "$FreeImage",
+            "hasRules": false
+        },
+        {
+            "license": "Furuseth",
+            "identifier": "$Furuseth",
+            "hasRules": false
+        },
+        {
+            "license": "GCR-docs",
+            "identifier": "$GCR_docs",
+            "hasRules": false
+        },
+        {
+            "license": "GD",
+            "identifier": "$GD",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.1",
+            "identifier": "$GFDL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.1-invariants-only",
+            "identifier": "$GFDL_1_1_invariants_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.1-invariants-or-later",
+            "identifier": "$GFDL_1_1_invariants_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.1-no-invariants-only",
+            "identifier": "$GFDL_1_1_no_invariants_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.1-no-invariants-or-later",
+            "identifier": "$GFDL_1_1_no_invariants_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.1-only",
+            "identifier": "$GFDL_1_1_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.1-or-later",
+            "identifier": "$GFDL_1_1_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.2",
+            "identifier": "$GFDL_1_2",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.2-invariants-only",
+            "identifier": "$GFDL_1_2_invariants_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.2-invariants-or-later",
+            "identifier": "$GFDL_1_2_invariants_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.2-no-invariants-only",
+            "identifier": "$GFDL_1_2_no_invariants_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.2-no-invariants-or-later",
+            "identifier": "$GFDL_1_2_no_invariants_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.2-only",
+            "identifier": "$GFDL_1_2_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.2-or-later",
+            "identifier": "$GFDL_1_2_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.3",
+            "identifier": "$GFDL_1_3",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "disclose-source",
+                    "same-license",
+                    "document-changes"
+                ],
+                "description": "A copyleft license for software documentation.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named COPYING, as per GNU conventions) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "GFDL-1.3",
+                "title": "GNU Free Documentation License v1.3",
+                "using": {}
+            }
+        },
+        {
+            "license": "GFDL-1.3-invariants-only",
+            "identifier": "$GFDL_1_3_invariants_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.3-invariants-or-later",
+            "identifier": "$GFDL_1_3_invariants_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.3-no-invariants-only",
+            "identifier": "$GFDL_1_3_no_invariants_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.3-no-invariants-or-later",
+            "identifier": "$GFDL_1_3_no_invariants_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.3-only",
+            "identifier": "$GFDL_1_3_only",
+            "hasRules": false
+        },
+        {
+            "license": "GFDL-1.3-or-later",
+            "identifier": "$GFDL_1_3_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GL2PS",
+            "identifier": "$GL2PS",
+            "hasRules": false
+        },
+        {
+            "license": "GLWTPL",
+            "identifier": "$GLWTPL",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-1.0",
+            "identifier": "$GPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-1.0+",
+            "identifier": "$GPL_1_0plus",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-1.0-only",
+            "identifier": "$GPL_1_0_only",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-1.0-or-later",
+            "identifier": "$GPL_1_0_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-2.0",
+            "identifier": "$GPL_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes",
+                    "disclose-source",
+                    "same-license"
+                ],
+                "description": "The GNU GPL is the most widely used free software license and has a strong copyleft requirement. When distributing derived works, the source code of the work must be made available under the same license. There are multiple variants of the GNU GPL, each with different requirements.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "GPL-2.0",
+                "title": "GNU General Public License v2.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "GPL-2.0+",
+            "identifier": "$GPL_2_0plus",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-2.0-only",
+            "identifier": "$GPL_2_0_only",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-2.0-or-later",
+            "identifier": "$GPL_2_0_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-2.0-with-GCC-exception",
+            "identifier": "$GPL_2_0_with_GCC_exception",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-2.0-with-autoconf-exception",
+            "identifier": "$GPL_2_0_with_autoconf_exception",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-2.0-with-bison-exception",
+            "identifier": "$GPL_2_0_with_bison_exception",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-2.0-with-classpath-exception",
+            "identifier": "$GPL_2_0_with_classpath_exception",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-2.0-with-font-exception",
+            "identifier": "$GPL_2_0_with_font_exception",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-3.0",
+            "identifier": "$GPL_3_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes",
+                    "disclose-source",
+                    "same-license"
+                ],
+                "description": "Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.",
+                "featured": true,
+                "hidden": false,
+                "how": "Create a text file (typically named COPYING, as per GNU conventions) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "GPL-3.0",
+                "title": "GNU General Public License v3.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "GPL-3.0+",
+            "identifier": "$GPL_3_0plus",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-3.0-only",
+            "identifier": "$GPL_3_0_only",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-3.0-or-later",
+            "identifier": "$GPL_3_0_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-3.0-with-GCC-exception",
+            "identifier": "$GPL_3_0_with_GCC_exception",
+            "hasRules": false
+        },
+        {
+            "license": "GPL-3.0-with-autoconf-exception",
+            "identifier": "$GPL_3_0_with_autoconf_exception",
+            "hasRules": false
+        },
+        {
+            "license": "Game-Programming-Gems",
+            "identifier": "$Game_Programming_Gems",
+            "hasRules": false
+        },
+        {
+            "license": "Giftware",
+            "identifier": "$Giftware",
+            "hasRules": false
+        },
+        {
+            "license": "Glide",
+            "identifier": "$Glide",
+            "hasRules": false
+        },
+        {
+            "license": "Glulxe",
+            "identifier": "$Glulxe",
+            "hasRules": false
+        },
+        {
+            "license": "Graphics-Gems",
+            "identifier": "$Graphics_Gems",
+            "hasRules": false
+        },
+        {
+            "license": "Gutmann",
+            "identifier": "$Gutmann",
+            "hasRules": false
+        },
+        {
+            "license": "HDF5",
+            "identifier": "$HDF5",
+            "hasRules": false
+        },
+        {
+            "license": "HIDAPI",
+            "identifier": "$HIDAPI",
+            "hasRules": false
+        },
+        {
+            "license": "HP-1986",
+            "identifier": "$HP_1986",
+            "hasRules": false
+        },
+        {
+            "license": "HP-1989",
+            "identifier": "$HP_1989",
+            "hasRules": false
+        },
+        {
+            "license": "HPND",
+            "identifier": "$HPND",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-DEC",
+            "identifier": "$HPND_DEC",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-Fenneberg-Livingston",
+            "identifier": "$HPND_Fenneberg_Livingston",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-INRIA-IMAG",
+            "identifier": "$HPND_INRIA_IMAG",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-Intel",
+            "identifier": "$HPND_Intel",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-Kevlin-Henney",
+            "identifier": "$HPND_Kevlin_Henney",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-MIT-disclaimer",
+            "identifier": "$HPND_MIT_disclaimer",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-Markus-Kuhn",
+            "identifier": "$HPND_Markus_Kuhn",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-Netrek",
+            "identifier": "$HPND_Netrek",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-Pbmplus",
+            "identifier": "$HPND_Pbmplus",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-UC",
+            "identifier": "$HPND_UC",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-UC-export-US",
+            "identifier": "$HPND_UC_export_US",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-doc",
+            "identifier": "$HPND_doc",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-doc-sell",
+            "identifier": "$HPND_doc_sell",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-export-US",
+            "identifier": "$HPND_export_US",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-export-US-acknowledgement",
+            "identifier": "$HPND_export_US_acknowledgement",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-export-US-modify",
+            "identifier": "$HPND_export_US_modify",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-export2-US",
+            "identifier": "$HPND_export2_US",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-merchantability-variant",
+            "identifier": "$HPND_merchantability_variant",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-sell-MIT-disclaimer-xserver",
+            "identifier": "$HPND_sell_MIT_disclaimer_xserver",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-sell-regexpr",
+            "identifier": "$HPND_sell_regexpr",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-sell-variant",
+            "identifier": "$HPND_sell_variant",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-sell-variant-MIT-disclaimer",
+            "identifier": "$HPND_sell_variant_MIT_disclaimer",
+            "hasRules": false
+        },
+        {
+            "license": "HPND-sell-variant-MIT-disclaimer-rev",
+            "identifier": "$HPND_sell_variant_MIT_disclaimer_rev",
+            "hasRules": false
+        },
+        {
+            "license": "HTMLTIDY",
+            "identifier": "$HTMLTIDY",
+            "hasRules": false
+        },
+        {
+            "license": "HaskellReport",
+            "identifier": "$HaskellReport",
+            "hasRules": false
+        },
+        {
+            "license": "Hippocratic-2.1",
+            "identifier": "$Hippocratic_2_1",
+            "hasRules": false
+        },
+        {
+            "license": "IBM-pibs",
+            "identifier": "$IBM_pibs",
+            "hasRules": false
+        },
+        {
+            "license": "ICU",
+            "identifier": "$ICU",
+            "hasRules": false
+        },
+        {
+            "license": "IEC-Code-Components-EULA",
+            "identifier": "$IEC_Code_Components_EULA",
+            "hasRules": false
+        },
+        {
+            "license": "IJG",
+            "identifier": "$IJG",
+            "hasRules": false
+        },
+        {
+            "license": "IJG-short",
+            "identifier": "$IJG_short",
+            "hasRules": false
+        },
+        {
+            "license": "IPA",
+            "identifier": "$IPA",
+            "hasRules": false
+        },
+        {
+            "license": "IPL-1.0",
+            "identifier": "$IPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "ISC",
+            "identifier": "$ISC",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A permissive license lets people do anything with your code with proper attribution and without warranty. The ISC license is functionally equivalent to the <a href=\"/licenses/bsd-2-clause/\">BSD 2-Clause</a> and <a href=\"/licenses/mit/\">MIT</a> licenses, removing some language that is no longer necessary.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "distribution",
+                    "modifications",
+                    "private-use"
+                ],
+                "spdx-id": "ISC",
+                "title": "ISC License",
+                "using": {}
+            }
+        },
+        {
+            "license": "ISC-Veillard",
+            "identifier": "$ISC_Veillard",
+            "hasRules": false
+        },
+        {
+            "license": "ImageMagick",
+            "identifier": "$ImageMagick",
+            "hasRules": false
+        },
+        {
+            "license": "Imlib2",
+            "identifier": "$Imlib2",
+            "hasRules": false
+        },
+        {
+            "license": "Info-ZIP",
+            "identifier": "$Info_ZIP",
+            "hasRules": false
+        },
+        {
+            "license": "Inner-Net-2.0",
+            "identifier": "$Inner_Net_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "InnoSetup",
+            "identifier": "$InnoSetup",
+            "hasRules": false
+        },
+        {
+            "license": "Intel",
+            "identifier": "$Intel",
+            "hasRules": false
+        },
+        {
+            "license": "Intel-ACPI",
+            "identifier": "$Intel_ACPI",
+            "hasRules": false
+        },
+        {
+            "license": "Interbase-1.0",
+            "identifier": "$Interbase_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "JPL-image",
+            "identifier": "$JPL_image",
+            "hasRules": false
+        },
+        {
+            "license": "JPNIC",
+            "identifier": "$JPNIC",
+            "hasRules": false
+        },
+        {
+            "license": "JSON",
+            "identifier": "$JSON",
+            "hasRules": false
+        },
+        {
+            "license": "Jam",
+            "identifier": "$Jam",
+            "hasRules": false
+        },
+        {
+            "license": "JasPer-2.0",
+            "identifier": "$JasPer_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "Kastrup",
+            "identifier": "$Kastrup",
+            "hasRules": false
+        },
+        {
+            "license": "Kazlib",
+            "identifier": "$Kazlib",
+            "hasRules": false
+        },
+        {
+            "license": "Knuth-CTAN",
+            "identifier": "$Knuth_CTAN",
+            "hasRules": false
+        },
+        {
+            "license": "LAL-1.2",
+            "identifier": "$LAL_1_2",
+            "hasRules": false
+        },
+        {
+            "license": "LAL-1.3",
+            "identifier": "$LAL_1_3",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-2.0",
+            "identifier": "$LGPL_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-2.0+",
+            "identifier": "$LGPL_2_0plus",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-2.0-only",
+            "identifier": "$LGPL_2_0_only",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-2.0-or-later",
+            "identifier": "$LGPL_2_0_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-2.1",
+            "identifier": "$LGPL_2_1",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "disclose-source",
+                    "document-changes",
+                    "same-license--library"
+                ],
+                "description": "Primarily used for software libraries, the GNU LGPL requires that derived works be licensed under the same license, but works that only link to it do not fall under this restriction. There are two commonly used versions of the GNU LGPL.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "LGPL-2.1",
+                "title": "GNU Lesser General Public License v2.1",
+                "using": null
+            }
+        },
+        {
+            "license": "LGPL-2.1+",
+            "identifier": "$LGPL_2_1plus",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-2.1-only",
+            "identifier": "$LGPL_2_1_only",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-2.1-or-later",
+            "identifier": "$LGPL_2_1_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-3.0",
+            "identifier": "$LGPL_3_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "disclose-source",
+                    "document-changes",
+                    "same-license--library"
+                ],
+                "description": "Permissions of this copyleft license are conditioned on making available complete source code of licensed works and modifications under the same license or the GNU GPLv3. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work through interfaces provided by the licensed work may be distributed under different terms and without source code for the larger work.",
+                "featured": null,
+                "hidden": null,
+                "how": "This license is an additional set of permissions to the <a href=\"/licenses/gpl-3.0\">GNU GPLv3</a> license. Follow the instructions to apply the GNU GPLv3, in the root of your source code. Then add another file named COPYING.LESSER and copy the text.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "LGPL-3.0",
+                "title": "GNU Lesser General Public License v3.0",
+                "using": null
+            }
+        },
+        {
+            "license": "LGPL-3.0+",
+            "identifier": "$LGPL_3_0plus",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-3.0-only",
+            "identifier": "$LGPL_3_0_only",
+            "hasRules": false
+        },
+        {
+            "license": "LGPL-3.0-or-later",
+            "identifier": "$LGPL_3_0_or_later",
+            "hasRules": false
+        },
+        {
+            "license": "LGPLLR",
+            "identifier": "$LGPLLR",
+            "hasRules": false
+        },
+        {
+            "license": "LOOP",
+            "identifier": "$LOOP",
+            "hasRules": false
+        },
+        {
+            "license": "LPD-document",
+            "identifier": "$LPD_document",
+            "hasRules": false
+        },
+        {
+            "license": "LPL-1.0",
+            "identifier": "$LPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "LPL-1.02",
+            "identifier": "$LPL_1_02",
+            "hasRules": false
+        },
+        {
+            "license": "LPPL-1.0",
+            "identifier": "$LPPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "LPPL-1.1",
+            "identifier": "$LPPL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "LPPL-1.2",
+            "identifier": "$LPPL_1_2",
+            "hasRules": false
+        },
+        {
+            "license": "LPPL-1.3a",
+            "identifier": "$LPPL_1_3a",
+            "hasRules": false
+        },
+        {
+            "license": "LPPL-1.3c",
+            "identifier": "$LPPL_1_3c",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes",
+                    "disclose-source"
+                ],
+                "description": "The LaTeX Project Public License (LPPL) is the primary license under which the LaTeX kernel and the base LaTeX packages are distributed.",
+                "featured": null,
+                "hidden": null,
+                "how": "Place in each of the components of your work both an explicit copyright notice including your name, and the year the work was authored and/or last substantially modified. Include also a statement that the distribution and/or modification of that component is constrained by the conditions in this license.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "LPPL-1.3c",
+                "title": "LaTeX Project Public License v1.3c",
+                "using": null
+            }
+        },
+        {
+            "license": "LZMA-SDK-9.11-to-9.20",
+            "identifier": "$LZMA_SDK_9_11_to_9_20",
+            "hasRules": false
+        },
+        {
+            "license": "LZMA-SDK-9.22",
+            "identifier": "$LZMA_SDK_9_22",
+            "hasRules": false
+        },
+        {
+            "license": "Latex2e",
+            "identifier": "$Latex2e",
+            "hasRules": false
+        },
+        {
+            "license": "Latex2e-translated-notice",
+            "identifier": "$Latex2e_translated_notice",
+            "hasRules": false
+        },
+        {
+            "license": "Leptonica",
+            "identifier": "$Leptonica",
+            "hasRules": false
+        },
+        {
+            "license": "LiLiQ-P-1.1",
+            "identifier": "$LiLiQ_P_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "LiLiQ-R-1.1",
+            "identifier": "$LiLiQ_R_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "LiLiQ-Rplus-1.1",
+            "identifier": "$LiLiQ_Rplus_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "Libpng",
+            "identifier": "$Libpng",
+            "hasRules": false
+        },
+        {
+            "license": "Linux-OpenIB",
+            "identifier": "$Linux_OpenIB",
+            "hasRules": false
+        },
+        {
+            "license": "Linux-man-pages-1-para",
+            "identifier": "$Linux_man_pages_1_para",
+            "hasRules": false
+        },
+        {
+            "license": "Linux-man-pages-copyleft",
+            "identifier": "$Linux_man_pages_copyleft",
+            "hasRules": false
+        },
+        {
+            "license": "Linux-man-pages-copyleft-2-para",
+            "identifier": "$Linux_man_pages_copyleft_2_para",
+            "hasRules": false
+        },
+        {
+            "license": "Linux-man-pages-copyleft-var",
+            "identifier": "$Linux_man_pages_copyleft_var",
+            "hasRules": false
+        },
+        {
+            "license": "Lucida-Bitmap-Fonts",
+            "identifier": "$Lucida_Bitmap_Fonts",
+            "hasRules": false
+        },
+        {
+            "license": "MIPS",
+            "identifier": "$MIPS",
+            "hasRules": false
+        },
+        {
+            "license": "MIT",
+            "identifier": "$MIT",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.",
+                "featured": true,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "MIT",
+                "title": "MIT License",
+                "using": {}
+            }
+        },
+        {
+            "license": "MIT-0",
+            "identifier": "$MIT_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [],
+                "description": "A short and simple permissive license with no conditions, not even requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "MIT-0",
+                "title": "MIT No Attribution",
+                "using": {}
+            }
+        },
+        {
+            "license": "MIT-CMU",
+            "identifier": "$MIT_CMU",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-Click",
+            "identifier": "$MIT_Click",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-Festival",
+            "identifier": "$MIT_Festival",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-Khronos-old",
+            "identifier": "$MIT_Khronos_old",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-Modern-Variant",
+            "identifier": "$MIT_Modern_Variant",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-Wu",
+            "identifier": "$MIT_Wu",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-advertising",
+            "identifier": "$MIT_advertising",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-enna",
+            "identifier": "$MIT_enna",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-feh",
+            "identifier": "$MIT_feh",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-open-group",
+            "identifier": "$MIT_open_group",
+            "hasRules": false
+        },
+        {
+            "license": "MIT-testregex",
+            "identifier": "$MIT_testregex",
+            "hasRules": false
+        },
+        {
+            "license": "MITNFA",
+            "identifier": "$MITNFA",
+            "hasRules": false
+        },
+        {
+            "license": "MMIXware",
+            "identifier": "$MMIXware",
+            "hasRules": false
+        },
+        {
+            "license": "MPEG-SSG",
+            "identifier": "$MPEG_SSG",
+            "hasRules": false
+        },
+        {
+            "license": "MPL-1.0",
+            "identifier": "$MPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "MPL-1.1",
+            "identifier": "$MPL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "MPL-2.0",
+            "identifier": "$MPL_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "disclose-source",
+                    "include-copyright",
+                    "same-license--file"
+                ],
+                "description": "Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "trademark-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "MPL-2.0",
+                "title": "Mozilla Public License 2.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "MPL-2.0-no-copyleft-exception",
+            "identifier": "$MPL_2_0_no_copyleft_exception",
+            "hasRules": false
+        },
+        {
+            "license": "MS-LPL",
+            "identifier": "$MS_LPL",
+            "hasRules": false
+        },
+        {
+            "license": "MS-PL",
+            "identifier": "$MS_PL",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "An open source license with a patent grant.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "warranty",
+                    "trademark-use"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "MS-PL",
+                "title": "Microsoft Public License",
+                "using": null
+            }
+        },
+        {
+            "license": "MS-RL",
+            "identifier": "$MS_RL",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "disclose-source",
+                    "include-copyright",
+                    "same-license--file"
+                ],
+                "description": "An open source license with a patent grant similar to the <a href=\"/licenses/ms-pl/\">Microsoft Public License</a>, with the additional condition that any source code for any derived file be provided under this license.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "warranty",
+                    "trademark-use"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "MS-RL",
+                "title": "Microsoft Reciprocal License",
+                "using": null
+            }
+        },
+        {
+            "license": "MTLL",
+            "identifier": "$MTLL",
+            "hasRules": false
+        },
+        {
+            "license": "Mackerras-3-Clause",
+            "identifier": "$Mackerras_3_Clause",
+            "hasRules": false
+        },
+        {
+            "license": "Mackerras-3-Clause-acknowledgment",
+            "identifier": "$Mackerras_3_Clause_acknowledgment",
+            "hasRules": false
+        },
+        {
+            "license": "MakeIndex",
+            "identifier": "$MakeIndex",
+            "hasRules": false
+        },
+        {
+            "license": "Martin-Birgmeier",
+            "identifier": "$Martin_Birgmeier",
+            "hasRules": false
+        },
+        {
+            "license": "McPhee-slideshow",
+            "identifier": "$McPhee_slideshow",
+            "hasRules": false
+        },
+        {
+            "license": "Minpack",
+            "identifier": "$Minpack",
+            "hasRules": false
+        },
+        {
+            "license": "MirOS",
+            "identifier": "$MirOS",
+            "hasRules": false
+        },
+        {
+            "license": "Motosoto",
+            "identifier": "$Motosoto",
+            "hasRules": false
+        },
+        {
+            "license": "MulanPSL-1.0",
+            "identifier": "$MulanPSL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "MulanPSL-2.0",
+            "identifier": "$MulanPSL_2_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A permissive license similar to the <a href=\"/licenses/apache-2.0/\">Apache License</a>, but explicitly states that it does not grant trademark rights. Mulan Permissive Software License is the first open source license in both Chinese and English approved by OSI.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "trademark-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "MulanPSL-2.0",
+                "title": "Mulan Permissive Software License, Version 2",
+                "using": {}
+            }
+        },
+        {
+            "license": "Multics",
+            "identifier": "$Multics",
+            "hasRules": false
+        },
+        {
+            "license": "Mup",
+            "identifier": "$Mup",
+            "hasRules": false
+        },
+        {
+            "license": "NAIST-2003",
+            "identifier": "$NAIST_2003",
+            "hasRules": false
+        },
+        {
+            "license": "NASA-1.3",
+            "identifier": "$NASA_1_3",
+            "hasRules": false
+        },
+        {
+            "license": "NBPL-1.0",
+            "identifier": "$NBPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "NCBI-PD",
+            "identifier": "$NCBI_PD",
+            "hasRules": false
+        },
+        {
+            "license": "NCGL-UK-2.0",
+            "identifier": "$NCGL_UK_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "NCL",
+            "identifier": "$NCL",
+            "hasRules": false
+        },
+        {
+            "license": "NCSA",
+            "identifier": "$NCSA",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "The University of Illinois/NCSA Open Source License, or UIUC license, is a permissive free software license, based on the <a href=\"/licenses/mit/\">MIT/X11 license</a>  and the <a href=\"/licenses/bsd-3-clause/\">BSD 3-clause License</a>. Its conditions include requiring the preservation of copyright and license notices both in source and in binary distributions and the prohibition of using the names of the authors or the project organization to promote or endorse derived products.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders. Replace [project] with the project organization, if any, that sponsors this work.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "NCSA",
+                "title": "University of Illinois/NCSA Open Source License",
+                "using": {}
+            }
+        },
+        {
+            "license": "NGPL",
+            "identifier": "$NGPL",
+            "hasRules": false
+        },
+        {
+            "license": "NICTA-1.0",
+            "identifier": "$NICTA_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "NIST-PD",
+            "identifier": "$NIST_PD",
+            "hasRules": false
+        },
+        {
+            "license": "NIST-PD-fallback",
+            "identifier": "$NIST_PD_fallback",
+            "hasRules": false
+        },
+        {
+            "license": "NIST-Software",
+            "identifier": "$NIST_Software",
+            "hasRules": false
+        },
+        {
+            "license": "NLOD-1.0",
+            "identifier": "$NLOD_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "NLOD-2.0",
+            "identifier": "$NLOD_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "NLPL",
+            "identifier": "$NLPL",
+            "hasRules": false
+        },
+        {
+            "license": "NOSL",
+            "identifier": "$NOSL",
+            "hasRules": false
+        },
+        {
+            "license": "NPL-1.0",
+            "identifier": "$NPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "NPL-1.1",
+            "identifier": "$NPL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "NPOSL-3.0",
+            "identifier": "$NPOSL_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "NRL",
+            "identifier": "$NRL",
+            "hasRules": false
+        },
+        {
+            "license": "NTIA-PD",
+            "identifier": "$NTIA_PD",
+            "hasRules": false
+        },
+        {
+            "license": "NTP",
+            "identifier": "$NTP",
+            "hasRules": false
+        },
+        {
+            "license": "NTP-0",
+            "identifier": "$NTP_0",
+            "hasRules": false
+        },
+        {
+            "license": "Naumen",
+            "identifier": "$Naumen",
+            "hasRules": false
+        },
+        {
+            "license": "Net-SNMP",
+            "identifier": "$Net_SNMP",
+            "hasRules": false
+        },
+        {
+            "license": "NetCDF",
+            "identifier": "$NetCDF",
+            "hasRules": false
+        },
+        {
+            "license": "Newsletr",
+            "identifier": "$Newsletr",
+            "hasRules": false
+        },
+        {
+            "license": "Nokia",
+            "identifier": "$Nokia",
+            "hasRules": false
+        },
+        {
+            "license": "Noweb",
+            "identifier": "$Noweb",
+            "hasRules": false
+        },
+        {
+            "license": "Nunit",
+            "identifier": "$Nunit",
+            "hasRules": false
+        },
+        {
+            "license": "O-UDA-1.0",
+            "identifier": "$O_UDA_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "OAR",
+            "identifier": "$OAR",
+            "hasRules": false
+        },
+        {
+            "license": "OCCT-PL",
+            "identifier": "$OCCT_PL",
+            "hasRules": false
+        },
+        {
+            "license": "OCLC-2.0",
+            "identifier": "$OCLC_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "ODC-By-1.0",
+            "identifier": "$ODC_By_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "ODbL-1.0",
+            "identifier": "$ODbL_1_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "disclose-source",
+                    "include-copyright",
+                    "same-license"
+                ],
+                "description": "The Open Database License (ODbL) is a license agreement intended to allow users to freely share, modify, and use a database while maintaining this same freedom for others.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [
+                    "liability",
+                    "patent-use",
+                    "trademark-use",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "distribution",
+                    "modifications",
+                    "private-use"
+                ],
+                "spdx-id": "ODbL-1.0",
+                "title": "Open Data Commons Open Database License v1.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "OFFIS",
+            "identifier": "$OFFIS",
+            "hasRules": false
+        },
+        {
+            "license": "OFL-1.0",
+            "identifier": "$OFL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "OFL-1.0-RFN",
+            "identifier": "$OFL_1_0_RFN",
+            "hasRules": false
+        },
+        {
+            "license": "OFL-1.0-no-RFN",
+            "identifier": "$OFL_1_0_no_RFN",
+            "hasRules": false
+        },
+        {
+            "license": "OFL-1.1",
+            "identifier": "$OFL_1_1",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "same-license"
+                ],
+                "description": "The Open Font License (OFL) is maintained by SIL International. It attempts to be a compromise between the values of the free software and typeface design communities. It is used for almost all open source font projects, including those by Adobe, Google and Mozilla.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your font's source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] ([email]) with the name and contact email address of each copyright holder. You may take the additional step of appending a Reserved Font Name notice. This option requires anyone making modifications to change the font's name, and is not ideal for web fonts (which all users will modify by changing formats and subsetting for their own needs.)",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "private-use",
+                    "commercial-use",
+                    "modifications",
+                    "distribution"
+                ],
+                "spdx-id": "OFL-1.1",
+                "title": "SIL Open Font License 1.1",
+                "using": {}
+            }
+        },
+        {
+            "license": "OFL-1.1-RFN",
+            "identifier": "$OFL_1_1_RFN",
+            "hasRules": false
+        },
+        {
+            "license": "OFL-1.1-no-RFN",
+            "identifier": "$OFL_1_1_no_RFN",
+            "hasRules": false
+        },
+        {
+            "license": "OGC-1.0",
+            "identifier": "$OGC_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "OGDL-Taiwan-1.0",
+            "identifier": "$OGDL_Taiwan_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "OGL-Canada-2.0",
+            "identifier": "$OGL_Canada_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "OGL-UK-1.0",
+            "identifier": "$OGL_UK_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "OGL-UK-2.0",
+            "identifier": "$OGL_UK_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "OGL-UK-3.0",
+            "identifier": "$OGL_UK_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "OGTSL",
+            "identifier": "$OGTSL",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-1.1",
+            "identifier": "$OLDAP_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-1.2",
+            "identifier": "$OLDAP_1_2",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-1.3",
+            "identifier": "$OLDAP_1_3",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-1.4",
+            "identifier": "$OLDAP_1_4",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.0",
+            "identifier": "$OLDAP_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.0.1",
+            "identifier": "$OLDAP_2_0_1",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.1",
+            "identifier": "$OLDAP_2_1",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.2",
+            "identifier": "$OLDAP_2_2",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.2.1",
+            "identifier": "$OLDAP_2_2_1",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.2.2",
+            "identifier": "$OLDAP_2_2_2",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.3",
+            "identifier": "$OLDAP_2_3",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.4",
+            "identifier": "$OLDAP_2_4",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.5",
+            "identifier": "$OLDAP_2_5",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.6",
+            "identifier": "$OLDAP_2_6",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.7",
+            "identifier": "$OLDAP_2_7",
+            "hasRules": false
+        },
+        {
+            "license": "OLDAP-2.8",
+            "identifier": "$OLDAP_2_8",
+            "hasRules": false
+        },
+        {
+            "license": "OLFL-1.3",
+            "identifier": "$OLFL_1_3",
+            "hasRules": false
+        },
+        {
+            "license": "OML",
+            "identifier": "$OML",
+            "hasRules": false
+        },
+        {
+            "license": "OPL-1.0",
+            "identifier": "$OPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "OPL-UK-3.0",
+            "identifier": "$OPL_UK_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "OPUBL-1.0",
+            "identifier": "$OPUBL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "OSET-PL-2.1",
+            "identifier": "$OSET_PL_2_1",
+            "hasRules": false
+        },
+        {
+            "license": "OSL-1.0",
+            "identifier": "$OSL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "OSL-1.1",
+            "identifier": "$OSL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "OSL-2.0",
+            "identifier": "$OSL_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "OSL-2.1",
+            "identifier": "$OSL_2_1",
+            "hasRules": false
+        },
+        {
+            "license": "OSL-3.0",
+            "identifier": "$OSL_3_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "disclose-source",
+                    "document-changes",
+                    "network-use-disclose",
+                    "same-license"
+                ],
+                "description": "OSL 3.0 is a copyleft license that does not require reciprocal licensing on linked works. It also provides an express grant of patent rights from contributors to users, with a termination clause triggered if a user files a patent infringement lawsuit.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Files licensed under OSL 3.0 must also include the notice \"Licensed under the Open Software License version 3.0\" adjacent to the copyright notice.",
+                "limitations": [
+                    "trademark-use",
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "distribution",
+                    "modifications",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "OSL-3.0",
+                "title": "Open Software License 3.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "OpenPBS-2.3",
+            "identifier": "$OpenPBS_2_3",
+            "hasRules": false
+        },
+        {
+            "license": "OpenSSL",
+            "identifier": "$OpenSSL",
+            "hasRules": false
+        },
+        {
+            "license": "OpenSSL-standalone",
+            "identifier": "$OpenSSL_standalone",
+            "hasRules": false
+        },
+        {
+            "license": "OpenVision",
+            "identifier": "$OpenVision",
+            "hasRules": false
+        },
+        {
+            "license": "PADL",
+            "identifier": "$PADL",
+            "hasRules": false
+        },
+        {
+            "license": "PDDL-1.0",
+            "identifier": "$PDDL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "PHP-3.0",
+            "identifier": "$PHP_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "PHP-3.01",
+            "identifier": "$PHP_3_01",
+            "hasRules": false
+        },
+        {
+            "license": "PPL",
+            "identifier": "$PPL",
+            "hasRules": false
+        },
+        {
+            "license": "PSF-2.0",
+            "identifier": "$PSF_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "Parity-6.0.0",
+            "identifier": "$Parity_6_0_0",
+            "hasRules": false
+        },
+        {
+            "license": "Parity-7.0.0",
+            "identifier": "$Parity_7_0_0",
+            "hasRules": false
+        },
+        {
+            "license": "Pixar",
+            "identifier": "$Pixar",
+            "hasRules": false
+        },
+        {
+            "license": "Plexus",
+            "identifier": "$Plexus",
+            "hasRules": false
+        },
+        {
+            "license": "PolyForm-Noncommercial-1.0.0",
+            "identifier": "$PolyForm_Noncommercial_1_0_0",
+            "hasRules": false
+        },
+        {
+            "license": "PolyForm-Small-Business-1.0.0",
+            "identifier": "$PolyForm_Small_Business_1_0_0",
+            "hasRules": false
+        },
+        {
+            "license": "PostgreSQL",
+            "identifier": "$PostgreSQL",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A very short, BSD-style license, used specifically for PostgreSQL.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "PostgreSQL",
+                "title": "PostgreSQL License",
+                "using": {}
+            }
+        },
+        {
+            "license": "Python-2.0",
+            "identifier": "$Python_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "Python-2.0.1",
+            "identifier": "$Python_2_0_1",
+            "hasRules": false
+        },
+        {
+            "license": "QPL-1.0",
+            "identifier": "$QPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "QPL-1.0-INRIA-2004",
+            "identifier": "$QPL_1_0_INRIA_2004",
+            "hasRules": false
+        },
+        {
+            "license": "Qhull",
+            "identifier": "$Qhull",
+            "hasRules": false
+        },
+        {
+            "license": "RHeCos-1.1",
+            "identifier": "$RHeCos_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "RPL-1.1",
+            "identifier": "$RPL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "RPL-1.5",
+            "identifier": "$RPL_1_5",
+            "hasRules": false
+        },
+        {
+            "license": "RPSL-1.0",
+            "identifier": "$RPSL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "RSA-MD",
+            "identifier": "$RSA_MD",
+            "hasRules": false
+        },
+        {
+            "license": "RSCPL",
+            "identifier": "$RSCPL",
+            "hasRules": false
+        },
+        {
+            "license": "Rdisc",
+            "identifier": "$Rdisc",
+            "hasRules": false
+        },
+        {
+            "license": "Ruby",
+            "identifier": "$Ruby",
+            "hasRules": false
+        },
+        {
+            "license": "Ruby-pty",
+            "identifier": "$Ruby_pty",
+            "hasRules": false
+        },
+        {
+            "license": "SAX-PD",
+            "identifier": "$SAX_PD",
+            "hasRules": false
+        },
+        {
+            "license": "SAX-PD-2.0",
+            "identifier": "$SAX_PD_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "SCEA",
+            "identifier": "$SCEA",
+            "hasRules": false
+        },
+        {
+            "license": "SGI-B-1.0",
+            "identifier": "$SGI_B_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "SGI-B-1.1",
+            "identifier": "$SGI_B_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "SGI-B-2.0",
+            "identifier": "$SGI_B_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "SGI-OpenGL",
+            "identifier": "$SGI_OpenGL",
+            "hasRules": false
+        },
+        {
+            "license": "SGP4",
+            "identifier": "$SGP4",
+            "hasRules": false
+        },
+        {
+            "license": "SHL-0.5",
+            "identifier": "$SHL_0_5",
+            "hasRules": false
+        },
+        {
+            "license": "SHL-0.51",
+            "identifier": "$SHL_0_51",
+            "hasRules": false
+        },
+        {
+            "license": "SISSL",
+            "identifier": "$SISSL",
+            "hasRules": false
+        },
+        {
+            "license": "SISSL-1.2",
+            "identifier": "$SISSL_1_2",
+            "hasRules": false
+        },
+        {
+            "license": "SL",
+            "identifier": "$SL",
+            "hasRules": false
+        },
+        {
+            "license": "SMAIL-GPL",
+            "identifier": "$SMAIL_GPL",
+            "hasRules": false
+        },
+        {
+            "license": "SMLNJ",
+            "identifier": "$SMLNJ",
+            "hasRules": false
+        },
+        {
+            "license": "SMPPL",
+            "identifier": "$SMPPL",
+            "hasRules": false
+        },
+        {
+            "license": "SNIA",
+            "identifier": "$SNIA",
+            "hasRules": false
+        },
+        {
+            "license": "SOFA",
+            "identifier": "$SOFA",
+            "hasRules": false
+        },
+        {
+            "license": "SPL-1.0",
+            "identifier": "$SPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "SSH-OpenSSH",
+            "identifier": "$SSH_OpenSSH",
+            "hasRules": false
+        },
+        {
+            "license": "SSH-short",
+            "identifier": "$SSH_short",
+            "hasRules": false
+        },
+        {
+            "license": "SSLeay-standalone",
+            "identifier": "$SSLeay_standalone",
+            "hasRules": false
+        },
+        {
+            "license": "SSPL-1.0",
+            "identifier": "$SSPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "SWL",
+            "identifier": "$SWL",
+            "hasRules": false
+        },
+        {
+            "license": "Saxpath",
+            "identifier": "$Saxpath",
+            "hasRules": false
+        },
+        {
+            "license": "SchemeReport",
+            "identifier": "$SchemeReport",
+            "hasRules": false
+        },
+        {
+            "license": "Sendmail",
+            "identifier": "$Sendmail",
+            "hasRules": false
+        },
+        {
+            "license": "Sendmail-8.23",
+            "identifier": "$Sendmail_8_23",
+            "hasRules": false
+        },
+        {
+            "license": "Sendmail-Open-Source-1.1",
+            "identifier": "$Sendmail_Open_Source_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "SimPL-2.0",
+            "identifier": "$SimPL_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "Sleepycat",
+            "identifier": "$Sleepycat",
+            "hasRules": false
+        },
+        {
+            "license": "Soundex",
+            "identifier": "$Soundex",
+            "hasRules": false
+        },
+        {
+            "license": "Spencer-86",
+            "identifier": "$Spencer_86",
+            "hasRules": false
+        },
+        {
+            "license": "Spencer-94",
+            "identifier": "$Spencer_94",
+            "hasRules": false
+        },
+        {
+            "license": "Spencer-99",
+            "identifier": "$Spencer_99",
+            "hasRules": false
+        },
+        {
+            "license": "StandardML-NJ",
+            "identifier": "$StandardML_NJ",
+            "hasRules": false
+        },
+        {
+            "license": "SugarCRM-1.1.3",
+            "identifier": "$SugarCRM_1_1_3",
+            "hasRules": false
+        },
+        {
+            "license": "Sun-PPP",
+            "identifier": "$Sun_PPP",
+            "hasRules": false
+        },
+        {
+            "license": "Sun-PPP-2000",
+            "identifier": "$Sun_PPP_2000",
+            "hasRules": false
+        },
+        {
+            "license": "SunPro",
+            "identifier": "$SunPro",
+            "hasRules": false
+        },
+        {
+            "license": "Symlinks",
+            "identifier": "$Symlinks",
+            "hasRules": false
+        },
+        {
+            "license": "TAPR-OHL-1.0",
+            "identifier": "$TAPR_OHL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "TCL",
+            "identifier": "$TCL",
+            "hasRules": false
+        },
+        {
+            "license": "TCP-wrappers",
+            "identifier": "$TCP_wrappers",
+            "hasRules": false
+        },
+        {
+            "license": "TGPPL-1.0",
+            "identifier": "$TGPPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "TMate",
+            "identifier": "$TMate",
+            "hasRules": false
+        },
+        {
+            "license": "TORQUE-1.1",
+            "identifier": "$TORQUE_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "TOSL",
+            "identifier": "$TOSL",
+            "hasRules": false
+        },
+        {
+            "license": "TPDL",
+            "identifier": "$TPDL",
+            "hasRules": false
+        },
+        {
+            "license": "TPL-1.0",
+            "identifier": "$TPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "TTWL",
+            "identifier": "$TTWL",
+            "hasRules": false
+        },
+        {
+            "license": "TTYP0",
+            "identifier": "$TTYP0",
+            "hasRules": false
+        },
+        {
+            "license": "TU-Berlin-1.0",
+            "identifier": "$TU_Berlin_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "TU-Berlin-2.0",
+            "identifier": "$TU_Berlin_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "TermReadKey",
+            "identifier": "$TermReadKey",
+            "hasRules": false
+        },
+        {
+            "license": "ThirdEye",
+            "identifier": "$ThirdEye",
+            "hasRules": false
+        },
+        {
+            "license": "TrustedQSL",
+            "identifier": "$TrustedQSL",
+            "hasRules": false
+        },
+        {
+            "license": "UCAR",
+            "identifier": "$UCAR",
+            "hasRules": false
+        },
+        {
+            "license": "UCL-1.0",
+            "identifier": "$UCL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "UMich-Merit",
+            "identifier": "$UMich_Merit",
+            "hasRules": false
+        },
+        {
+            "license": "UPL-1.0",
+            "identifier": "$UPL_1_0",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright"
+                ],
+                "description": "A permissive, OSI- and FSF-approved, GPL-compatible license, expressly allowing attribution with just a copyright notice and a short form link rather than the full text of the license.  Includes an express grant of patent rights.  Licensed works and modifications may be distributed under different terms and without source code, and the patent grant may also optionally be expanded to larger works to permit use as a contributor license agreement.",
+                "featured": null,
+                "hidden": null,
+                "how": "Insert the license or a link to it along with a copyright notice into your source file(s), and/or create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file, replacing [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "patent-use",
+                    "private-use"
+                ],
+                "spdx-id": "UPL-1.0",
+                "title": "Universal Permissive License v1.0",
+                "using": {}
+            }
+        },
+        {
+            "license": "URT-RLE",
+            "identifier": "$URT_RLE",
+            "hasRules": false
+        },
+        {
+            "license": "Ubuntu-font-1.0",
+            "identifier": "$Ubuntu_font_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "Unicode-3.0",
+            "identifier": "$Unicode_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "Unicode-DFS-2015",
+            "identifier": "$Unicode_DFS_2015",
+            "hasRules": false
+        },
+        {
+            "license": "Unicode-DFS-2016",
+            "identifier": "$Unicode_DFS_2016",
+            "hasRules": false
+        },
+        {
+            "license": "Unicode-TOU",
+            "identifier": "$Unicode_TOU",
+            "hasRules": false
+        },
+        {
+            "license": "UnixCrypt",
+            "identifier": "$UnixCrypt",
+            "hasRules": false
+        },
+        {
+            "license": "Unlicense",
+            "identifier": "$Unlicense",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [],
+                "description": "A license with no conditions whatsoever which dedicates works to the public domain. Unlicensed works, modifications, and larger works may be distributed under different terms and without source code.",
+                "featured": null,
+                "hidden": false,
+                "how": "Create a text file (typically named UNLICENSE or UNLICENSE.txt) in the root of your source code and copy the text of the license disclaimer into the file.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "private-use",
+                    "commercial-use",
+                    "modifications",
+                    "distribution"
+                ],
+                "spdx-id": "Unlicense",
+                "title": "The Unlicense",
+                "using": {}
+            }
+        },
+        {
+            "license": "Unlicense-libtelnet",
+            "identifier": "$Unlicense_libtelnet",
+            "hasRules": false
+        },
+        {
+            "license": "Unlicense-libwhirlpool",
+            "identifier": "$Unlicense_libwhirlpool",
+            "hasRules": false
+        },
+        {
+            "license": "VOSTROM",
+            "identifier": "$VOSTROM",
+            "hasRules": false
+        },
+        {
+            "license": "VSL-1.0",
+            "identifier": "$VSL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "Vim",
+            "identifier": "$Vim",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright",
+                    "document-changes",
+                    "disclose-source",
+                    "same-license"
+                ],
+                "description": "There are no restrictions on using or distributing an unmodified copy of the software. Parts of the software may also be distributed, but the license text must always be included. For modified versions a few restrictions apply. The license is GPL compatible, you may compile the software with GPL libraries and distribute it.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [project] with the project name.",
+                "limitations": [],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "Vim",
+                "title": "Vim License",
+                "using": {}
+            }
+        },
+        {
+            "license": "W3C",
+            "identifier": "$W3C",
+            "hasRules": false
+        },
+        {
+            "license": "W3C-19980720",
+            "identifier": "$W3C_19980720",
+            "hasRules": false
+        },
+        {
+            "license": "W3C-20150513",
+            "identifier": "$W3C_20150513",
+            "hasRules": false
+        },
+        {
+            "license": "WTFPL",
+            "identifier": "$WTFPL",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [],
+                "description": "The easiest license out there. It gives the user permissions to do whatever they want with your code.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.",
+                "limitations": [],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "WTFPL",
+                "title": "Do What The F*ck You Want To Public License",
+                "using": null
+            }
+        },
+        {
+            "license": "Watcom-1.0",
+            "identifier": "$Watcom_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "Widget-Workshop",
+            "identifier": "$Widget_Workshop",
+            "hasRules": false
+        },
+        {
+            "license": "Wsuipa",
+            "identifier": "$Wsuipa",
+            "hasRules": false
+        },
+        {
+            "license": "X11",
+            "identifier": "$X11",
+            "hasRules": false
+        },
+        {
+            "license": "X11-distribute-modifications-variant",
+            "identifier": "$X11_distribute_modifications_variant",
+            "hasRules": false
+        },
+        {
+            "license": "X11-swapped",
+            "identifier": "$X11_swapped",
+            "hasRules": false
+        },
+        {
+            "license": "XFree86-1.1",
+            "identifier": "$XFree86_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "XSkat",
+            "identifier": "$XSkat",
+            "hasRules": false
+        },
+        {
+            "license": "Xdebug-1.03",
+            "identifier": "$Xdebug_1_03",
+            "hasRules": false
+        },
+        {
+            "license": "Xerox",
+            "identifier": "$Xerox",
+            "hasRules": false
+        },
+        {
+            "license": "Xfig",
+            "identifier": "$Xfig",
+            "hasRules": false
+        },
+        {
+            "license": "Xnet",
+            "identifier": "$Xnet",
+            "hasRules": false
+        },
+        {
+            "license": "YPL-1.0",
+            "identifier": "$YPL_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "YPL-1.1",
+            "identifier": "$YPL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "ZPL-1.1",
+            "identifier": "$ZPL_1_1",
+            "hasRules": false
+        },
+        {
+            "license": "ZPL-2.0",
+            "identifier": "$ZPL_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "ZPL-2.1",
+            "identifier": "$ZPL_2_1",
+            "hasRules": false
+        },
+        {
+            "license": "Zed",
+            "identifier": "$Zed",
+            "hasRules": false
+        },
+        {
+            "license": "Zeeff",
+            "identifier": "$Zeeff",
+            "hasRules": false
+        },
+        {
+            "license": "Zend-2.0",
+            "identifier": "$Zend_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "Zimbra-1.3",
+            "identifier": "$Zimbra_1_3",
+            "hasRules": false
+        },
+        {
+            "license": "Zimbra-1.4",
+            "identifier": "$Zimbra_1_4",
+            "hasRules": false
+        },
+        {
+            "license": "Zlib",
+            "identifier": "$Zlib",
+            "hasRules": true,
+            "rules": {
+                "hasPermissions": true,
+                "hasConditions": true,
+                "hasLimitations": true,
+                "conditions": [
+                    "include-copyright--source",
+                    "document-changes"
+                ],
+                "description": "A short permissive license, compatible with GPL. Requires altered source versions to be documented as such.",
+                "featured": null,
+                "hidden": null,
+                "how": "Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file. Replace [year] with the current year and [fullname] with the name (or names) of the copyright holders.",
+                "limitations": [
+                    "liability",
+                    "warranty"
+                ],
+                "permissions": [
+                    "commercial-use",
+                    "modifications",
+                    "distribution",
+                    "private-use"
+                ],
+                "spdx-id": "Zlib",
+                "title": "zlib License",
+                "using": {}
+            }
+        },
+        {
+            "license": "any-OSI",
+            "identifier": "$any_OSI",
+            "hasRules": false
+        },
+        {
+            "license": "any-OSI-perl-modules",
+            "identifier": "$any_OSI_perl_modules",
+            "hasRules": false
+        },
+        {
+            "license": "bcrypt-Solar-Designer",
+            "identifier": "$bcrypt_Solar_Designer",
+            "hasRules": false
+        },
+        {
+            "license": "blessing",
+            "identifier": "$blessing",
+            "hasRules": false
+        },
+        {
+            "license": "bzip2-1.0.5",
+            "identifier": "$bzip2_1_0_5",
+            "hasRules": false
+        },
+        {
+            "license": "bzip2-1.0.6",
+            "identifier": "$bzip2_1_0_6",
+            "hasRules": false
+        },
+        {
+            "license": "check-cvs",
+            "identifier": "$check_cvs",
+            "hasRules": false
+        },
+        {
+            "license": "checkmk",
+            "identifier": "$checkmk",
+            "hasRules": false
+        },
+        {
+            "license": "copyleft-next-0.3.0",
+            "identifier": "$copyleft_next_0_3_0",
+            "hasRules": false
+        },
+        {
+            "license": "copyleft-next-0.3.1",
+            "identifier": "$copyleft_next_0_3_1",
+            "hasRules": false
+        },
+        {
+            "license": "curl",
+            "identifier": "$curl",
+            "hasRules": false
+        },
+        {
+            "license": "cve-tou",
+            "identifier": "$cve_tou",
+            "hasRules": false
+        },
+        {
+            "license": "details",
+            "identifier": "$details",
+            "hasRules": false
+        },
+        {
+            "license": "diffmark",
+            "identifier": "$diffmark",
+            "hasRules": false
+        },
+        {
+            "license": "dtoa",
+            "identifier": "$dtoa",
+            "hasRules": false
+        },
+        {
+            "license": "dvipdfm",
+            "identifier": "$dvipdfm",
+            "hasRules": false
+        },
+        {
+            "license": "eCos-2.0",
+            "identifier": "$eCos_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "eGenix",
+            "identifier": "$eGenix",
+            "hasRules": false
+        },
+        {
+            "license": "etalab-2.0",
+            "identifier": "$etalab_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "fwlw",
+            "identifier": "$fwlw",
+            "hasRules": false
+        },
+        {
+            "license": "gSOAP-1.3b",
+            "identifier": "$gSOAP_1_3b",
+            "hasRules": false
+        },
+        {
+            "license": "generic-xts",
+            "identifier": "$generic_xts",
+            "hasRules": false
+        },
+        {
+            "license": "gnuplot",
+            "identifier": "$gnuplot",
+            "hasRules": false
+        },
+        {
+            "license": "gtkbook",
+            "identifier": "$gtkbook",
+            "hasRules": false
+        },
+        {
+            "license": "hdparm",
+            "identifier": "$hdparm",
+            "hasRules": false
+        },
+        {
+            "license": "iMatix",
+            "identifier": "$iMatix",
+            "hasRules": false
+        },
+        {
+            "license": "jove",
+            "identifier": "$jove",
+            "hasRules": false
+        },
+        {
+            "license": "libpng-1.6.35",
+            "identifier": "$libpng_1_6_35",
+            "hasRules": false
+        },
+        {
+            "license": "libpng-2.0",
+            "identifier": "$libpng_2_0",
+            "hasRules": false
+        },
+        {
+            "license": "libselinux-1.0",
+            "identifier": "$libselinux_1_0",
+            "hasRules": false
+        },
+        {
+            "license": "libtiff",
+            "identifier": "$libtiff",
+            "hasRules": false
+        },
+        {
+            "license": "libutil-David-Nugent",
+            "identifier": "$libutil_David_Nugent",
+            "hasRules": false
+        },
+        {
+            "license": "lsof",
+            "identifier": "$lsof",
+            "hasRules": false
+        },
+        {
+            "license": "magaz",
+            "identifier": "$magaz",
+            "hasRules": false
+        },
+        {
+            "license": "mailprio",
+            "identifier": "$mailprio",
+            "hasRules": false
+        },
+        {
+            "license": "man2html",
+            "identifier": "$man2html",
+            "hasRules": false
+        },
+        {
+            "license": "metamail",
+            "identifier": "$metamail",
+            "hasRules": false
+        },
+        {
+            "license": "mpi-permissive",
+            "identifier": "$mpi_permissive",
+            "hasRules": false
+        },
+        {
+            "license": "mpich2",
+            "identifier": "$mpich2",
+            "hasRules": false
+        },
+        {
+            "license": "mplus",
+            "identifier": "$mplus",
+            "hasRules": false
+        },
+        {
+            "license": "ngrep",
+            "identifier": "$ngrep",
+            "hasRules": false
+        },
+        {
+            "license": "pkgconf",
+            "identifier": "$pkgconf",
+            "hasRules": false
+        },
+        {
+            "license": "pnmstitch",
+            "identifier": "$pnmstitch",
+            "hasRules": false
+        },
+        {
+            "license": "psfrag",
+            "identifier": "$psfrag",
+            "hasRules": false
+        },
+        {
+            "license": "psutils",
+            "identifier": "$psutils",
+            "hasRules": false
+        },
+        {
+            "license": "python-ldap",
+            "identifier": "$python_ldap",
+            "hasRules": false
+        },
+        {
+            "license": "radvd",
+            "identifier": "$radvd",
+            "hasRules": false
+        },
+        {
+            "license": "snprintf",
+            "identifier": "$snprintf",
+            "hasRules": false
+        },
+        {
+            "license": "softSurfer",
+            "identifier": "$softSurfer",
+            "hasRules": false
+        },
+        {
+            "license": "ssh-keyscan",
+            "identifier": "$ssh_keyscan",
+            "hasRules": false
+        },
+        {
+            "license": "swrule",
+            "identifier": "$swrule",
+            "hasRules": false
+        },
+        {
+            "license": "threeparttable",
+            "identifier": "$threeparttable",
+            "hasRules": false
+        },
+        {
+            "license": "ulem",
+            "identifier": "$ulem",
+            "hasRules": false
+        },
+        {
+            "license": "w3m",
+            "identifier": "$w3m",
+            "hasRules": false
+        },
+        {
+            "license": "wwl",
+            "identifier": "$wwl",
+            "hasRules": false
+        },
+        {
+            "license": "wxWindows",
+            "identifier": "$wxWindows",
+            "hasRules": false
+        },
+        {
+            "license": "xinetd",
+            "identifier": "$xinetd",
+            "hasRules": false
+        },
+        {
+            "license": "xkeyboard-config-Zinoviev",
+            "identifier": "$xkeyboard_config_Zinoviev",
+            "hasRules": false
+        },
+        {
+            "license": "xlock",
+            "identifier": "$xlock",
+            "hasRules": false
+        },
+        {
+            "license": "xpp",
+            "identifier": "$xpp",
+            "hasRules": false
+        },
+        {
+            "license": "xzoom",
+            "identifier": "$xzoom",
+            "hasRules": false
+        },
+        {
+            "license": "zlib-acknowledgement",
+            "identifier": "$zlib_acknowledgement",
+            "hasRules": false
+        }
+    ],
+    "total": 699,
+    "rules": {
+        "permissions": [
+            {
+                "description": "The licensed material and derivatives may be used for commercial purposes.",
+                "label": "Commercial use",
+                "tag": "commercial-use"
+            },
+            {
+                "description": "The licensed material may be modified.",
+                "label": "Modification",
+                "tag": "modifications"
+            },
+            {
+                "description": "The licensed material may be distributed.",
+                "label": "Distribution",
+                "tag": "distribution"
+            },
+            {
+                "description": "The licensed material may be used and modified in private.",
+                "label": "Private use",
+                "tag": "private-use"
+            },
+            {
+                "description": "This license provides an express grant of patent rights from contributors.",
+                "label": "Patent use",
+                "tag": "patent-use"
+            }
+        ],
+        "conditions": [
+            {
+                "description": "A copy of the license and copyright notice must be included with the licensed material.",
+                "label": "License and copyright notice",
+                "tag": "include-copyright"
+            },
+            {
+                "description": "A copy of the license and copyright notice must be included with the licensed material in source form, but is not required for binaries.",
+                "label": "License and copyright notice for source",
+                "tag": "include-copyright--source"
+            },
+            {
+                "description": "Changes made to the licensed material must be documented.",
+                "label": "State changes",
+                "tag": "document-changes"
+            },
+            {
+                "description": "Source code must be made available when the licensed material is distributed.",
+                "label": "Disclose source",
+                "tag": "disclose-source"
+            },
+            {
+                "description": "Users who interact with the licensed material via network are given the right to receive a copy of the source code.",
+                "label": "Network use is distribution",
+                "tag": "network-use-disclose"
+            },
+            {
+                "description": "Modifications must be released under the same license when distributing the licensed material. In some cases a similar or related license may be used.",
+                "label": "Same license",
+                "tag": "same-license"
+            },
+            {
+                "description": "Modifications of existing files must be released under the same license when distributing the licensed material. In some cases a similar or related license may be used.",
+                "label": "Same license (file)",
+                "tag": "same-license--file"
+            },
+            {
+                "description": "Modifications must be released under the same license when distributing the licensed material. In some cases a similar or related license may be used, or this condition may not apply to works that use the licensed material as a library.",
+                "label": "Same license (library)",
+                "tag": "same-license--library"
+            }
+        ],
+        "limitations": [
+            {
+                "description": "This license explicitly states that it does NOT grant trademark rights, even though licenses without such a statement probably do not grant any implicit trademark rights.",
+                "label": "Trademark use",
+                "tag": "trademark-use"
+            },
+            {
+                "description": "This license includes a limitation of liability.",
+                "label": "Liability",
+                "tag": "liability"
+            },
+            {
+                "description": "This license explicitly states that it does NOT grant any rights in the patents of contributors.",
+                "label": "Patent use",
+                "tag": "patent-use"
+            },
+            {
+                "description": "This license explicitly states that it does NOT provide any warranty.",
+                "label": "Warranty",
+                "tag": "warranty"
+            }
+        ]
+    }
+}

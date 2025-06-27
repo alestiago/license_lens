@@ -38,7 +38,7 @@ jobs:
         id: make
         run: |
           cd spdxlib/
-          if [[ $(mason make spdxlib -q --licenses "[]" -o lib/src/ --on-conflict overwrite --set-exit-if-changed) =~ "0 files changed" ]]; then echo "did_change=false"; else echo "did_change=true"; fi >> $GITHUB_ENV
+          if [[ $(mason make spdxlib -q -o lib/src/ --on-conflict overwrite --set-exit-if-changed) =~ "0 files changed" ]]; then echo "did_change=false"; else echo "did_change=true"; fi >> $GITHUB_ENV
           cd -
 
       - name: 🐙 Generate GitHub App token

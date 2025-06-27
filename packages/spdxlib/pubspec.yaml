@@ -1,6 +1,6 @@
 name: spdxlib
 description: Provides up-to-date SPDX licenses information and utilities in Dart.
-version: 1.0.0
+version: 1.1.0
 repository: https://github.com/alestiago/license_lens/tree/main/packages/spdxlib
 issue_tracker: https://github.com/alestiago/license_lens/issues
 topics:

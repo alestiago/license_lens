@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // 
 // If you would like to modify this file consider contributing to the
-// SPDX License brick. 
+// spdxlib brick.
 //
 // Further contribution information can be found at:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/CONTRIBUTING.md
@@ -21,19 +21,28 @@
 
 /// List of all SPDX licenses.
 ///
-/// This file was automatically generated with the SPDX License brick.
+/// This file was automatically generated with the spdxlib brick.
 library spdx_license;
+
+import 'license_rules.gen.dart';
 
 /// {@template spdx_license}
 /// A list of all {{total}} SPDX licenses.
 ///
-/// These have been automatically generated from the SPDX License brick.
+/// These have been automatically generated from the spdxlib brick.
 /// {@endtemplate}
 enum SpdxLicense {
-  {{#licenses}}{{{identifier}}}._('{{{license}}}'),
+  {{#licenses}}{{{identifier}}}._('{{{license}}}'{{#hasRules}},
+    rules: LicenseRules(
+      {{#rules.hasPermissions}}permissions: const { {{#rules.permissions}}LicensePermission.{{#camelCase}}{{.}}{{/camelCase}},{{/rules.permissions}} },{{/rules.hasPermissions}}
+      {{#rules.hasConditions}}conditions: const { {{#rules.conditions}}LicenseCondition.{{#camelCase}}{{.}}{{/camelCase}},{{/rules.conditions}} },{{/rules.hasConditions}}
+      {{#rules.hasLimitations}}limitations: const { {{#rules.limitations}}LicenseLimitation.{{#camelCase}}{{.}}{{/camelCase}},{{/rules.limitations}} },{{/rules.hasLimitations}}
+    ),
+  {{/hasRules}}
+  ),
   {{/licenses}}$unknown._('unknown');
 
-  const SpdxLicense._(this.identifier);
+  const SpdxLicense._(this.identifier, {this.rules});
 
   /// Parses a [String] into a [SpdxLicense].
   ///
@@ -62,4 +71,9 @@ enum SpdxLicense {
 
   /// The identifier of the license, as seen in the [SPDX License List](https://spdx.org/licenses/).
   final String identifier;
+
+  /// {@macro LicenseRules}
+  ///
+  /// Null when no rules could be determined for the license.
+  final LicenseRules? rules;
 }

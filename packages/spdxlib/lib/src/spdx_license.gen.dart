@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 //
 // If you would like to modify this file consider contributing to the
-// SPDX License brick.
+// spdxlib brick.
 //
 // Further contribution information can be found at:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdx_license_gen/CONTRIBUTING.md
@@ -21,16 +21,33 @@
 
 /// List of all SPDX licenses.
 ///
-/// This file was automatically generated with the SPDX License brick.
+/// This file was automatically generated with the spdxlib brick.
 library spdx_license;
+
+import 'license_rules.gen.dart';
 
 /// {@template spdx_license}
 /// A list of all 699 SPDX licenses.
 ///
-/// These have been automatically generated from the SPDX License brick.
+/// These have been automatically generated from the spdxlib brick.
 /// {@endtemplate}
 enum SpdxLicense {
-  $0BSD._('0BSD'),
+  $0BSD._(
+    '0BSD',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.distribution,
+        LicensePermission.modifications,
+        LicensePermission.privateUse,
+      },
+      conditions: const {},
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $3D_Slicer_1_0._('3D-Slicer-1.0'),
   $AAL._('AAL'),
   $ADSL._('ADSL'),
@@ -38,11 +55,53 @@ enum SpdxLicense {
   $AFL_1_2._('AFL-1.2'),
   $AFL_2_0._('AFL-2.0'),
   $AFL_2_1._('AFL-2.1'),
-  $AFL_3_0._('AFL-3.0'),
+  $AFL_3_0._(
+    'AFL-3.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+        LicensePermission.patentUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+      },
+      limitations: const {
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $AGPL_1_0._('AGPL-1.0'),
   $AGPL_1_0_only._('AGPL-1.0-only'),
   $AGPL_1_0_or_later._('AGPL-1.0-or-later'),
-  $AGPL_3_0._('AGPL-3.0'),
+  $AGPL_3_0._(
+    'AGPL-3.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+        LicenseCondition.discloseSource,
+        LicenseCondition.networkUseDisclose,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $AGPL_3_0_only._('AGPL-3.0-only'),
   $AGPL_3_0_or_later._('AGPL-3.0-or-later'),
   $AMD_newlib._('AMD-newlib'),
@@ -70,27 +129,137 @@ enum SpdxLicense {
   $Aladdin._('Aladdin'),
   $Apache_1_0._('Apache-1.0'),
   $Apache_1_1._('Apache-1.1'),
-  $Apache_2_0._('Apache-2.0'),
+  $Apache_2_0._(
+    'Apache-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+      },
+      limitations: const {
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $App_s2p._('App-s2p'),
   $Arphic_1999._('Arphic-1999'),
   $Artistic_1_0._('Artistic-1.0'),
   $Artistic_1_0_Perl._('Artistic-1.0-Perl'),
   $Artistic_1_0_cl8._('Artistic-1.0-cl8'),
-  $Artistic_2_0._('Artistic-2.0'),
+  $Artistic_2_0._(
+    'Artistic-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $Artistic_dist._('Artistic-dist'),
   $Aspell_RU._('Aspell-RU'),
   $BSD_1_Clause._('BSD-1-Clause'),
-  $BSD_2_Clause._('BSD-2-Clause'),
+  $BSD_2_Clause._(
+    'BSD-2-Clause',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $BSD_2_Clause_Darwin._('BSD-2-Clause-Darwin'),
   $BSD_2_Clause_FreeBSD._('BSD-2-Clause-FreeBSD'),
   $BSD_2_Clause_NetBSD._('BSD-2-Clause-NetBSD'),
-  $BSD_2_Clause_Patent._('BSD-2-Clause-Patent'),
+  $BSD_2_Clause_Patent._(
+    'BSD-2-Clause-Patent',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $BSD_2_Clause_Views._('BSD-2-Clause-Views'),
   $BSD_2_Clause_first_lines._('BSD-2-Clause-first-lines'),
   $BSD_2_Clause_pkgconf_disclaimer._('BSD-2-Clause-pkgconf-disclaimer'),
-  $BSD_3_Clause._('BSD-3-Clause'),
+  $BSD_3_Clause._(
+    'BSD-3-Clause',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $BSD_3_Clause_Attribution._('BSD-3-Clause-Attribution'),
-  $BSD_3_Clause_Clear._('BSD-3-Clause-Clear'),
+  $BSD_3_Clause_Clear._(
+    'BSD-3-Clause-Clear',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.patentUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $BSD_3_Clause_HP._('BSD-3-Clause-HP'),
   $BSD_3_Clause_LBNL._('BSD-3-Clause-LBNL'),
   $BSD_3_Clause_Modification._('BSD-3-Clause-Modification'),
@@ -104,7 +273,24 @@ enum SpdxLicense {
   $BSD_3_Clause_Sun._('BSD-3-Clause-Sun'),
   $BSD_3_Clause_acpica._('BSD-3-Clause-acpica'),
   $BSD_3_Clause_flex._('BSD-3-Clause-flex'),
-  $BSD_4_Clause._('BSD-4-Clause'),
+  $BSD_4_Clause._(
+    'BSD-4-Clause',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $BSD_4_Clause_Shortened._('BSD-4-Clause-Shortened'),
   $BSD_4_Clause_UC._('BSD-4-Clause-UC'),
   $BSD_4_3RENO._('BSD-4.3RENO'),
@@ -117,7 +303,24 @@ enum SpdxLicense {
   $BSD_Source_beginning_file._('BSD-Source-beginning-file'),
   $BSD_Systemics._('BSD-Systemics'),
   $BSD_Systemics_W3Works._('BSD-Systemics-W3Works'),
-  $BSL_1_0._('BSL-1.0'),
+  $BSL_1_0._(
+    'BSL-1.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyrightSource,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $BUSL_1_1._('BUSL-1.1'),
   $Baekmuk._('Baekmuk'),
   $Bahyph._('Bahyph'),
@@ -127,7 +330,25 @@ enum SpdxLicense {
   $BitTorrent_1_1._('BitTorrent-1.1'),
   $Bitstream_Charter._('Bitstream-Charter'),
   $Bitstream_Vera._('Bitstream-Vera'),
-  $BlueOak_1_0_0._('BlueOak-1.0.0'),
+  $BlueOak_1_0_0._(
+    'BlueOak-1.0.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $Boehm_GC._('Boehm-GC'),
   $Boehm_GC_without_fee._('Boehm-GC-without-fee'),
   $Borceux._('Borceux'),
@@ -148,7 +369,27 @@ enum SpdxLicense {
   $CC_BY_3_0_IGO._('CC-BY-3.0-IGO'),
   $CC_BY_3_0_NL._('CC-BY-3.0-NL'),
   $CC_BY_3_0_US._('CC-BY-3.0-US'),
-  $CC_BY_4_0._('CC-BY-4.0'),
+  $CC_BY_4_0._(
+    'CC-BY-4.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.patentUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $CC_BY_NC_1_0._('CC-BY-NC-1.0'),
   $CC_BY_NC_2_0._('CC-BY-NC-2.0'),
   $CC_BY_NC_2_5._('CC-BY-NC-2.5'),
@@ -187,11 +428,49 @@ enum SpdxLicense {
   $CC_BY_SA_3_0_AT._('CC-BY-SA-3.0-AT'),
   $CC_BY_SA_3_0_DE._('CC-BY-SA-3.0-DE'),
   $CC_BY_SA_3_0_IGO._('CC-BY-SA-3.0-IGO'),
-  $CC_BY_SA_4_0._('CC-BY-SA-4.0'),
+  $CC_BY_SA_4_0._(
+    'CC-BY-SA-4.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.patentUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $CC_PDDC._('CC-PDDC'),
   $CC_PDM_1_0._('CC-PDM-1.0'),
   $CC_SA_1_0._('CC-SA-1.0'),
-  $CC0_1_0._('CC0-1.0'),
+  $CC0_1_0._(
+    'CC0-1.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {},
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.patentUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $CDDL_1_0._('CDDL-1.0'),
   $CDDL_1_1._('CDDL-1.1'),
   $CDL_1_0._('CDL-1.0'),
@@ -201,14 +480,96 @@ enum SpdxLicense {
   $CECILL_1_0._('CECILL-1.0'),
   $CECILL_1_1._('CECILL-1.1'),
   $CECILL_2_0._('CECILL-2.0'),
-  $CECILL_2_1._('CECILL-2.1'),
+  $CECILL_2_1._(
+    'CECILL-2.1',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+        LicensePermission.patentUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.networkUseDisclose,
+        LicenseCondition.discloseSource,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $CECILL_B._('CECILL-B'),
   $CECILL_C._('CECILL-C'),
   $CERN_OHL_1_1._('CERN-OHL-1.1'),
   $CERN_OHL_1_2._('CERN-OHL-1.2'),
-  $CERN_OHL_P_2_0._('CERN-OHL-P-2.0'),
-  $CERN_OHL_S_2_0._('CERN-OHL-S-2.0'),
-  $CERN_OHL_W_2_0._('CERN-OHL-W-2.0'),
+  $CERN_OHL_P_2_0._(
+    'CERN-OHL-P-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+        LicensePermission.patentUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
+  $CERN_OHL_S_2_0._(
+    'CERN-OHL-S-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+        LicensePermission.patentUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+        LicenseCondition.discloseSource,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
+  $CERN_OHL_W_2_0._(
+    'CERN-OHL-W-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+        LicensePermission.patentUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+        LicenseCondition.discloseSource,
+        LicenseCondition.sameLicenseLibrary,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $CFITSIO._('CFITSIO'),
   $CMU_Mach._('CMU-Mach'),
   $CMU_Mach_nodoc._('CMU-Mach-nodoc'),
@@ -247,16 +608,122 @@ enum SpdxLicense {
   $DocBook_XML._('DocBook-XML'),
   $Dotseqn._('Dotseqn'),
   $ECL_1_0._('ECL-1.0'),
-  $ECL_2_0._('ECL-2.0'),
+  $ECL_2_0._(
+    'ECL-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+      },
+      limitations: const {
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $EFL_1_0._('EFL-1.0'),
   $EFL_2_0._('EFL-2.0'),
   $EPICS._('EPICS'),
-  $EPL_1_0._('EPL-1.0'),
-  $EPL_2_0._('EPL-2.0'),
+  $EPL_1_0._(
+    'EPL-1.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.distribution,
+        LicensePermission.modifications,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.discloseSource,
+        LicenseCondition.includeCopyright,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
+  $EPL_2_0._(
+    'EPL-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.distribution,
+        LicensePermission.modifications,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.discloseSource,
+        LicenseCondition.includeCopyright,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $EUDatagrid._('EUDatagrid'),
   $EUPL_1_0._('EUPL-1.0'),
-  $EUPL_1_1._('EUPL-1.1'),
-  $EUPL_1_2._('EUPL-1.2'),
+  $EUPL_1_1._(
+    'EUPL-1.1',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.discloseSource,
+        LicenseCondition.documentChanges,
+        LicenseCondition.networkUseDisclose,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
+  $EUPL_1_2._(
+    'EUPL-1.2',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.discloseSource,
+        LicenseCondition.documentChanges,
+        LicenseCondition.networkUseDisclose,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $Elastic_2_0._('Elastic-2.0'),
   $Entessa._('Entessa'),
   $ErlPL_1_1._('ErlPL-1.1'),
@@ -294,7 +761,27 @@ enum SpdxLicense {
   $GFDL_1_2_no_invariants_or_later._('GFDL-1.2-no-invariants-or-later'),
   $GFDL_1_2_only._('GFDL-1.2-only'),
   $GFDL_1_2_or_later._('GFDL-1.2-or-later'),
-  $GFDL_1_3._('GFDL-1.3'),
+  $GFDL_1_3._(
+    'GFDL-1.3',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.discloseSource,
+        LicenseCondition.sameLicense,
+        LicenseCondition.documentChanges,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $GFDL_1_3_invariants_only._('GFDL-1.3-invariants-only'),
   $GFDL_1_3_invariants_or_later._('GFDL-1.3-invariants-or-later'),
   $GFDL_1_3_no_invariants_only._('GFDL-1.3-no-invariants-only'),
@@ -307,7 +794,27 @@ enum SpdxLicense {
   $GPL_1_0plus._('GPL-1.0+'),
   $GPL_1_0_only._('GPL-1.0-only'),
   $GPL_1_0_or_later._('GPL-1.0-or-later'),
-  $GPL_2_0._('GPL-2.0'),
+  $GPL_2_0._(
+    'GPL-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+        LicenseCondition.discloseSource,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $GPL_2_0plus._('GPL-2.0+'),
   $GPL_2_0_only._('GPL-2.0-only'),
   $GPL_2_0_or_later._('GPL-2.0-or-later'),
@@ -316,7 +823,28 @@ enum SpdxLicense {
   $GPL_2_0_with_bison_exception._('GPL-2.0-with-bison-exception'),
   $GPL_2_0_with_classpath_exception._('GPL-2.0-with-classpath-exception'),
   $GPL_2_0_with_font_exception._('GPL-2.0-with-font-exception'),
-  $GPL_3_0._('GPL-3.0'),
+  $GPL_3_0._(
+    'GPL-3.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+        LicenseCondition.discloseSource,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $GPL_3_0plus._('GPL-3.0+'),
   $GPL_3_0_only._('GPL-3.0-only'),
   $GPL_3_0_or_later._('GPL-3.0-or-later'),
@@ -368,7 +896,24 @@ enum SpdxLicense {
   $IJG_short._('IJG-short'),
   $IPA._('IPA'),
   $IPL_1_0._('IPL-1.0'),
-  $ISC._('ISC'),
+  $ISC._(
+    'ISC',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.distribution,
+        LicensePermission.modifications,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $ISC_Veillard._('ISC-Veillard'),
   $ImageMagick._('ImageMagick'),
   $Imlib2._('Imlib2'),
@@ -392,11 +937,52 @@ enum SpdxLicense {
   $LGPL_2_0plus._('LGPL-2.0+'),
   $LGPL_2_0_only._('LGPL-2.0-only'),
   $LGPL_2_0_or_later._('LGPL-2.0-or-later'),
-  $LGPL_2_1._('LGPL-2.1'),
+  $LGPL_2_1._(
+    'LGPL-2.1',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.discloseSource,
+        LicenseCondition.documentChanges,
+        LicenseCondition.sameLicenseLibrary,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $LGPL_2_1plus._('LGPL-2.1+'),
   $LGPL_2_1_only._('LGPL-2.1-only'),
   $LGPL_2_1_or_later._('LGPL-2.1-or-later'),
-  $LGPL_3_0._('LGPL-3.0'),
+  $LGPL_3_0._(
+    'LGPL-3.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.discloseSource,
+        LicenseCondition.documentChanges,
+        LicenseCondition.sameLicenseLibrary,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $LGPL_3_0plus._('LGPL-3.0+'),
   $LGPL_3_0_only._('LGPL-3.0-only'),
   $LGPL_3_0_or_later._('LGPL-3.0-or-later'),
@@ -409,7 +995,26 @@ enum SpdxLicense {
   $LPPL_1_1._('LPPL-1.1'),
   $LPPL_1_2._('LPPL-1.2'),
   $LPPL_1_3a._('LPPL-1.3a'),
-  $LPPL_1_3c._('LPPL-1.3c'),
+  $LPPL_1_3c._(
+    'LPPL-1.3c',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+        LicenseCondition.discloseSource,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $LZMA_SDK_9_11_to_9_20._('LZMA-SDK-9.11-to-9.20'),
   $LZMA_SDK_9_22._('LZMA-SDK-9.22'),
   $Latex2e._('Latex2e'),
@@ -426,8 +1031,40 @@ enum SpdxLicense {
   $Linux_man_pages_copyleft_var._('Linux-man-pages-copyleft-var'),
   $Lucida_Bitmap_Fonts._('Lucida-Bitmap-Fonts'),
   $MIPS._('MIPS'),
-  $MIT._('MIT'),
-  $MIT_0._('MIT-0'),
+  $MIT._(
+    'MIT',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
+  $MIT_0._(
+    'MIT-0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {},
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $MIT_CMU._('MIT-CMU'),
   $MIT_Click._('MIT-Click'),
   $MIT_Festival._('MIT-Festival'),
@@ -444,11 +1081,70 @@ enum SpdxLicense {
   $MPEG_SSG._('MPEG-SSG'),
   $MPL_1_0._('MPL-1.0'),
   $MPL_1_1._('MPL-1.1'),
-  $MPL_2_0._('MPL-2.0'),
+  $MPL_2_0._(
+    'MPL-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.discloseSource,
+        LicenseCondition.includeCopyright,
+        LicenseCondition.sameLicenseFile,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $MPL_2_0_no_copyleft_exception._('MPL-2.0-no-copyleft-exception'),
   $MS_LPL._('MS-LPL'),
-  $MS_PL._('MS-PL'),
-  $MS_RL._('MS-RL'),
+  $MS_PL._(
+    'MS-PL',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.warranty,
+        LicenseLimitation.trademarkUse,
+      },
+    ),
+  ),
+  $MS_RL._(
+    'MS-RL',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.discloseSource,
+        LicenseCondition.includeCopyright,
+        LicenseCondition.sameLicenseFile,
+      },
+      limitations: const {
+        LicenseLimitation.warranty,
+        LicenseLimitation.trademarkUse,
+      },
+    ),
+  ),
   $MTLL._('MTLL'),
   $Mackerras_3_Clause._('Mackerras-3-Clause'),
   $Mackerras_3_Clause_acknowledgment._('Mackerras-3-Clause-acknowledgment'),
@@ -459,7 +1155,26 @@ enum SpdxLicense {
   $MirOS._('MirOS'),
   $Motosoto._('Motosoto'),
   $MulanPSL_1_0._('MulanPSL-1.0'),
-  $MulanPSL_2_0._('MulanPSL-2.0'),
+  $MulanPSL_2_0._(
+    'MulanPSL-2.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $Multics._('Multics'),
   $Mup._('Mup'),
   $NAIST_2003._('NAIST-2003'),
@@ -468,7 +1183,24 @@ enum SpdxLicense {
   $NCBI_PD._('NCBI-PD'),
   $NCGL_UK_2_0._('NCGL-UK-2.0'),
   $NCL._('NCL'),
-  $NCSA._('NCSA'),
+  $NCSA._(
+    'NCSA',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $NGPL._('NGPL'),
   $NICTA_1_0._('NICTA-1.0'),
   $NIST_PD._('NIST-PD'),
@@ -497,12 +1229,51 @@ enum SpdxLicense {
   $OCCT_PL._('OCCT-PL'),
   $OCLC_2_0._('OCLC-2.0'),
   $ODC_By_1_0._('ODC-By-1.0'),
-  $ODbL_1_0._('ODbL-1.0'),
+  $ODbL_1_0._(
+    'ODbL-1.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.distribution,
+        LicensePermission.modifications,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.discloseSource,
+        LicenseCondition.includeCopyright,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.patentUse,
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $OFFIS._('OFFIS'),
   $OFL_1_0._('OFL-1.0'),
   $OFL_1_0_RFN._('OFL-1.0-RFN'),
   $OFL_1_0_no_RFN._('OFL-1.0-no-RFN'),
-  $OFL_1_1._('OFL-1.1'),
+  $OFL_1_1._(
+    'OFL-1.1',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.privateUse,
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $OFL_1_1_RFN._('OFL-1.1-RFN'),
   $OFL_1_1_no_RFN._('OFL-1.1-no-RFN'),
   $OGC_1_0._('OGC-1.0'),
@@ -538,7 +1309,30 @@ enum SpdxLicense {
   $OSL_1_1._('OSL-1.1'),
   $OSL_2_0._('OSL-2.0'),
   $OSL_2_1._('OSL-2.1'),
-  $OSL_3_0._('OSL-3.0'),
+  $OSL_3_0._(
+    'OSL-3.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.distribution,
+        LicensePermission.modifications,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.discloseSource,
+        LicenseCondition.documentChanges,
+        LicenseCondition.networkUseDisclose,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {
+        LicenseLimitation.trademarkUse,
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $OpenPBS_2_3._('OpenPBS-2.3'),
   $OpenSSL._('OpenSSL'),
   $OpenSSL_standalone._('OpenSSL-standalone'),
@@ -555,7 +1349,24 @@ enum SpdxLicense {
   $Plexus._('Plexus'),
   $PolyForm_Noncommercial_1_0_0._('PolyForm-Noncommercial-1.0.0'),
   $PolyForm_Small_Business_1_0_0._('PolyForm-Small-Business-1.0.0'),
-  $PostgreSQL._('PostgreSQL'),
+  $PostgreSQL._(
+    'PostgreSQL',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $Python_2_0._('Python-2.0'),
   $Python_2_0_1._('Python-2.0.1'),
   $QPL_1_0._('QPL-1.0'),
@@ -630,7 +1441,25 @@ enum SpdxLicense {
   $UCAR._('UCAR'),
   $UCL_1_0._('UCL-1.0'),
   $UMich_Merit._('UMich-Merit'),
-  $UPL_1_0._('UPL-1.0'),
+  $UPL_1_0._(
+    'UPL-1.0',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.patentUse,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $URT_RLE._('URT-RLE'),
   $Ubuntu_font_1_0._('Ubuntu-font-1.0'),
   $Unicode_3_0._('Unicode-3.0'),
@@ -638,16 +1467,60 @@ enum SpdxLicense {
   $Unicode_DFS_2016._('Unicode-DFS-2016'),
   $Unicode_TOU._('Unicode-TOU'),
   $UnixCrypt._('UnixCrypt'),
-  $Unlicense._('Unlicense'),
+  $Unlicense._(
+    'Unlicense',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.privateUse,
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+      },
+      conditions: const {},
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $Unlicense_libtelnet._('Unlicense-libtelnet'),
   $Unlicense_libwhirlpool._('Unlicense-libwhirlpool'),
   $VOSTROM._('VOSTROM'),
   $VSL_1_0._('VSL-1.0'),
-  $Vim._('Vim'),
+  $Vim._(
+    'Vim',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyright,
+        LicenseCondition.documentChanges,
+        LicenseCondition.discloseSource,
+        LicenseCondition.sameLicense,
+      },
+      limitations: const {},
+    ),
+  ),
   $W3C._('W3C'),
   $W3C_19980720._('W3C-19980720'),
   $W3C_20150513._('W3C-20150513'),
-  $WTFPL._('WTFPL'),
+  $WTFPL._(
+    'WTFPL',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {},
+      limitations: const {},
+    ),
+  ),
   $Watcom_1_0._('Watcom-1.0'),
   $Widget_Workshop._('Widget-Workshop'),
   $Wsuipa._('Wsuipa'),
@@ -672,7 +1545,25 @@ enum SpdxLicense {
   $Zend_2_0._('Zend-2.0'),
   $Zimbra_1_3._('Zimbra-1.3'),
   $Zimbra_1_4._('Zimbra-1.4'),
-  $Zlib._('Zlib'),
+  $Zlib._(
+    'Zlib',
+    rules: LicenseRules(
+      permissions: const {
+        LicensePermission.commercialUse,
+        LicensePermission.modifications,
+        LicensePermission.distribution,
+        LicensePermission.privateUse,
+      },
+      conditions: const {
+        LicenseCondition.includeCopyrightSource,
+        LicenseCondition.documentChanges,
+      },
+      limitations: const {
+        LicenseLimitation.liability,
+        LicenseLimitation.warranty,
+      },
+    ),
+  ),
   $any_OSI._('any-OSI'),
   $any_OSI_perl_modules._('any-OSI-perl-modules'),
   $bcrypt_Solar_Designer._('bcrypt-Solar-Designer'),
@@ -737,7 +1628,7 @@ enum SpdxLicense {
   $zlib_acknowledgement._('zlib-acknowledgement'),
   $unknown._('unknown');
 
-  const SpdxLicense._(this.identifier);
+  const SpdxLicense._(this.identifier, {this.rules});
 
   /// Parses a [String] into a [SpdxLicense].
   ///
@@ -766,4 +1657,9 @@ enum SpdxLicense {
 
   /// The identifier of the license, as seen in the [SPDX License List](https://spdx.org/licenses/).
   final String identifier;
+
+  /// {@macro LicenseRules}
+  ///
+  /// Null when no rules could be determined for the license.
+  final LicenseRules? rules;
 }
