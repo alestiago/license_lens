@@ -9,8 +9,6 @@
 // Full attribution information is provided in the NOTICE file:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/NOTICE.md
 
-// ignore_for_file: prefer_const_constructors
-
 import 'package:archive/archive.dart';
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
@@ -111,13 +109,13 @@ void main() {
 
   group(GenerateSpdxLicenseException, () {
     test('can be instantiated', () {
-      final exception = GenerateSpdxLicenseException('Test error');
+      const exception = GenerateSpdxLicenseException('Test error');
       expect(exception, isA<GenerateSpdxLicenseException>());
       expect(exception.message, contains('Test error'));
     });
 
     test('toString has message', () {
-      final exception = GenerateSpdxLicenseException('Test error');
+      const exception = GenerateSpdxLicenseException('Test error');
       expect(exception.toString(), contains('Test error'));
     });
   });
