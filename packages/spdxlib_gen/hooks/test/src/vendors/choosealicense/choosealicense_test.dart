@@ -199,4 +199,21 @@ void main() {
       );
     });
   });
+
+  group(ChooseALicenseException, () {
+    test('can be instantiated', () {
+      expect(
+        const ChooseALicenseException('Test exception'),
+        isA<ChooseALicenseException>(),
+      );
+    });
+
+    test('toString uses message', () {
+      const exception = ChooseALicenseException('Test message');
+      expect(
+        exception.toString(),
+        equals('ChooseALicenseException: Test message'),
+      );
+    });
+  });
 }
