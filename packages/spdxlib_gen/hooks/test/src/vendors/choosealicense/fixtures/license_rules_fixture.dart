@@ -3,8 +3,8 @@ abstract class ChooseALicenseLicenseRulesFixture {
   /// https://api.github.com/repos/github/choosealicense.com/contents/_licenses
   /// (Accessed 27 June 2025).
   ///
-  /// This fixture is used to test the parsing of the license rules without needing to
-  /// download the rules from the internet.
+  /// This fixture is used to test the parsing of the license rules without
+  /// needing to download the rules from the internet.
   static const successGitHubContent = '''
 [
   {
@@ -774,8 +774,8 @@ abstract class ChooseALicenseLicenseRulesFixture {
   /// https://raw.githubusercontent.com/github/choosealicense.com/gh-pages/_licenses/0bsd.txt
   /// (Accessed 27 June 2025).
   ///
-  /// This fixture is used to test the parsing of the license rules without needing to
-  /// download the rules from the internet.
+  /// This fixture is used to test the parsing of the license rules without
+  /// needing to download the rules from the internet.
   static const successLicense = '''
 ---
 title: BSD Zero Clause License
