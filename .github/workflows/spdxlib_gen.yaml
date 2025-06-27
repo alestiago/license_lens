@@ -28,6 +28,6 @@ jobs:
       report_on: "lib"
       check_ignore: true
       no_example: true
-      run_skipped: false
+      run_skipped: true
       coverage_excludes: "**/*.g.dart"
       working_directory: "packages/spdxlib_gen/hooks"

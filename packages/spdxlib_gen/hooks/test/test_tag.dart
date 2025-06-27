@@ -20,5 +20,5 @@
 /// * [Dart Test Configuration documentation](https://github.com/dart-lang/test/blob/master/pkgs/test/doc/configuration.md)
 abstract class TestTag {
   /// Should only be run during pull request
-  static const e2e = 'e2e';
+  static const ci = 'ci';
 }

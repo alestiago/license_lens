@@ -1,4 +1,4 @@
 tags:
-  e2e:
-    description: "End to end tests that may consume network resources"
-    skip: "Avoid running e2e tests unless necessary"
+  ci:
+    description: "Run tests in CI"
+    skip: "Exclusively run in CI environments"

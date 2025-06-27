@@ -51,7 +51,7 @@ void main() {
 
     test(
       'downloads licenses successfully',
-      tags: [TestTag.e2e],
+      tags: [TestTag.ci],
       () async {
         final client = http.Client();
         addTearDown(client.close);
