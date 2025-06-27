@@ -9,6 +9,8 @@
 // Full attribution information is provided in the NOTICE file:
 // https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/NOTICE.md
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:archive/archive.dart';
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
@@ -77,9 +79,9 @@ void main() {
     });
 
     group('throws $GenerateSpdxLicenseException', () {
-      test('when response statusCode is 200', () async {
+      test('when response statusCode is not 200', () async {
         when(() => httpClient.get(uri)).thenAnswer(
-          (_) async => http.Response('Invalid response body', 200),
+          (_) async => http.Response('Invalid response body', 404),
         );
 
         expect(
@@ -104,6 +106,19 @@ void main() {
           throwsA(isA<GenerateSpdxLicenseException>()),
         );
       });
+    });
+  });
+
+  group(GenerateSpdxLicenseException, () {
+    test('can be instantiated', () {
+      final exception = GenerateSpdxLicenseException('Test error');
+      expect(exception, isA<GenerateSpdxLicenseException>());
+      expect(exception.message, contains('Test error'));
+    });
+
+    test('toString has message', () {
+      final exception = GenerateSpdxLicenseException('Test error');
+      expect(exception.toString(), contains('Test error'));
     });
   });
 }
