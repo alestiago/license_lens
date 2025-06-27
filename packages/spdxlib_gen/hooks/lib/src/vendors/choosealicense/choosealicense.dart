@@ -11,7 +11,6 @@
 
 import 'dart:convert';
 
-import 'package:archive/archive.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:spdxlib_hooks/spdxlib.dart';
@@ -81,7 +80,6 @@ typedef AllLicenseRules = Map<String, LicenseRules>;
 /// Downloads the rules for all licenses defined by ChooseALicense.
 Future<AllLicenseRules> downloadLicenseRules({
   required http.Client client,
-  @visibleForTesting ZipDecoder? zipDecoder,
 }) async {
   final httpClient = client;
   final response = await httpClient.get(Uri.parse(licenseRulesUrl));
