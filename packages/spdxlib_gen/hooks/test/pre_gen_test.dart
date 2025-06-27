@@ -10,9 +10,9 @@
 // https://github.com/alestiago/license_lens/blob/main/packages/spdxlib_gen/NOTICE.md
 
 import 'package:mason/mason.dart';
-import 'package:spdxlib_hooks/src/pre_gen/pre_gen.dart' as pre_gen;
 import 'package:test/test.dart';
 
+import '../pre_gen.dart' as pre_gen;
 import 'test_tag.dart';
 
 class _FakeHookContext implements HookContext {

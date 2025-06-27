@@ -4,7 +4,10 @@ Future<MasonContextVariables> _rulesVariables(
   HookContext context, {
   @visibleForTesting TestOverrides? testOverrides,
 }) async {
-  final rules = await _downloadRules(logger: context.logger);
+  final rules = await _downloadRules(
+    logger: context.logger,
+    testOverrides: testOverrides,
+  );
   return {ContextVariables.rules.name: rules.toJson()};
 }
 

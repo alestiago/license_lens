@@ -23,18 +23,10 @@ import 'package:spdxlib_hooks/spdxlib.dart';
 
 part 'licenses.dart';
 part 'rules.dart';
+part 'test_overrides.dart';
 
 /// The type for the Mason context variables used in the pre-gen hook.
 typedef MasonContextVariables = Map<String, dynamic>;
-
-/// Signature for overriding [downloadRules].
-typedef DownloadRules = Future<Rules> Function();
-
-/// Signature for overriding [downloadLicenseRules].
-typedef DownloadLicenseRules = Future<AllLicenseRules> Function();
-
-/// Signature for overriding [downloadLicenses].
-typedef DownloadLicenses = Future<Licenses> Function();
 
 /// Defines the context variables used by the pre-gen hook.
 enum ContextVariables {
@@ -53,60 +45,7 @@ enum ContextVariables {
   final String name;
 }
 
-@visibleForTesting
-/// {@template TestOverrides}
-/// A class that allows overriding the download functions for testing purposes.
-/// {@endtemplate}
-class TestOverrides {
-  @visibleForTesting
-  /// {@macro TestOverrides}
-  const TestOverrides(
-    this.downloadLicensesOverride,
-    this.downloadRulesOverride,
-    this.downloadLicenseRulesOverride,
-  );
-
-  /// Creates an instance of [TestOverrides] with empty overrides.
-  @visibleForTesting
-  factory TestOverrides.empty() {
-    return TestOverrides(
-      () async => [],
-      () async => Rules(permissions: [], conditions: [], limitations: []),
-      () async => {},
-    );
-  }
-
-  @visibleForTesting
-  /// Allows overriding [downloadLicenses] function for testing purposes.
-  final DownloadLicenses? downloadLicensesOverride;
-
-  @visibleForTesting
-  /// Allows overriding [downloadRules] function for testing purposes.
-  final DownloadRules? downloadRulesOverride;
-
-  @visibleForTesting
-  /// Allows overriding [downloadLicenseRules] function for testing purposes.
-  final DownloadLicenseRules? downloadLicenseRulesOverride;
-
-  /// Creates a copy of this [TestOverrides] instance with the specified
-  /// overrides.
-  TestOverrides copyWith({
-    DownloadLicenses? downloadLicensesOverride,
-    DownloadRules? downloadRulesOverride,
-    DownloadLicenseRules? downloadLicenseRulesOverride,
-  }) {
-    return TestOverrides(
-      downloadLicensesOverride ?? this.downloadLicensesOverride,
-      downloadRulesOverride ?? this.downloadRulesOverride,
-      downloadLicenseRulesOverride ?? this.downloadLicenseRulesOverride,
-    );
-  }
-}
-
 http.Client _client = http.Client();
-
-/// {@macro pre_gen}
-Future<void> run(HookContext context) async => preGen(context);
 
 void _close() {
   _client.close();
@@ -155,7 +94,6 @@ Future<T> _downloadWithProgress<T>({
   required String startMessage,
   required String Function(T result) completeMessage,
   required Future<T> Function() downloadFunction,
-  void Function()? onError,
 }) async {
   final progress = logger.progress(startMessage);
 
@@ -163,13 +101,11 @@ Future<T> _downloadWithProgress<T>({
   try {
     result = await downloadFunction();
   } catch (e) {
-    progress.cancel();
-    if (onError != null) {
-      onError();
-    } else {
-      rethrow;
-    }
-    return Future.error(e);
+    progress
+      ..update(e.toString())
+      ..cancel();
+    _exit(ExitCode.software.code);
+    rethrow;
   }
 
   progress.complete(completeMessage(result));
