@@ -23,7 +23,6 @@ import 'package:spdxlib_hooks/spdxlib.dart';
 
 part 'licenses.dart';
 part 'rules.dart';
-part 'test_overrides.dart';
 
 /// The type for the Mason context variables used in the pre-gen hook.
 typedef MasonContextVariables = Map<String, dynamic>;
@@ -64,19 +63,10 @@ void _exit(int code) {
 /// will be populated with the user's list. Otherwise, the SPDX license list
 /// will be downloaded and parsed from the same source as the PANA tool.
 /// {@endtemplate}
-Future<void> preGen(
-  HookContext context, {
-  @visibleForTesting TestOverrides? testOverrides,
-}) async {
+Future<void> preGen(HookContext context) async {
   try {
-    final licenses = await _licensesVariables(
-      context,
-      testOverrides: testOverrides,
-    );
-    final rules = await _rulesVariables(
-      context,
-      testOverrides: testOverrides,
-    );
+    final licenses = await _licensesVariables(context);
+    final rules = await _rulesVariables(context);
 
     context.vars = {
       ...licenses,

@@ -1,9 +1,6 @@
 part of 'pre_gen.dart';
 
-Future<MasonContextVariables> _licensesVariables(
-  HookContext context, {
-  @visibleForTesting TestOverrides? testOverrides,
-}) async {
+Future<MasonContextVariables> _licensesVariables(HookContext context) async {
   final licensesVar = context.vars['licenses'];
   final shouldFetchLicenses =
       (licensesVar == null || (licensesVar is List && licensesVar.isEmpty)) &&
@@ -14,11 +11,9 @@ Future<MasonContextVariables> _licensesVariables(
   if (shouldFetchLicenses) {
     licenses = await _downloadLicenses(
       logger: context.logger,
-      testOverrides: testOverrides,
     );
     allLicenseRules = await _downloadAllLicenseRules(
       logger: context.logger,
-      testOverrides: testOverrides,
     );
   } else {
     if (licensesVar is! List) {
@@ -64,25 +59,19 @@ extension on String {
   }
 }
 
-Future<Licenses> _downloadLicenses({
-  required Logger logger,
-  @visibleForTesting TestOverrides? testOverrides,
-}) async {
+Future<Licenses> _downloadLicenses({required Logger logger}) async {
   return _downloadWithProgress(
     logger: logger,
     startMessage:
         'Starting to download the SPDX license list, this might take some time',
     completeMessage: (Licenses licenses) =>
         'Found ${licenses.length} SPDX licenses',
-    downloadFunction: () async =>
-        testOverrides?.downloadLicensesOverride?.call() ??
-        downloadLicenses(client: _client),
+    downloadFunction: () async => downloadLicenses(client: _client),
   );
 }
 
 Future<AllLicenseRules> _downloadAllLicenseRules({
   required Logger logger,
-  @visibleForTesting TestOverrides? testOverrides,
 }) async {
   return _downloadWithProgress(
     logger: logger,
@@ -91,8 +80,6 @@ Future<AllLicenseRules> _downloadAllLicenseRules({
         'time',
     completeMessage: (AllLicenseRules rules) =>
         'Found ${rules.length} ChooseALicense rules',
-    downloadFunction: () async =>
-        testOverrides?.downloadLicenseRulesOverride?.call() ??
-        downloadLicenseRules(client: _client),
+    downloadFunction: () async => downloadLicenseRules(client: _client),
   );
 }
