@@ -66,51 +66,33 @@ extension on String {
 
 Future<Licenses> _downloadLicenses({
   required Logger logger,
-
   @visibleForTesting TestOverrides? testOverrides,
 }) async {
-  final progress = logger.progress(
-    'Starting to download the SPDX license list, this might take some time',
+  return _downloadWithProgress(
+    logger: logger,
+    startMessage:
+        'Starting to download the SPDX license list, this might take some time',
+    completeMessage: (Licenses licenses) =>
+        'Found ${licenses.length} SPDX licenses',
+    downloadFunction: () async =>
+        testOverrides?.downloadLicensesOverride?.call() ??
+        downloadLicenses(client: _client),
   );
-
-  late Licenses licenses;
-  try {
-    licenses =
-        await (testOverrides?.downloadLicensesOverride?.call() ??
-            downloadLicenses(client: _client));
-  } on GenerateSpdxLicenseException catch (e) {
-    progress.cancel();
-    logger.err(e.message);
-    _exit(ExitCode.unavailable.code);
-  } on Object {
-    rethrow;
-  }
-
-  progress.complete('Found ${licenses.length} SPDX licenses');
-  return licenses;
 }
 
 Future<AllLicenseRules> _downloadAllLicenseRules({
   required Logger logger,
   @visibleForTesting TestOverrides? testOverrides,
 }) async {
-  final progress = logger.progress(
-    'Starting to download the ChooseALicense rules, this might take some time',
+  return _downloadWithProgress(
+    logger: logger,
+    startMessage:
+        'Starting to download the ChooseALicense rules, this might take some '
+        'time',
+    completeMessage: (AllLicenseRules rules) =>
+        'Found ${rules.length} ChooseALicense rules',
+    downloadFunction: () async =>
+        testOverrides?.downloadLicenseRulesOverride?.call() ??
+        downloadLicenseRules(client: _client),
   );
-
-  late AllLicenseRules allLicenseRules;
-  try {
-    allLicenseRules =
-        await (testOverrides?.downloadLicenseRulesOverride?.call() ??
-            downloadLicenseRules(client: _client));
-  } on ChooseALicenseException catch (e) {
-    progress.cancel();
-    logger.err(e.message);
-    _exit(ExitCode.unavailable.code);
-  } on Object {
-    rethrow;
-  }
-
-  progress.complete('Found ${allLicenseRules.length} ChooseALicense rules');
-  return allLicenseRules;
 }

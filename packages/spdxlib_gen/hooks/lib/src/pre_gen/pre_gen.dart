@@ -149,3 +149,29 @@ Future<void> preGen(
     );
   }
 }
+
+Future<T> _downloadWithProgress<T>({
+  required Logger logger,
+  required String startMessage,
+  required String Function(T result) completeMessage,
+  required Future<T> Function() downloadFunction,
+  void Function()? onError,
+}) async {
+  final progress = logger.progress(startMessage);
+
+  late T result;
+  try {
+    result = await downloadFunction();
+  } catch (e) {
+    progress.cancel();
+    if (onError != null) {
+      onError();
+    } else {
+      rethrow;
+    }
+    return Future.error(e);
+  }
+
+  progress.complete(completeMessage(result));
+  return result;
+}

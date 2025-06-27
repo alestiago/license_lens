@@ -12,27 +12,17 @@ Future<Rules> _downloadRules({
   required Logger logger,
   @visibleForTesting TestOverrides? testOverrides,
 }) async {
-  final progress = logger.progress(
-    'Starting to download the ChooseALicense rules, this might take some time',
+  return _downloadWithProgress(
+    logger: logger,
+    startMessage:
+        'Starting to download the ChooseALicense rules, this might take some '
+        'time',
+    completeMessage: (Rules rules) =>
+        'Downloaded ${rules.permissions.length} permissions, '
+        '${rules.conditions.length} conditions, and ${rules.limitations.length}'
+        'limitations',
+    downloadFunction: () async =>
+        testOverrides?.downloadRulesOverride?.call() ??
+        downloadRules(client: _client),
   );
-
-  late Rules rules;
-  try {
-    rules =
-        await (testOverrides?.downloadRulesOverride?.call() ??
-            downloadRules(client: _client));
-  } on ChooseALicenseException catch (e) {
-    progress.cancel();
-    logger.err(e.toString());
-    _exit(ExitCode.unavailable.code);
-  } on Object {
-    rethrow;
-  }
-
-  progress.complete(
-    'Downloaded ${rules.permissions.length} permissions, '
-    '${rules.conditions.length} conditions, and '
-    '${rules.limitations.length} limitations',
-  );
-  return rules;
 }
