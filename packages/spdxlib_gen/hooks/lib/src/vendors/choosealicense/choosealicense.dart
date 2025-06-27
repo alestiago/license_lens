@@ -58,7 +58,15 @@ Future<Rules> downloadRules({
     );
   }
 
-  final yaml = loadYaml(response.body);
+  late dynamic yaml;
+  try {
+    yaml = loadYaml(response.body);
+  } on Exception catch (_) {
+    throw ChooseALicenseException(
+      '''Failed to parse the ChooseALicense rules, received response: ${response.body}''',
+    );
+  }
+
   if (yaml is! YamlMap) {
     throw ChooseALicenseException(
       '''Failed to parse the ChooseALicense rules, expected a YAML map but got: $yaml.runtimeType''',

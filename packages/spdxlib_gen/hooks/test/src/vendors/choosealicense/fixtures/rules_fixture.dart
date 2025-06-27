@@ -1,10 +1,11 @@
-/// Raw result from the ChooseALicense rules endpoint:
-/// https://raw.githubusercontent.com/github/choosealicense.com/refs/heads/gh-pages/_data/rules.yml
-/// (Accessed 27 June 2025).
-///
-/// This fixture is used to test the parsing of the rules without needing to
-/// download the rules from the internet.
-const rulesFixture = '''
+abstract class ChooseALicenseRulesFixture {
+  /// Raw result from the ChooseALicense rules endpoint:
+  /// https://raw.githubusercontent.com/github/choosealicense.com/refs/heads/gh-pages/_data/rules.yml
+  /// (Accessed 27 June 2025).
+  ///
+  /// This fixture is used to test the parsing of the rules without needing to
+  /// download the rules from the internet.
+  static const success = '''
 permissions:
 - description: The licensed material and derivatives may be used for commercial purposes.
   label: Commercial use
@@ -62,3 +63,24 @@ limitations:
   label: Warranty
   tag: warranty
 ''';
+
+  /// Manually crafted invalid YAML to test error handling.
+  static const invalidYaml = '''
+permission:: permissions: permissions:
+- description: The licensed material and derivatives may be used for commercial purposes.
+  label: Commercial use
+  tag: commercial-use
+- description: The licensed material may be modified.
+  label: Modification
+  tag: modifications
+''';
+
+  static const invalidYamlMap = '''
+- description: The licensed material and derivatives may be used for commercial purposes.
+  label: Commercial use
+  tag: commercial-use
+- description: The licensed material may be modified.
+  label: Modification
+  tag: modifications
+''';
+}
