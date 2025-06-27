@@ -212,7 +212,7 @@ void main() {
       const exception = ChooseALicenseException('Test message');
       expect(
         exception.toString(),
-        equals('ChooseALicenseException: Test message'),
+        equals('[spdxlib] Test message'),
       );
     });
   });
