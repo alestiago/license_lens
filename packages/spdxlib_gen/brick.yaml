@@ -6,7 +6,3 @@ publish_to: none
 environment:
   mason: ^0.1.0
 
-vars:
-  licenses:
-    type: list
-    description: List of all SPDX licenses

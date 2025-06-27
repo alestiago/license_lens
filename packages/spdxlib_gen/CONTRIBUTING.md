@@ -48,5 +48,3 @@ mason get
 # ⚙️ Generate code using the spdxlib brick (from project root)
 mason make spdxlib -o packages/spdxlib/lib/src/ --on-conflict=overwrite 
 ```
-
-If the licenses prompt is left empty the brick will fetch the [SPDX list](https://github.com/spdx/license-list-data/tree/main/json/details). Otherwise, the user specified licenses will be used and no SPDX List will be fetched.

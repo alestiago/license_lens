@@ -1,30 +1,12 @@
 part of 'pre_gen.dart';
 
 Future<MasonContextVariables> _licensesVariables(HookContext context) async {
-  final licensesVar = context.vars['licenses'];
-  final shouldFetchLicenses =
-      (licensesVar == null || (licensesVar is List && licensesVar.isEmpty)) &&
-      licensesVar is! List<String>;
-
-  late List<String> licenses;
-  late AllLicenseRules allLicenseRules;
-  if (shouldFetchLicenses) {
-    licenses = await _downloadLicenses(
-      logger: context.logger,
-    );
-    allLicenseRules = await _downloadAllLicenseRules(
-      logger: context.logger,
-    );
-  } else {
-    if (licensesVar is! List) {
-      context.logger.err(
-        'The "licenses" variable is not a List or null',
-      );
-      exit(ExitCode.data.code);
-    }
-    licenses = licensesVar.map((e) => e.toString()).toList();
-    allLicenseRules = {};
-  }
+  final licenses = await _downloadLicenses(
+    logger: context.logger,
+  );
+  final allLicenseRules = await _downloadAllLicenseRules(
+    logger: context.logger,
+  );
 
   final newLicensesVar = <Map<String, dynamic>>[
     for (final license in licenses)
