@@ -31,3 +31,4 @@ jobs:
       run_skipped: true
       coverage_excludes: "**/*.g.dart"
       working_directory: "packages/spdxlib_gen/hooks"
+      min_coverage: 89
