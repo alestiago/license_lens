@@ -32,11 +32,7 @@ library license_rules;
 /// {@endtemplate}
 class LicenseRules {
   // {@macro LicenseRules}
-  const LicenseRules({
-    this.permissions,
-    this.conditions,
-    this.limitations,
-  });
+  const LicenseRules({this.permissions, this.conditions, this.limitations});
 
   /// The permissions that the license grants.
   ///

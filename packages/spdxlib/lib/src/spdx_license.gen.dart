@@ -27,7 +27,7 @@ library spdx_license;
 import 'license_rules.gen.dart';
 
 /// {@template spdx_license}
-/// A list of all 699 SPDX licenses.
+/// A list of all 700 SPDX licenses.
 ///
 /// These have been automatically generated from the spdxlib brick.
 /// {@endtemplate}
@@ -188,9 +188,7 @@ enum SpdxLicense {
         LicensePermission.distribution,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -210,9 +208,7 @@ enum SpdxLicense {
         LicensePermission.patentUse,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -231,9 +227,7 @@ enum SpdxLicense {
         LicensePermission.distribution,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -250,9 +244,7 @@ enum SpdxLicense {
         LicensePermission.distribution,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.patentUse,
@@ -282,9 +274,7 @@ enum SpdxLicense {
         LicensePermission.distribution,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -312,9 +302,7 @@ enum SpdxLicense {
         LicensePermission.distribution,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyrightSource,
-      },
+      conditions: const {LicenseCondition.includeCopyrightSource},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -340,9 +328,7 @@ enum SpdxLicense {
         LicensePermission.patentUse,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -905,9 +891,7 @@ enum SpdxLicense {
         LicensePermission.modifications,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -1040,9 +1024,7 @@ enum SpdxLicense {
         LicensePermission.distribution,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -1115,9 +1097,7 @@ enum SpdxLicense {
         LicensePermission.patentUse,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.warranty,
         LicenseLimitation.trademarkUse,
@@ -1165,9 +1145,7 @@ enum SpdxLicense {
         LicensePermission.patentUse,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.trademarkUse,
@@ -1192,9 +1170,7 @@ enum SpdxLicense {
         LicensePermission.distribution,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -1358,9 +1334,7 @@ enum SpdxLicense {
         LicensePermission.distribution,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,
@@ -1404,6 +1378,7 @@ enum SpdxLicense {
   $SSH_short._('SSH-short'),
   $SSLeay_standalone._('SSLeay-standalone'),
   $SSPL_1_0._('SSPL-1.0'),
+  $SUL_1_0._('SUL-1.0'),
   $SWL._('SWL'),
   $Saxpath._('Saxpath'),
   $SchemeReport._('SchemeReport'),
@@ -1451,9 +1426,7 @@ enum SpdxLicense {
         LicensePermission.patentUse,
         LicensePermission.privateUse,
       },
-      conditions: const {
-        LicenseCondition.includeCopyright,
-      },
+      conditions: const {LicenseCondition.includeCopyright},
       limitations: const {
         LicenseLimitation.liability,
         LicenseLimitation.warranty,

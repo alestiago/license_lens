@@ -57,8 +57,8 @@ jobs:
           token: ${{ steps.generate-token.outputs.token }}
           base: main
           branch: bot/spdxlib_gen_update
-          commit-message: "chore(spdxlib): update SPDX licenses"
-          title: "chore(spdxlib): update SPDX licenses"
+          commit-message: "feat(spdxlib): update SPDX licenses"
+          title: "feat(spdxlib): update SPDX licenses"
           body: |
             ## Description
 
