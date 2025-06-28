@@ -1,6 +1,7 @@
 ## 1.1.0 (Unreleased)
 
 - feat: provide license rules information([#5](https://github.com/alestiago/license_lens/pull/5))
+- docs: update README links ([#7](https://github.com/alestiago/license_lens/pull/7))
 
 ## 1.0.0
 
