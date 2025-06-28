@@ -46,7 +46,7 @@ import 'package:spdxlib/spdxlib.dart';
 import 'package:spdxlib/spdxlib.dart';
 
 void main() {
-  // 😎 Simple access for specific SPDX license by its identifier:
+  // 😎 Simple access to a specific SPDX license:
   SpdxLicense.$MIT;
 
   // 👮‍♂️ Access the rules associated with a specific license:
