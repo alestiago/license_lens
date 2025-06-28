@@ -2,7 +2,7 @@
 
 ![Pub Version](https://img.shields.io/pub/v/spdxlib)
 ![License](https://img.shields.io/github/license/alestiago/license_lens)
-![Build Status](https://img.shields.io/github/actions/workflow/status/alestiago/license_lens/spdxlib.yml)
+![Build Status](https://img.shields.io/github/actions/workflow/status/alestiago/license_lens/spdxlib.yaml)
 
 Provides an up-to-date full list of all SPDX licenses as seen in the [SPDX Licenses list](https://spdx.org/licenses/), in Dart.
 
