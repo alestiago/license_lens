@@ -8,6 +8,9 @@ on:
 
 jobs:
   pub:
+    defaults:
+      run:
+        working-directory: packages/spdxlib
     permissions:
       id-token: write # Required for authentication using OIDC
     runs-on: ubuntu-latest
