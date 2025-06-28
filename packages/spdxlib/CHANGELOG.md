@@ -4,6 +4,7 @@
     - Defines permissions, conditions and limitations for those licenses defined by [`choosealicense.com`](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses)
 - feat: update SPDX licenses ([#6](https://github.com/alestiago/license_lens/pull/6))
     - Defines 700 SPDX licenses, from [license-list-data/63c0a85](63c0a85258a0bda9517b6b66029a002eb463820b); adding `SUL-1.0`.
+- docs: update README links ([#7](https://github.com/alestiago/license_lens/pull/7))
 
 ## 1.0.0
 
