@@ -27,7 +27,7 @@ library spdx_license;
 import 'license_rules.gen.dart';
 
 /// {@template spdx_license}
-/// A list of all 700 SPDX licenses.
+/// A list of all 701 SPDX licenses.
 ///
 /// These have been automatically generated from the spdxlib brick.
 /// {@endtemplate}
@@ -1496,6 +1496,7 @@ enum SpdxLicense {
   ),
   $Watcom_1_0._('Watcom-1.0'),
   $Widget_Workshop._('Widget-Workshop'),
+  $WordNet._('WordNet'),
   $Wsuipa._('Wsuipa'),
   $X11._('X11'),
   $X11_distribute_modifications_variant._(
