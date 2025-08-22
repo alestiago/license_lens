@@ -27,7 +27,7 @@ library spdx_license;
 import 'license_rules.gen.dart';
 
 /// {@template spdx_license}
-/// A list of all 701 SPDX licenses.
+/// A list of all 704 SPDX licenses.
 ///
 /// These have been automatically generated from the spdxlib brick.
 /// {@endtemplate}
@@ -263,6 +263,7 @@ enum SpdxLicense {
   $BSD_3_Clause_No_Nuclear_Warranty._('BSD-3-Clause-No-Nuclear-Warranty'),
   $BSD_3_Clause_Open_MPI._('BSD-3-Clause-Open-MPI'),
   $BSD_3_Clause_Sun._('BSD-3-Clause-Sun'),
+  $BSD_3_Clause_Tso._('BSD-3-Clause-Tso'),
   $BSD_3_Clause_acpica._('BSD-3-Clause-acpica'),
   $BSD_3_Clause_flex._('BSD-3-Clause-flex'),
   $BSD_4_Clause._(
@@ -660,6 +661,7 @@ enum SpdxLicense {
       },
     ),
   ),
+  $ESA_PL_weak_copyleft_2_4._('ESA-PL-weak-copyleft-2.4'),
   $EUDatagrid._('EUDatagrid'),
   $EUPL_1_0._('EUPL-1.0'),
   $EUPL_1_1._(
@@ -1481,6 +1483,7 @@ enum SpdxLicense {
   $W3C._('W3C'),
   $W3C_19980720._('W3C-19980720'),
   $W3C_20150513._('W3C-20150513'),
+  $WTFNMFPL._('WTFNMFPL'),
   $WTFPL._(
     'WTFPL',
     rules: LicenseRules(
